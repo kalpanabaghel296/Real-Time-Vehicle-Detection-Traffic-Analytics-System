@@ -74,6 +74,7 @@ class EventLogger:
         config: Optional[TrafficConfig] = None,
         csv_path: Optional[str] = None,
         json_path: Optional[str] = None,
+        clear_existing: bool = False,
     ):
         self.config = config or TrafficConfig()
 
@@ -84,6 +85,11 @@ class EventLogger:
         self.json_path = Path(json_path) if json_path else logs_dir / "events.json"
 
         self.events: List[TrafficEvent] = []
+        if clear_existing:
+            if self.csv_path.exists():
+                self.csv_path.unlink()
+            if self.json_path.exists():
+                self.json_path.unlink()
         self._init_csv()
 
     def _init_csv(self) -> None:

@@ -15,9 +15,11 @@ Master CLI entry point integrating the complete Computer Vision pipeline:
 
 import argparse
 from datetime import datetime
+import json
 from pathlib import Path
 import sys
 import time
+from typing import Dict, Any, Optional
 
 # Ensure project root is in sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -43,7 +45,8 @@ def run_pipeline(
     conf_thresh: float = 0.35,
     frame_skip: int = 0,
     preview: bool = False,
-) -> None:
+    reset_logs: bool = False,
+) -> Dict[str, Any]:
     """Runs the unified traffic analytics pipeline."""
     print("=" * 75)
     print("REAL-TIME VEHICLE DETECTION & TRAFFIC ANALYTICS SYSTEM")
@@ -64,7 +67,7 @@ def run_pipeline(
     counter = VehicleCounter(cfg, counting_direction="ANY")
     violation_detector = WrongWayDetector(cfg, allowed_direction=allowed_direction)
     monitor = PerformanceMonitor()
-    logger = EventLogger(cfg)
+    logger = EventLogger(cfg, clear_existing=reset_logs)
     visualizer = Visualizer()
 
     print(f"[x] Pipeline ready:")
@@ -188,6 +191,25 @@ def run_pipeline(
     print(f"  [x] Snapshots: {violation_detector.snapshots_dir.resolve()}")
     print("=" * 75)
 
+    summary_data = {
+        "total_frames": frame_idx,
+        "wall_clock_seconds": round(total_wall_elapsed, 2),
+        "avg_fps": perf_summary.get("avg_fps", 0.0),
+        "avg_inference_ms": perf_summary.get("avg_inference_ms", 0.0),
+        "avg_total_ms": perf_summary.get("avg_total_ms", 0.0),
+        "total_counted": counter.total_count,
+        "counts_by_class": counter.counts_by_class,
+        "total_violations": len(violation_detector.violations),
+        "source": str(source),
+        "allowed_direction": allowed_direction,
+        "completed_at": datetime.now().isoformat(timespec="seconds"),
+    }
+    summary_path = Path(cfg.logs_dir) / "summary.json"
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(summary_data, f, indent=2)
+
+    return summary_data
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -230,6 +252,11 @@ def main():
         help="Frame skipping factor: 0=process every frame, 1=skip alternate frames (default: 0)",
     )
     parser.add_argument(
+        "--reset-logs",
+        action="store_true",
+        help="Clear prior event logs before processing",
+    )
+    parser.add_argument(
         "--preview",
         action="store_true",
         help="Display OpenCV live window preview",
@@ -244,6 +271,7 @@ def main():
         conf_thresh=args.conf,
         frame_skip=args.skip,
         preview=args.preview,
+        reset_logs=args.reset_logs,
     )
 
 

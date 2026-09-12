@@ -6,6 +6,7 @@ inspecting class distributions, viewing wrong-way violation snapshots,
 and analyzing real-time performance telemetry.
 """
 
+import json
 from pathlib import Path
 import sys
 import pandas as pd
@@ -29,6 +30,17 @@ def load_events(csv_path: Path) -> pd.DataFrame:
         except Exception:
             return pd.DataFrame()
     return pd.DataFrame()
+
+
+def load_summary(summary_path: Path) -> dict:
+    """Loads run summary telemetry JSON."""
+    if summary_path.exists() and summary_path.stat().st_size > 0:
+        try:
+            with open(summary_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
 
 
 def main():
@@ -69,12 +81,16 @@ def main():
     line_y_ratio = st.sidebar.slider("Counting Line Height (0.0 = Top, 1.0 = Bottom)", 0.10, 0.90, 0.35, 0.05)
     frame_skip = st.sidebar.selectbox("Frame Skipping", [0, 1, 2], index=0, format_func=lambda x: f"Process all frames (0)" if x == 0 else f"Skip {x} frame(s)")
 
+    reset_logs = st.sidebar.checkbox("Reset audit logs for this run", value=True, help="Clear previous video counts and logs before running this video")
+    st.sidebar.caption("💡 **Camera Perspective Tip**: Best results are achieved with standard roadside or overhead CCTV footage (30°-60° angle). High-altitude vertical drone footage experiences COCO domain shift and extreme downsampling.")
+
     run_btn = st.sidebar.button("🚀 Run Analytics Pipeline", type="primary", width="stretch")
 
     # Output paths
     output_video_path = Path("outputs/videos/processed_video.mp4")
     csv_log_path = Path("outputs/logs/events.csv")
     snapshots_dir = Path("outputs/snapshots")
+    summary_path = Path("outputs/logs/summary.json")
 
     # Pipeline Execution Trigger
     if run_btn:
@@ -87,29 +103,42 @@ def main():
                 conf_thresh=conf_threshold,
                 frame_skip=frame_skip,
                 preview=False,
+                reset_logs=reset_logs,
             )
         st.sidebar.success("✅ Video Processing Complete!")
+        st.rerun()
 
     # -------------------------------------------------------------------------
-    # Top KPI Metrics Row
+    # Top KPI Metrics Row (Dynamic Telemetry)
     # -------------------------------------------------------------------------
+    summary = load_summary(summary_path)
     events_df = load_events(csv_log_path)
-    total_counted = 0
-    total_violations = 0
 
-    if not events_df.empty:
-        total_counted = len(events_df[events_df["event_type"] == "LINE_CROSSING"])
-        total_violations = len(events_df[events_df["event_type"] == "WRONG_WAY_VIOLATION"])
+    if summary:
+        total_counted = summary.get("total_counted", 0)
+        total_violations = summary.get("total_violations", 0)
+        avg_fps = f"{summary.get('avg_fps', 0.0):.1f} FPS"
+        avg_lat = f"{summary.get('avg_inference_ms', 0.0):.1f} ms"
+    else:
+        total_counted = len(events_df[events_df["event_type"] == "LINE_CROSSING"]) if not events_df.empty else 0
+        total_violations = len(events_df[events_df["event_type"] == "WRONG_WAY_VIOLATION"]) if not events_df.empty else 0
+        avg_fps = "-- FPS"
+        avg_lat = "-- ms"
 
     kpi1, kpi2, kpi3, kpi4 = st.columns(4)
     with kpi1:
         st.metric("🚗 Total Vehicles Counted", total_counted)
     with kpi2:
-        st.metric("🚨 Wrong-Way Violations", total_violations, delta=f"{total_violations} alerts", delta_color="inverse")
+        st.metric(
+            "🚨 Wrong-Way Violations",
+            total_violations,
+            delta=f"{total_violations} alerts" if total_violations > 0 else None,
+            delta_color="inverse",
+        )
     with kpi3:
-        st.metric("⚡ Real-Time Speed", "15.2 FPS", help="Average processing throughput on host CPU")
+        st.metric("⚡ Processing Speed", avg_fps, help="Actual measured pipeline throughput on host machine")
     with kpi4:
-        st.metric("⏱️ Inference Latency", "59.3 ms", help="Average forward pass latency per frame")
+        st.metric("⏱️ Inference Latency", avg_lat, help="Actual measured YOLO forward pass latency per frame")
 
     st.divider()
 
