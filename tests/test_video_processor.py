@@ -75,3 +75,16 @@ def test_video_writer_helper(tmp_path):
 
     assert out_file.exists()
     assert out_file.stat().st_size > 0
+
+
+def test_camera_source_parsing():
+    reader = VideoReader(0)
+    assert reader.is_camera is True
+    assert reader.capture_source == 0
+    reader.release()
+
+    reader_str = VideoReader("0")
+    assert reader_str.is_camera is True
+    assert reader_str.capture_source == 0
+    reader_str.release()
+

@@ -111,3 +111,19 @@ def test_direction_filter_counting():
 
     assert len(events_down) == 1
     assert counter.total_count == 1
+
+
+def test_vertical_line_orientation():
+    cfg = TrafficConfig(line_orientation="VERTICAL")
+    counter = VehicleCounter(cfg)
+    # Default line should be vertical across x = 320 for 640x480 frame
+    p1, p2 = counter._ensure_line_coordinates((480, 640))
+    assert p1 == (320, 0)
+    assert p2 == (320, 480)
+
+    # Vehicle moving horizontally from x=300 to x=350 crosses vertical line at x=320
+    veh = make_test_vehicle(track_id=50, class_name="car", prev_centroid=(300, 200), curr_centroid=(350, 200))
+    events = counter.update([veh], frame_shape=(480, 640))
+    assert len(events) == 1
+    assert counter.total_count == 1
+

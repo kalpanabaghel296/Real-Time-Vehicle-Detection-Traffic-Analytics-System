@@ -91,6 +91,10 @@ class VideoReader:
             fps = 30.0  # Safe default assumption for live streams
 
         if self.is_camera:
+            try:
+                self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+            except Exception:
+                pass
             total_frames = -1
             duration = -1.0
         else:

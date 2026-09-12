@@ -63,16 +63,20 @@ class VehicleCounter:
 
     def _ensure_line_coordinates(self, frame_shape: Tuple[int, int]) -> Tuple[Tuple[int, int], Tuple[int, int]]:
         """
-        Calculates default horizontal line across the middle-lower portion of the frame
-        if no explicit line coordinates were configured.
+        Calculates default counting line coordinates across the frame
+        if no explicit line coordinates were configured, respecting orientation.
         """
         if self.counting_line is not None:
             return self.counting_line
 
         h, w = frame_shape[:2]
-        # Default: Horizontal line at 35% of frame height across full roadway width
-        line_y = int(h * 0.35)
-        self.counting_line = ((0, line_y), (w, line_y))
+        orientation = getattr(self.config, "line_orientation", "AUTO").upper()
+        if orientation == "VERTICAL":
+            line_x = int(w * 0.50)
+            self.counting_line = ((line_x, 0), (line_x, h))
+        else:
+            line_y = int(h * 0.35)
+            self.counting_line = ((0, line_y), (w, line_y))
         return self.counting_line
 
     def update(

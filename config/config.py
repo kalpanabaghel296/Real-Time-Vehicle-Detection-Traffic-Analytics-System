@@ -42,10 +42,11 @@ class TrafficConfig:
 
     # Inference resolution: YOLO scales the frame while preserving aspect ratio
     input_size: Tuple[int, int] = (640, 640)
+    imgsz: int = 640
 
     # Minimum confidence score [0.0 - 1.0] for a candidate detection box to be accepted
-    # Set to 0.40 to balance high precision with recall on moving vehicles
-    confidence_threshold: float = 0.40
+    # Set to 0.35 to balance high precision with recall on moving vehicles
+    confidence_threshold: float = 0.35
 
     # Non-Maximum Suppression (NMS) Intersection-over-Union (IoU) threshold
     # Boxes with IoU > iou_threshold with a higher confidence box are suppressed
@@ -89,14 +90,18 @@ class TrafficConfig:
     # or absolute pixel coordinates. If None, auto-calculated across the middle.
     counting_line: Optional[Tuple[Tuple[int, int], Tuple[int, int]]] = None
 
+    # Line orientation: "AUTO", "HORIZONTAL" (for UP/DOWN flow), "VERTICAL" (for LEFT/RIGHT flow)
+    line_orientation: str = "AUTO"
+
     # Allowed counting flow: "ANY", "DOWN", "UP", "LEFT", "RIGHT"
     counting_direction: str = "ANY"
 
     # -------------------------------------------------------------------------
     # 5. Direction & Wrong-Way Detection Settings
     # -------------------------------------------------------------------------
-    # Configured legal flow of traffic on the lane: "DOWN", "UP", "LEFT", "RIGHT"
-    allowed_direction: str = "DOWN"
+    # Configured legal flow of traffic on the lane: "AUTO", "DOWN", "UP", "LEFT", "RIGHT"
+    # When "AUTO", the system infers the legal flow automatically from dominant traffic vectors.
+    allowed_direction: str = "AUTO"
 
     # Centroid history buffer length (number of past frame positions kept per vehicle)
     trajectory_history_length: int = 30

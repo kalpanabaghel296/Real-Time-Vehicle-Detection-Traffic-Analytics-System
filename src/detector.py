@@ -118,16 +118,18 @@ class YOLOVehicleDetector:
         if frame is None or frame.size == 0:
             return []
 
+        # Determine inference resolution
+        imgsz = getattr(self.config, "imgsz", None) or self.config.input_size[0]
+        if str(imgsz).lower() == "auto":
+            h, w = frame.shape[:2]
+            imgsz = 1280 if max(h, w) >= 1920 else 640
+
         # Run inference through Ultralytics YOLO
-        # imgsz: input resolution
-        # conf: confidence threshold
-        # iou: NMS IoU threshold
-        # classes: filter candidate boxes at the detector level
         results = self.model.predict(
             source=frame,
             conf=self.config.confidence_threshold,
             iou=self.config.iou_threshold,
-            imgsz=self.config.input_size,
+            imgsz=imgsz,
             device=self.device,
             classes=self.config.target_class_ids,
             verbose=False,

@@ -38,26 +38,37 @@ from src.visualizer import Visualizer
 
 
 def run_pipeline(
-    source: str = "data/input/traffic.mp4",
+    source: Any = "data/input/traffic.mp4",
     output: str = "outputs/videos/processed_video.mp4",
-    allowed_direction: str = "UP",
+    allowed_direction: str = "AUTO",
     line_y: float = 0.35,
     conf_thresh: float = 0.35,
     frame_skip: int = 0,
     preview: bool = False,
     reset_logs: bool = False,
+    imgsz: Any = 640,
+    line_orientation: str = "AUTO",
 ) -> Dict[str, Any]:
     """Runs the unified traffic analytics pipeline."""
     print("=" * 75)
     print("REAL-TIME VEHICLE DETECTION & TRAFFIC ANALYTICS SYSTEM")
     print("=" * 75)
 
+    # Convert numeric camera source string to int if applicable
+    if isinstance(source, str) and source.strip().isdigit():
+        source = int(source.strip())
+
+    # Parse imgsz
+    effective_imgsz = int(imgsz) if str(imgsz).isdigit() else str(imgsz)
+
     # 1. Initialize Configuration
     cfg = TrafficConfig(
-        video_source=source,
+        video_source=str(source),
         confidence_threshold=conf_thresh,
         allowed_direction=allowed_direction,
         frame_skip=frame_skip,
+        imgsz=effective_imgsz,
+        line_orientation=line_orientation,
     )
     cfg.ensure_directories()
 
@@ -82,9 +93,10 @@ def run_pipeline(
 
     print(f"[x] Pipeline ready:")
     print(f"    - Input Source: {source}")
-    print(f"    - Model: {cfg.model_name} (Device: {tracker.device})")
+    print(f"    - Model: {cfg.model_name} (Device: {tracker.device}, imgsz: {effective_imgsz})")
     print(f"    - Allowed Direction: {allowed_direction}")
     print(f"    - Confidence Threshold: {conf_thresh}")
+    print(f"    - Counting Line Orientation: {line_orientation}")
     print(f"    - Output Video: {output}")
     print(f"    - Events Log: {logger.csv_path}")
 
@@ -92,11 +104,17 @@ def run_pipeline(
 
     with VideoReader(source) as reader:
         meta = reader.metadata
-        print(f"\n[*] Processing Video Stream: {meta.width}x{meta.height} @ {meta.fps} FPS ({meta.total_frames} frames)")
+        stream_type = "Live Camera Stream" if reader.is_camera else "Video File"
+        print(f"\n[*] Processing {stream_type}: {meta.width}x{meta.height} @ {meta.fps:.1f} FPS ({meta.total_frames} frames)")
 
-        # Configure counting line
-        line_pixel_y = int(meta.height * line_y)
-        counter.counting_line = ((0, line_pixel_y), (meta.width, line_pixel_y))
+        # Configure counting line: Horizontal for vertical traffic, Vertical for horizontal traffic
+        norm_orient = line_orientation.upper()
+        if norm_orient == "VERTICAL" or (norm_orient == "AUTO" and allowed_direction in ["LEFT", "RIGHT"]):
+            line_pos_px = int(meta.width * line_y)
+            counter.counting_line = ((line_pos_px, 0), (line_pos_px, meta.height))
+        else:
+            line_pos_px = int(meta.height * line_y)
+            counter.counting_line = ((0, line_pos_px), (meta.width, line_pos_px))
 
         with VideoWriterHelper(
             output_path=output,
@@ -164,7 +182,9 @@ def run_pipeline(
 
                 if preview:
                     cv2.imshow("Real-Time Traffic Analytics", annotated)
-                    if cv2.waitKey(1) & 0xFF == ord("q"):
+                    key = cv2.waitKey(1) & 0xFF
+                    if key in [ord("q"), 27]:
+                        print("\n[!] Stream preview terminated by user (pressed 'q' / ESC).")
                         break
 
             if preview:
@@ -229,7 +249,7 @@ def main():
         "--source",
         type=str,
         default="data/input/traffic.mp4",
-        help="Path to input video or camera index (default: data/input/traffic.mp4)",
+        help="Path to input video, webcam index (e.g. 0), or RTSP URL (default: data/input/traffic.mp4)",
     )
     parser.add_argument(
         "--output",
@@ -240,14 +260,15 @@ def main():
     parser.add_argument(
         "--allowed",
         type=str,
-        default="UP",
-        help="Configured legal traffic flow direction: 'UP' or 'DOWN' (default: UP)",
+        default="AUTO",
+        choices=["AUTO", "DOWN", "UP", "LEFT", "RIGHT"],
+        help="Configured legal traffic flow direction: 'AUTO', 'DOWN', 'UP', 'LEFT', 'RIGHT' (default: AUTO)",
     )
     parser.add_argument(
         "--line-y",
         type=float,
         default=0.35,
-        help="Normalized Y coordinate for virtual counting line [0.0 - 1.0] (default: 0.35)",
+        help="Normalized coordinate for virtual counting line [0.0 - 1.0] (default: 0.35)",
     )
     parser.add_argument(
         "--conf",
@@ -260,6 +281,19 @@ def main():
         type=int,
         default=0,
         help="Frame skipping factor: 0=process every frame, 1=skip alternate frames (default: 0)",
+    )
+    parser.add_argument(
+        "--imgsz",
+        type=str,
+        default="640",
+        help="Inference resolution: 640, 1280, or 'auto' (default: 640)",
+    )
+    parser.add_argument(
+        "--orientation",
+        type=str,
+        default="AUTO",
+        choices=["AUTO", "HORIZONTAL", "VERTICAL"],
+        help="Counting line orientation: 'AUTO', 'HORIZONTAL', 'VERTICAL' (default: AUTO)",
     )
     parser.add_argument(
         "--reset-logs",
@@ -282,6 +316,8 @@ def main():
         frame_skip=args.skip,
         preview=args.preview,
         reset_logs=args.reset_logs,
+        imgsz=args.imgsz,
+        line_orientation=args.orientation,
     )
 
 
