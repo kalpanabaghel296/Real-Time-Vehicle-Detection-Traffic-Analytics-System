@@ -102,11 +102,11 @@ class TrafficConfig:
     trajectory_history_length: int = 30
 
     # Minimum pixel movement required to calculate direction (filters stationary/jittery detections)
-    min_movement_distance: float = 20.0
+    min_movement_distance: float = 15.0
 
     # Temporal confirmation window: consecutive frames a vehicle must violate allowed direction
     # before raising a confirmed violation alert (prevents single-frame detector noise)
-    violation_confirm_frames: int = 5
+    violation_confirm_frames: int = 3
 
     # -------------------------------------------------------------------------
     # 6. Performance & Optimization Settings

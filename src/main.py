@@ -1,0 +1,251 @@
+"""
+Real-Time Traffic & Vehicle Analytics System
+============================================
+Master CLI entry point integrating the complete Computer Vision pipeline:
+1. Video Capture & Streaming
+2. YOLOv8 Vehicle Detection
+3. ByteTrack Multi-Object Tracking
+4. Line-Based Vehicle Counting & Class Breakdown
+5. Direction Estimation & Wrong-Way Violation Detection
+6. Automated Evidence Snapshot Saving
+7. Real-Time Performance Profiling (FPS & Latency)
+8. Structured CSV/JSON Event Logging
+9. Annotated Output Video Generation
+"""
+
+import argparse
+from datetime import datetime
+from pathlib import Path
+import sys
+import time
+
+# Ensure project root is in sys.path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+import cv2
+from config.config import TrafficConfig
+from src.video_processor import VideoReader, VideoWriterHelper
+from src.tracker import VehicleTracker
+from src.counter import VehicleCounter
+from src.violation import WrongWayDetector
+from src.metrics import PerformanceMonitor
+from src.logger import EventLogger
+from src.visualizer import Visualizer
+
+
+def run_pipeline(
+    source: str = "data/input/traffic.mp4",
+    output: str = "outputs/videos/processed_video.mp4",
+    allowed_direction: str = "UP",
+    line_y: float = 0.35,
+    conf_thresh: float = 0.35,
+    frame_skip: int = 0,
+    preview: bool = False,
+) -> None:
+    """Runs the unified traffic analytics pipeline."""
+    print("=" * 75)
+    print("REAL-TIME VEHICLE DETECTION & TRAFFIC ANALYTICS SYSTEM")
+    print("=" * 75)
+
+    # 1. Initialize Configuration
+    cfg = TrafficConfig(
+        video_source=source,
+        confidence_threshold=conf_thresh,
+        allowed_direction=allowed_direction,
+        frame_skip=frame_skip,
+    )
+    cfg.ensure_directories()
+
+    # 2. Instantiate Pipeline Modules
+    print("[*] Initializing Computer Vision Modules...")
+    tracker = VehicleTracker(cfg)
+    counter = VehicleCounter(cfg, counting_direction="ANY")
+    violation_detector = WrongWayDetector(cfg, allowed_direction=allowed_direction)
+    monitor = PerformanceMonitor()
+    logger = EventLogger(cfg)
+    visualizer = Visualizer()
+
+    print(f"[x] Pipeline ready:")
+    print(f"    - Input Source: {source}")
+    print(f"    - Model: {cfg.model_name} (Device: {tracker.device})")
+    print(f"    - Allowed Direction: {allowed_direction}")
+    print(f"    - Confidence Threshold: {conf_thresh}")
+    print(f"    - Output Video: {output}")
+    print(f"    - Events Log: {logger.csv_path}")
+
+    start_wall_time = time.perf_counter()
+
+    with VideoReader(source) as reader:
+        meta = reader.metadata
+        print(f"\n[*] Processing Video Stream: {meta.width}x{meta.height} @ {meta.fps} FPS ({meta.total_frames} frames)")
+
+        # Configure counting line
+        line_pixel_y = int(meta.height * line_y)
+        counter.counting_line = ((0, line_pixel_y), (meta.width, line_pixel_y))
+
+        with VideoWriterHelper(
+            output_path=output,
+            fps=meta.fps if frame_skip == 0 else meta.fps / (frame_skip + 1),
+            frame_size=(meta.width, meta.height),
+        ) as writer:
+            frame_idx = 0
+            for idx, frame in reader.read_frames(frame_skip=frame_skip):
+                monitor.start_frame()
+
+                # Stage 1: Detection & Multi-Object Tracking
+                monitor.mark_preprocessed()
+                active_tracks = tracker.update(frame, idx)
+                monitor.mark_inference_complete()
+
+                # Stage 2: Vehicle Counting
+                new_crossings = counter.update(active_tracks, frame.shape[:2], idx)
+                for ev in new_crossings:
+                    logger.log_event(
+                        event_type="LINE_CROSSING",
+                        track_id=ev["track_id"],
+                        class_name=ev["class_name"],
+                        direction="CROSSING",
+                        confidence=ev["confidence"],
+                        frame_idx=idx,
+                        details=f"Crossed counting line at y={line_pixel_y}",
+                    )
+                    print(
+                        f"  [COUNT] Frame {idx:03d} | {ev['class_name'].capitalize()} "
+                        f"(ID: {ev['track_id']}) crossed line | Total: {counter.total_count}"
+                    )
+
+                # Stage 3: Direction & Wrong-Way Violation Detection
+                new_violations = violation_detector.update(frame, active_tracks, idx)
+                for v in new_violations:
+                    logger.log_event(
+                        event_type="WRONG_WAY_VIOLATION",
+                        track_id=v["track_id"],
+                        class_name=v["class_name"],
+                        direction=v["direction"],
+                        confidence=v["confidence"],
+                        frame_idx=idx,
+                        snapshot_path=v["snapshot_path"],
+                        details=f"Heading {v['direction']} (Allowed: {v['allowed_direction']})",
+                    )
+                    print(
+                        f"  [ALERT] Frame {idx:03d} | WRONG-WAY VIOLATION: {v['class_name'].capitalize()} "
+                        f"(ID: {v['track_id']}) moving {v['direction']}! Snapshot: {v['snapshot_path']}"
+                    )
+
+                monitor.mark_tracking_complete()
+
+                # Stage 4: Visual Overlay & Video Writing
+                annotated = visualizer.render(
+                    frame,
+                    active_tracks,
+                    counter=counter,
+                    violation_detector=violation_detector,
+                    monitor=monitor,
+                )
+                writer.write(annotated)
+
+                monitor.end_frame(idx)
+                frame_idx += 1
+
+                if preview:
+                    cv2.imshow("Real-Time Traffic Analytics", annotated)
+                    if cv2.waitKey(1) & 0xFF == ord("q"):
+                        break
+
+            if preview:
+                cv2.destroyAllWindows()
+
+    total_wall_elapsed = time.perf_counter() - start_wall_time
+    logger.save_json()
+    perf_summary = monitor.get_summary()
+
+    # Print Executive Summary Report
+    print("\n" + "=" * 75)
+    print("PIPELINE EXECUTION COMPLETE: SUMMARY REPORT")
+    print("=" * 75)
+    print(f"Total Video Frames Processed: {frame_idx}")
+    print(f"Total Wall-Clock Time:        {total_wall_elapsed:.2f} seconds")
+    print(f"Average Processing Speed:     {perf_summary['avg_fps']} FPS")
+    print(f"Average Inference Latency:    {perf_summary['avg_inference_ms']} ms")
+    print(f"Average Total Frame Latency:  {perf_summary['avg_total_ms']} ms")
+    print("-" * 75)
+    print(f"Total Vehicles Counted:       {counter.total_count}")
+    print(f"  - Cars:                     {counter.counts_by_class.get('car', 0)}")
+    print(f"  - Trucks:                   {counter.counts_by_class.get('truck', 0)}")
+    print(f"  - Buses:                    {counter.counts_by_class.get('bus', 0)}")
+    print(f"  - Motorcycles:              {counter.counts_by_class.get('motorcycle', 0)}")
+    print("-" * 75)
+    print(f"Total Confirmed Violations:   {len(violation_detector.violations)}")
+    for v in violation_detector.violations:
+        print(f"  - Frame {v['frame_idx']} | ID {v['track_id']} ({v['class_name']}) | Snapshot: {v['snapshot_path']}")
+    print("-" * 75)
+    print(f"Generated Outputs:")
+    print(f"  [x] Video:     {Path(output).resolve()}")
+    print(f"  [x] CSV Log:   {logger.csv_path.resolve()}")
+    print(f"  [x] JSON Log:  {logger.json_path.resolve()}")
+    print(f"  [x] Snapshots: {violation_detector.snapshots_dir.resolve()}")
+    print("=" * 75)
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Real-Time Traffic & Vehicle Analytics System (Production CLI)"
+    )
+    parser.add_argument(
+        "--source",
+        type=str,
+        default="data/input/traffic.mp4",
+        help="Path to input video or camera index (default: data/input/traffic.mp4)",
+    )
+    parser.add_argument(
+        "--output",
+        type=str,
+        default="outputs/videos/processed_video.mp4",
+        help="Path for processed output MP4 (default: outputs/videos/processed_video.mp4)",
+    )
+    parser.add_argument(
+        "--allowed",
+        type=str,
+        default="UP",
+        help="Configured legal traffic flow direction: 'UP' or 'DOWN' (default: UP)",
+    )
+    parser.add_argument(
+        "--line-y",
+        type=float,
+        default=0.35,
+        help="Normalized Y coordinate for virtual counting line [0.0 - 1.0] (default: 0.35)",
+    )
+    parser.add_argument(
+        "--conf",
+        type=float,
+        default=0.35,
+        help="YOLO detection confidence threshold (default: 0.35)",
+    )
+    parser.add_argument(
+        "--skip",
+        type=int,
+        default=0,
+        help="Frame skipping factor: 0=process every frame, 1=skip alternate frames (default: 0)",
+    )
+    parser.add_argument(
+        "--preview",
+        action="store_true",
+        help="Display OpenCV live window preview",
+    )
+    args = parser.parse_args()
+
+    run_pipeline(
+        source=args.source,
+        output=args.output,
+        allowed_direction=args.allowed,
+        line_y=args.line_y,
+        conf_thresh=args.conf,
+        frame_skip=args.skip,
+        preview=args.preview,
+    )
+
+
+if __name__ == "__main__":
+    main()
