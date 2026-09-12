@@ -20,7 +20,7 @@ class TrafficConfig:
     # 1. Video Input & Output Paths
     # -------------------------------------------------------------------------
     # Path to video file, image folder, RTSP stream URL, or integer (e.g. 0 for webcam)
-    video_source: str = "data/sample/traffic_sample.mp4"
+    video_source: str = "data/input/traffic.mp4"
 
     # Directory destinations for generated artifacts
     output_video_dir: str = "outputs/videos"
