@@ -1,0 +1,38 @@
+# Python Bytecode and Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Model Weights (downloaded on demand)
+models/*.pt
+models/*.onnx
+models/*.engine
+*.pt
+
+# Outputs & Temporary Data
+outputs/videos/*.mp4
+outputs/videos/*.avi
+outputs/snapshots/*.jpg
+outputs/snapshots/*.png
+outputs/logs/*.csv
+outputs/logs/*.json
+
+# Keep output folders in git via .gitkeep
+!outputs/videos/.gitkeep
+!outputs/snapshots/.gitkeep
+!outputs/logs/.gitkeep
+!data/input/.gitkeep
+!data/sample/.gitkeep
+!models/.gitkeep
+
+# IDE and OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
