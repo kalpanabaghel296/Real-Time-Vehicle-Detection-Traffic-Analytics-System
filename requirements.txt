@@ -4,6 +4,7 @@ opencv-python>=4.8.0.76
 ultralytics>=8.1.0
 torch>=2.2.0
 torchvision>=0.17.0
+lap>=0.5.12
 
 # Analytics & Utilities
 pandas>=2.0.0
