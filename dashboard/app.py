@@ -69,7 +69,7 @@ def main():
     line_y_ratio = st.sidebar.slider("Counting Line Height (0.0 = Top, 1.0 = Bottom)", 0.10, 0.90, 0.35, 0.05)
     frame_skip = st.sidebar.selectbox("Frame Skipping", [0, 1, 2], index=0, format_func=lambda x: f"Process all frames (0)" if x == 0 else f"Skip {x} frame(s)")
 
-    run_btn = st.sidebar.button("🚀 Run Analytics Pipeline", type="primary", use_container_width=True)
+    run_btn = st.sidebar.button("🚀 Run Analytics Pipeline", type="primary", width="stretch")
 
     # Output paths
     output_video_path = Path("outputs/videos/processed_video.mp4")
@@ -137,7 +137,7 @@ def main():
                     st.bar_chart(class_counts)
                     st.dataframe(
                         class_counts.reset_index().rename(columns={"index": "Class", "class_name": "Count"}),
-                        use_container_width=True,
+                        width="stretch",
                     )
                 else:
                     st.info("No line crossings recorded yet.")
@@ -154,7 +154,7 @@ def main():
                 col = cols[idx % len(cols)]
                 with col:
                     img = Image.open(snap_path)
-                    st.image(img, caption=f"Evidence: {snap_path.name}", use_column_width=True)
+                    st.image(img, caption=f"Evidence: {snap_path.name}", width="stretch")
                     st.download_button(
                         label="Download Evidence",
                         data=open(snap_path, "rb").read(),
@@ -168,7 +168,7 @@ def main():
     with tab3:
         st.subheader("Structured Traffic Audit Events")
         if not events_df.empty:
-            st.dataframe(events_df, use_container_width=True)
+            st.dataframe(events_df, width="stretch")
             csv_data = events_df.to_csv(index=False).encode("utf-8")
             st.download_button(
                 "📥 Export Audit Log (CSV)",
