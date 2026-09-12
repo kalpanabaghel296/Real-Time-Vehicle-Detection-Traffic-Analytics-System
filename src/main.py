@@ -109,12 +109,17 @@ def run_pipeline(
 
         # Configure counting line: Horizontal for vertical traffic, Vertical for horizontal traffic
         norm_orient = line_orientation.upper()
-        if norm_orient == "VERTICAL" or (norm_orient == "AUTO" and allowed_direction in ["LEFT", "RIGHT"]):
+        is_vertical_line = norm_orient == "VERTICAL" or (norm_orient == "AUTO" and allowed_direction in ["LEFT", "RIGHT"])
+        if is_vertical_line:
             line_pos_px = int(meta.width * line_y)
+            line_pixel_y = line_pos_px
             counter.counting_line = ((line_pos_px, 0), (line_pos_px, meta.height))
+            line_axis_desc = f"x={line_pos_px}"
         else:
             line_pos_px = int(meta.height * line_y)
+            line_pixel_y = line_pos_px
             counter.counting_line = ((0, line_pos_px), (meta.width, line_pos_px))
+            line_axis_desc = f"y={line_pos_px}"
 
         with VideoWriterHelper(
             output_path=output,
@@ -140,7 +145,7 @@ def run_pipeline(
                         direction="CROSSING",
                         confidence=ev["confidence"],
                         frame_idx=idx,
-                        details=f"Crossed counting line at y={line_pixel_y}",
+                        details=f"Crossed counting line at {line_axis_desc}",
                     )
                     print(
                         f"  [COUNT] Frame {idx:03d} | {ev['class_name'].capitalize()} "
