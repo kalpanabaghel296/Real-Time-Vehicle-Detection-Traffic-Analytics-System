@@ -175,11 +175,21 @@ def main():
 
     with tab2:
         st.subheader("Forensic Evidence Gallery (Wrong-Way Snapshots)")
-        snapshot_files = sorted(list(snapshots_dir.glob("*.jpg")), reverse=True)
+        valid_snapshots = []
+        if not events_df.empty:
+            viol_events = events_df[events_df["event_type"] == "WRONG_WAY_VIOLATION"]
+            for _, row in viol_events.iterrows():
+                snap_path_str = str(row.get("snapshot_path", ""))
+                if snap_path_str:
+                    p = Path(snap_path_str)
+                    if p.exists() and p.is_file() and p not in valid_snapshots:
+                        valid_snapshots.append(p)
+        elif snapshots_dir.exists():
+            valid_snapshots = sorted(list(snapshots_dir.glob("violation_*.jpg")), reverse=True)
 
-        if snapshot_files:
-            cols = st.columns(min(3, len(snapshot_files)))
-            for idx, snap_path in enumerate(snapshot_files):
+        if valid_snapshots:
+            cols = st.columns(min(3, len(valid_snapshots)))
+            for idx, snap_path in enumerate(valid_snapshots):
                 col = cols[idx % len(cols)]
                 with col:
                     img = Image.open(snap_path)
@@ -192,7 +202,7 @@ def main():
                         key=f"dl_{idx}",
                     )
         else:
-            st.info("No violation snapshots have been recorded yet.")
+            st.info("No violation snapshots have been recorded for this video run.")
 
     with tab3:
         st.subheader("Structured Traffic Audit Events")

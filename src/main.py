@@ -61,6 +61,16 @@ def run_pipeline(
     )
     cfg.ensure_directories()
 
+    # If reset_logs is requested, purge previous snapshots so new runs start clean
+    if reset_logs:
+        snapshots_dir = Path(cfg.snapshots_dir)
+        if snapshots_dir.exists():
+            for p in snapshots_dir.glob("*.jpg"):
+                try:
+                    p.unlink()
+                except Exception:
+                    pass
+
     # 2. Instantiate Pipeline Modules
     print("[*] Initializing Computer Vision Modules...")
     tracker = VehicleTracker(cfg)
