@@ -46,7 +46,7 @@ class WrongWayDetector:
             snapshots_dir: Output directory where alert snapshot images are written.
         """
         self.config = config or TrafficConfig()
-        self.allowed_direction = allowed_direction or self.config.allowed_direction
+        self.allowed_direction = (allowed_direction or self.config.allowed_direction).upper()
         self.confirm_frames = confirm_frames or self.config.violation_confirm_frames
 
         snap_path_str = snapshots_dir or self.config.snapshots_dir
@@ -56,17 +56,27 @@ class WrongWayDetector:
         # Audit registry of confirmed violations
         self.violations: List[Dict[str, Any]] = []
 
+        # Direction statistics for AUTO baseline flow inference
+        self.direction_counts: Dict[str, int] = {"UP": 0, "DOWN": 0, "LEFT": 0, "RIGHT": 0}
+        self.inferred_allowed_direction: Optional[str] = (
+            self.allowed_direction if self.allowed_direction != "AUTO" else None
+        )
+
     def _is_opposite_direction(self, current_dir: str) -> bool:
         """
-        Checks if estimated direction directly opposes configured legal traffic flow.
+        Checks if estimated direction directly opposes configured or auto-inferred legal traffic flow.
         """
+        effective_allowed = self.inferred_allowed_direction or self.allowed_direction
+        if not effective_allowed or effective_allowed == "AUTO":
+            return False  # Calibrating baseline flow
+
         opposites = {
             "DOWN": "UP",
             "UP": "DOWN",
             "LEFT": "RIGHT",
             "RIGHT": "LEFT",
         }
-        target_opposite = opposites.get(self.allowed_direction.upper())
+        target_opposite = opposites.get(effective_allowed.upper())
         return current_dir == target_opposite
 
     def update(
@@ -96,6 +106,16 @@ class WrongWayDetector:
                 min_distance=self.config.min_movement_distance,
             )
             veh.direction = current_dir
+
+            # In AUTO mode, accumulate observed valid directions and infer baseline flow
+            if current_dir in self.direction_counts:
+                self.direction_counts[current_dir] += 1
+                if self.allowed_direction == "AUTO":
+                    total_obs = sum(self.direction_counts.values())
+                    if total_obs >= 5:
+                        self.inferred_allowed_direction = max(
+                            self.direction_counts, key=self.direction_counts.get
+                        )
 
             # 2. Check for opposite direction violation
             if self._is_opposite_direction(current_dir):

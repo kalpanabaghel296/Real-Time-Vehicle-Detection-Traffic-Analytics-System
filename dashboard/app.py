@@ -76,7 +76,20 @@ def main():
         video_source = str(upload_path)
         st.sidebar.success(f"Loaded: {uploaded_file.name}")
 
-    allowed_direction = st.sidebar.radio("Legal Traffic Flow Direction", ["UP", "DOWN", "LEFT", "RIGHT"], index=0)
+    direction_options = {
+        "AUTO": "🔄 AUTO (Infer Majority Flow - Recommended)",
+        "DOWN": "⬇️ DOWN (Traffic Towards Camera / Downward)",
+        "UP": "⬆️ UP (Traffic Away From Camera / Upward)",
+        "LEFT": "⬅️ LEFT (Traffic Moving Towards Left)",
+        "RIGHT": "➡️ RIGHT (Traffic Moving Towards Right)",
+    }
+    allowed_direction = st.sidebar.radio(
+        "Legal Traffic Flow Direction",
+        options=list(direction_options.keys()),
+        index=0,
+        format_func=lambda k: direction_options[k],
+        help="In 2D video coordinates, vehicles driving towards the camera move DOWN the screen, and vehicles driving away move UP. Select AUTO to infer the baseline flow automatically from majority traffic.",
+    )
     conf_threshold = st.sidebar.slider("YOLO Confidence Threshold", 0.10, 0.90, 0.35, 0.05)
     line_y_ratio = st.sidebar.slider("Counting Line Height (0.0 = Top, 1.0 = Bottom)", 0.10, 0.90, 0.35, 0.05)
     frame_skip = st.sidebar.selectbox("Frame Skipping", [0, 1, 2], index=0, format_func=lambda x: f"Process all frames (0)" if x == 0 else f"Skip {x} frame(s)")
@@ -152,8 +165,16 @@ def main():
 
         with col_video:
             st.subheader("Annotated Video Playback")
-            if output_video_path.exists():
-                st.video(str(output_video_path))
+            if output_video_path.exists() and output_video_path.stat().st_size > 0:
+                with open(output_video_path, "rb") as vf:
+                    video_bytes = vf.read()
+                st.video(video_bytes, format="video/mp4")
+                st.download_button(
+                    label="⬇️ Download Processed Video (MP4)",
+                    data=video_bytes,
+                    file_name="processed_traffic_video.mp4",
+                    mime="video/mp4",
+                )
             else:
                 st.info("Click 'Run Analytics Pipeline' in the sidebar to generate the processed video.")
 

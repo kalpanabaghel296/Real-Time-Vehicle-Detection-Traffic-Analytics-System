@@ -221,6 +221,42 @@ class VideoWriterHelper:
         if self.writer is not None:
             self.writer.release()
             self.writer = None
+            self._ensure_browser_compatible()
+
+    def _ensure_browser_compatible(self) -> None:
+        """
+        Transcodes output video to web-compatible H.264 (avc1) using ffmpeg if available.
+        Modern web browsers (Chrome, Edge, Safari) cannot play raw OpenCV 'mp4v' streams.
+        """
+        import shutil
+        import subprocess
+
+        ffmpeg_bin = shutil.which("ffmpeg")
+        if not ffmpeg_bin or not self.output_path.exists():
+            return
+
+        temp_h264 = self.output_path.with_name(f"{self.output_path.stem}_web.mp4")
+        try:
+            cmd = [
+                ffmpeg_bin,
+                "-y",
+                "-i", str(self.output_path),
+                "-c:v", "libx264",
+                "-pix_fmt", "yuv420p",
+                "-preset", "ultrafast",
+                "-crf", "22",
+                str(temp_h264),
+            ]
+            res = subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            if res.returncode == 0 and temp_h264.exists() and temp_h264.stat().st_size > 0:
+                self.output_path.unlink()
+                temp_h264.rename(self.output_path)
+        except Exception:
+            if temp_h264.exists():
+                try:
+                    temp_h264.unlink()
+                except Exception:
+                    pass
 
     def __enter__(self):
         return self
