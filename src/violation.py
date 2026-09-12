@@ -1,0 +1,331 @@
+"""
+Wrong-Way Vehicle Violation Detection Module
+============================================
+Detects vehicles driving counter to legal roadway flow.
+Features:
+- Configurable allowed flow direction
+- Multi-frame temporal confirmation window (prevents single-frame detector false alerts)
+- Automated violation snapshot saving with red alert bounding boxes and banners
+- Structured event logging
+"""
+
+from datetime import datetime
+from pathlib import Path
+import sys
+from typing import List, Dict, Any, Optional
+import cv2
+import numpy as np
+
+# Ensure project root is on sys.path for direct script execution
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from config.config import TrafficConfig
+from src.tracker import TrackedVehicle
+from src.direction import get_vehicle_direction
+
+
+class WrongWayDetector:
+    """
+    Monitors tracked vehicle trajectories against legal traffic flow rules.
+    """
+
+    def __init__(
+        self,
+        config: Optional[TrafficConfig] = None,
+        allowed_direction: Optional[str] = None,
+        confirm_frames: Optional[int] = None,
+        snapshots_dir: Optional[str] = None,
+    ):
+        """
+        Args:
+            config: TrafficConfig instance.
+            allowed_direction: Legal traffic heading ("DOWN", "UP", "LEFT", "RIGHT").
+            confirm_frames: Consecutive frames of violation required before firing alert.
+            snapshots_dir: Output directory where alert snapshot images are written.
+        """
+        self.config = config or TrafficConfig()
+        self.allowed_direction = allowed_direction or self.config.allowed_direction
+        self.confirm_frames = confirm_frames or self.config.violation_confirm_frames
+
+        snap_path_str = snapshots_dir or self.config.snapshots_dir
+        self.snapshots_dir = Path(snap_path_str)
+        self.snapshots_dir.mkdir(parents=True, exist_ok=True)
+
+        # Audit registry of confirmed violations
+        self.violations: List[Dict[str, Any]] = []
+
+    def _is_opposite_direction(self, current_dir: str) -> bool:
+        """
+        Checks if estimated direction directly opposes configured legal traffic flow.
+        """
+        opposites = {
+            "DOWN": "UP",
+            "UP": "DOWN",
+            "LEFT": "RIGHT",
+            "RIGHT": "LEFT",
+        }
+        target_opposite = opposites.get(self.allowed_direction.upper())
+        return current_dir == target_opposite
+
+    def update(
+        self,
+        frame: np.ndarray,
+        tracks: List[TrackedVehicle],
+        frame_idx: int = 0,
+    ) -> List[Dict[str, Any]]:
+        """
+        Evaluates active tracks for wrong-way movement in the current frame.
+
+        Args:
+            frame: Current raw BGR image.
+            tracks: Active TrackedVehicle instances from the tracker.
+            frame_idx: Current frame index.
+
+        Returns:
+            List of newly confirmed violation event dictionaries.
+        """
+        new_violations: List[Dict[str, Any]] = []
+
+        for veh in tracks:
+            # 1. Update vehicle direction estimate from trajectory history
+            current_dir = get_vehicle_direction(
+                veh.trajectory,
+                window=self.config.trajectory_history_length,
+                min_distance=self.config.min_movement_distance,
+            )
+            veh.direction = current_dir
+
+            # 2. Check for opposite direction violation
+            if self._is_opposite_direction(current_dir):
+                veh.violation_frames += 1
+
+                # 3. Temporal Confirmation Gate:
+                # Require N consecutive violation frames before raising an alarm
+                if (
+                    veh.violation_frames >= self.confirm_frames
+                    and not veh.violation_alerted
+                ):
+                    veh.violation_alerted = True
+                    snapshot_path = self._save_violation_snapshot(
+                        frame, veh, frame_idx
+                    )
+
+                    event = {
+                        "timestamp": datetime.now().isoformat(timespec="seconds"),
+                        "frame_idx": frame_idx,
+                        "track_id": veh.track_id,
+                        "class_name": veh.class_name,
+                        "direction": veh.direction,
+                        "allowed_direction": self.allowed_direction,
+                        "confidence": round(float(veh.confidence), 4),
+                        "snapshot_path": str(snapshot_path),
+                    }
+                    self.violations.append(event)
+                    new_violations.append(event)
+            else:
+                # Vehicle is moving legally or stationary: decay/reset violation counter
+                if veh.violation_frames > 0:
+                    veh.violation_frames = max(0, veh.violation_frames - 1)
+
+        return new_violations
+
+    def _save_violation_snapshot(
+        self,
+        frame: np.ndarray,
+        veh: TrackedVehicle,
+        frame_idx: int,
+    ) -> Path:
+        """
+        Annotates the current frame with a prominent red violation badge and saves to disk.
+        """
+        snapshot = frame.copy()
+        x1, y1, x2, y2 = veh.bbox
+
+        # Draw intense red bounding box
+        alert_color = (0, 0, 255)  # BGR Red
+        cv2.rectangle(snapshot, (x1, y1), (x2, y2), alert_color, 3)
+
+        # Header warning banner
+        banner_text = (
+            f"VIOLATION: ID {veh.track_id} {veh.class_name.upper()} | "
+            f"Moving: {veh.direction} | Allowed: {self.allowed_direction}"
+        )
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.rectangle(snapshot, (0, 0), (snapshot.shape[1], 40), (0, 0, 180), -1)
+        cv2.putText(
+            snapshot,
+            banner_text,
+            (15, 26),
+            font,
+            0.6,
+            (255, 255, 255),
+            2,
+            cv2.LINE_AA,
+        )
+
+        filename = f"violation_id{veh.track_id}_f{frame_idx:04d}.jpg"
+        save_path = self.snapshots_dir / filename
+        cv2.imwrite(str(save_path), snapshot)
+        return save_path
+
+    def draw_alerts(
+        self,
+        frame: np.ndarray,
+        tracks: List[TrackedVehicle],
+    ) -> np.ndarray:
+        """
+        Renders warning banners and red alert boxes for vehicles currently in confirmed violation.
+
+        Args:
+            frame: Image array to annotate.
+            tracks: Active TrackedVehicle instances.
+
+        Returns:
+            Annotated BGR frame.
+        """
+        annotated = frame.copy()
+        alert_color = (0, 0, 255)  # Red
+        has_active_violation = False
+
+        for veh in tracks:
+            # Draw persistent red highlight if vehicle is confirmed in wrong-way motion
+            if veh.violation_frames >= self.confirm_frames:
+                has_active_violation = True
+                x1, y1, x2, y2 = veh.bbox
+
+                # Thick red bounding box
+                cv2.rectangle(annotated, (x1, y1), (x2, y2), alert_color, 3)
+
+                # Floating "! WRONG WAY !" warning badge
+                label = f"! WRONG WAY ! (ID: {veh.track_id})"
+                cv2.rectangle(annotated, (x1, max(0, y1 - 25)), (x1 + 190, y1), alert_color, -1)
+                cv2.putText(
+                    annotated,
+                    label,
+                    (x1 + 5, max(15, y1 - 7)),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.45,
+                    (255, 255, 255),
+                    1,
+                    cv2.LINE_AA,
+                )
+
+        # If any violation is currently active, render top flashing alert bar
+        if has_active_violation:
+            h, w = annotated.shape[:2]
+            overlay = annotated.copy()
+            cv2.rectangle(overlay, (0, 0), (w, 35), (0, 0, 200), -1)
+            cv2.addWeighted(overlay, 0.7, annotated, 0.3, 0, annotated)
+            cv2.putText(
+                annotated,
+                "[!] WRONG-WAY TRAFFIC ALERT ACTIVE [!]",
+                (w // 2 - 180, 24),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.65,
+                (255, 255, 255),
+                2,
+                cv2.LINE_AA,
+            )
+
+        return annotated
+
+
+def main():
+    """CLI runner to test direction detection and wrong-way violation alerting on a video."""
+    import argparse
+    from src.video_processor import VideoReader, VideoWriterHelper
+    from src.tracker import VehicleTracker
+
+    parser = argparse.ArgumentParser(description="Test wrong-way vehicle violation detection.")
+    parser.add_argument(
+        "--source",
+        type=str,
+        default="data/input/traffic.mp4",
+        help="Path to input video (default: data/input/traffic.mp4)",
+    )
+    parser.add_argument(
+        "--output",
+        type=str,
+        default="outputs/videos/violation_test.mp4",
+        help="Destination path for violation output video",
+    )
+    parser.add_argument(
+        "--allowed",
+        type=str,
+        default="DOWN",
+        help="Allowed legal traffic flow: 'DOWN' or 'UP' (default: DOWN)",
+    )
+    parser.add_argument(
+        "--confirm-frames",
+        type=int,
+        default=4,
+        help="Consecutive frames required to confirm wrong-way violation (default: 4)",
+    )
+    parser.add_argument(
+        "--preview",
+        action="store_true",
+        help="Display live preview window",
+    )
+    args = parser.parse_args()
+
+    cfg = TrafficConfig(
+        video_source=args.source,
+        allowed_direction=args.allowed,
+        violation_confirm_frames=args.confirm_frames,
+    )
+    tracker = VehicleTracker(cfg)
+    detector = WrongWayDetector(cfg)
+
+    print(f"[x] Initialized WrongWayDetector:")
+    print(f"    - Allowed Direction: {detector.allowed_direction}")
+    print(f"    - Confirmation Window: {detector.confirm_frames} frames")
+    print(f"    - Snapshots Target: {detector.snapshots_dir.resolve()}")
+
+    with VideoReader(args.source) as reader:
+        meta = reader.metadata
+        print(f"[*] Input Video: {meta.width}x{meta.height} @ {meta.fps} FPS ({meta.total_frames} frames)")
+
+        with VideoWriterHelper(
+            output_path=args.output,
+            fps=meta.fps,
+            frame_size=(meta.width, meta.height),
+        ) as writer:
+            for idx, frame in reader.read_frames():
+                # 1. Update Tracker
+                active_tracks = tracker.update(frame, idx)
+
+                # 2. Update Wrong-Way Detector
+                new_violations = detector.update(frame, active_tracks, idx)
+                for v in new_violations:
+                    print(
+                        f"  [ALERT] Frame {idx:03d} | Confirmed WRONG-WAY: {v['class_name']} "
+                        f"(ID: {v['track_id']}) moving {v['direction']}! Snapshot saved: {v['snapshot_path']}"
+                    )
+
+                # 3. Draw Tracks and Alert Badges
+                annotated = tracker.draw_tracks(frame, active_tracks, draw_trajectory=True)
+                annotated = detector.draw_alerts(annotated, active_tracks)
+
+                writer.write(annotated)
+
+                if args.preview:
+                    cv2.imshow("Wrong-Way Violation Detection Test", annotated)
+                    if cv2.waitKey(1) & 0xFF == ord("q"):
+                        break
+
+            if args.preview:
+                cv2.destroyAllWindows()
+
+            print("=" * 60)
+            print("[x] WRONG-WAY VIOLATION SUMMARY:")
+            print(f"    - Total Confirmed Violations: {len(detector.violations)}")
+            for v in detector.violations:
+                print(f"    - Frame {v['frame_idx']} | ID: {v['track_id']} ({v['class_name']}) | Snapshot: {v['snapshot_path']}")
+            print(f"    - Output video saved to: {args.output}")
+            print("=" * 60)
+
+
+if __name__ == "__main__":
+    main()
