@@ -1,0 +1,742 @@
+{
+  "annotation_audit": {
+    "files_checked": 5,
+    "total_annotations": 7417,
+    "degenerate_boxes": 0,
+    "out_of_bounds_boxes": 0,
+    "inverted_boxes": 0,
+    "class_histogram": {
+      "car": 6155,
+      "truck": 773,
+      "bus": 64,
+      "motorcycle": 425
+    }
+  },
+  "hard_case_mining": {
+    "mined_negatives": 30,
+    "mined_low_conf": 30,
+    "mined_misclassifications": 30,
+    "samples": [
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_001_day_highway_f0_conf71.jpg",
+        "clip": "day_highway",
+        "frame": 0,
+        "confidence": 0.7195699214935303,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_002_day_highway_f0_conf67.jpg",
+        "clip": "day_highway",
+        "frame": 0,
+        "confidence": 0.6738618612289429,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_003_day_highway_f0_conf60.jpg",
+        "clip": "day_highway",
+        "frame": 0,
+        "confidence": 0.6048375368118286,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_004_day_highway_f0_conf59.jpg",
+        "clip": "day_highway",
+        "frame": 0,
+        "confidence": 0.5939083099365234,
+        "predicted_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_001_day_highway_f0.jpg",
+        "clip": "day_highway",
+        "frame": 0,
+        "gt_class": "truck"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_002_day_highway_f0.jpg",
+        "clip": "day_highway",
+        "frame": 0,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_003_day_highway_f0.jpg",
+        "clip": "day_highway",
+        "frame": 0,
+        "gt_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_005_day_highway_f1_conf67.jpg",
+        "clip": "day_highway",
+        "frame": 1,
+        "confidence": 0.6743497848510742,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_006_day_highway_f1_conf66.jpg",
+        "clip": "day_highway",
+        "frame": 1,
+        "confidence": 0.6698939800262451,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_007_day_highway_f1_conf65.jpg",
+        "clip": "day_highway",
+        "frame": 1,
+        "confidence": 0.6597614884376526,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_008_day_highway_f1_conf63.jpg",
+        "clip": "day_highway",
+        "frame": 1,
+        "confidence": 0.632480800151825,
+        "predicted_class": "car"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_001_day_highway_f1.jpg",
+        "clip": "day_highway",
+        "frame": 1,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.39093148708343506
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_004_day_highway_f1.jpg",
+        "clip": "day_highway",
+        "frame": 1,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_005_day_highway_f1.jpg",
+        "clip": "day_highway",
+        "frame": 1,
+        "gt_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_009_day_highway_f2_conf68.jpg",
+        "clip": "day_highway",
+        "frame": 2,
+        "confidence": 0.6851320266723633,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_010_day_highway_f2_conf65.jpg",
+        "clip": "day_highway",
+        "frame": 2,
+        "confidence": 0.6513208746910095,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_011_day_highway_f2_conf63.jpg",
+        "clip": "day_highway",
+        "frame": 2,
+        "confidence": 0.63047856092453,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_012_day_highway_f2_conf62.jpg",
+        "clip": "day_highway",
+        "frame": 2,
+        "confidence": 0.629660964012146,
+        "predicted_class": "car"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_002_day_highway_f2.jpg",
+        "clip": "day_highway",
+        "frame": 2,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.44460529088974
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_006_day_highway_f2.jpg",
+        "clip": "day_highway",
+        "frame": 2,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_007_day_highway_f2.jpg",
+        "clip": "day_highway",
+        "frame": 2,
+        "gt_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_013_day_highway_f3_conf69.jpg",
+        "clip": "day_highway",
+        "frame": 3,
+        "confidence": 0.6949259042739868,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_014_day_highway_f3_conf68.jpg",
+        "clip": "day_highway",
+        "frame": 3,
+        "confidence": 0.6898053884506226,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_015_day_highway_f3_conf65.jpg",
+        "clip": "day_highway",
+        "frame": 3,
+        "confidence": 0.6579914093017578,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_016_day_highway_f3_conf53.jpg",
+        "clip": "day_highway",
+        "frame": 3,
+        "confidence": 0.5364094376564026,
+        "predicted_class": "car"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_003_day_highway_f3.jpg",
+        "clip": "day_highway",
+        "frame": 3,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.4415011405944824
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_008_day_highway_f3.jpg",
+        "clip": "day_highway",
+        "frame": 3,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_009_day_highway_f3.jpg",
+        "clip": "day_highway",
+        "frame": 3,
+        "gt_class": "truck"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_017_day_highway_f4_conf70.jpg",
+        "clip": "day_highway",
+        "frame": 4,
+        "confidence": 0.7007436752319336,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_018_day_highway_f4_conf69.jpg",
+        "clip": "day_highway",
+        "frame": 4,
+        "confidence": 0.6909785270690918,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_019_day_highway_f4_conf55.jpg",
+        "clip": "day_highway",
+        "frame": 4,
+        "confidence": 0.5527816414833069,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_020_day_highway_f4_conf52.jpg",
+        "clip": "day_highway",
+        "frame": 4,
+        "confidence": 0.5260772109031677,
+        "predicted_class": "car"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_004_day_highway_f4.jpg",
+        "clip": "day_highway",
+        "frame": 4,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.472409188747406
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_010_day_highway_f4.jpg",
+        "clip": "day_highway",
+        "frame": 4,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_011_day_highway_f4.jpg",
+        "clip": "day_highway",
+        "frame": 4,
+        "gt_class": "truck"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_021_day_highway_f5_conf75.jpg",
+        "clip": "day_highway",
+        "frame": 5,
+        "confidence": 0.7551312446594238,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_022_day_highway_f5_conf70.jpg",
+        "clip": "day_highway",
+        "frame": 5,
+        "confidence": 0.7005792260169983,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_023_day_highway_f5_conf66.jpg",
+        "clip": "day_highway",
+        "frame": 5,
+        "confidence": 0.6602714657783508,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_024_day_highway_f5_conf57.jpg",
+        "clip": "day_highway",
+        "frame": 5,
+        "confidence": 0.5736676454544067,
+        "predicted_class": "car"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_005_day_highway_f5.jpg",
+        "clip": "day_highway",
+        "frame": 5,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.4972248077392578
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_012_day_highway_f5.jpg",
+        "clip": "day_highway",
+        "frame": 5,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_013_day_highway_f5.jpg",
+        "clip": "day_highway",
+        "frame": 5,
+        "gt_class": "truck"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_025_day_highway_f6_conf77.jpg",
+        "clip": "day_highway",
+        "frame": 6,
+        "confidence": 0.7779537439346313,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_026_day_highway_f6_conf74.jpg",
+        "clip": "day_highway",
+        "frame": 6,
+        "confidence": 0.7460623979568481,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_027_day_highway_f6_conf67.jpg",
+        "clip": "day_highway",
+        "frame": 6,
+        "confidence": 0.6714795827865601,
+        "predicted_class": "car"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_006_day_highway_f6.jpg",
+        "clip": "day_highway",
+        "frame": 6,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.5371412038803101
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_014_day_highway_f6.jpg",
+        "clip": "day_highway",
+        "frame": 6,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_015_day_highway_f6.jpg",
+        "clip": "day_highway",
+        "frame": 6,
+        "gt_class": "truck"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_028_day_highway_f7_conf80.jpg",
+        "clip": "day_highway",
+        "frame": 7,
+        "confidence": 0.8006506562232971,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_029_day_highway_f7_conf74.jpg",
+        "clip": "day_highway",
+        "frame": 7,
+        "confidence": 0.7466621398925781,
+        "predicted_class": "car"
+      },
+      {
+        "type": "NEGATIVE_BACKGROUND",
+        "filename": "neg_030_day_highway_f7_conf67.jpg",
+        "clip": "day_highway",
+        "frame": 7,
+        "confidence": 0.6718142628669739,
+        "predicted_class": "car"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_007_day_highway_f7.jpg",
+        "clip": "day_highway",
+        "frame": 7,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.5425018668174744
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_016_day_highway_f7.jpg",
+        "clip": "day_highway",
+        "frame": 7,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_017_day_highway_f7.jpg",
+        "clip": "day_highway",
+        "frame": 7,
+        "gt_class": "truck"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_008_day_highway_f8.jpg",
+        "clip": "day_highway",
+        "frame": 8,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.46991196274757385
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_018_day_highway_f8.jpg",
+        "clip": "day_highway",
+        "frame": 8,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_019_day_highway_f8.jpg",
+        "clip": "day_highway",
+        "frame": 8,
+        "gt_class": "truck"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_009_day_highway_f9.jpg",
+        "clip": "day_highway",
+        "frame": 9,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.3799324631690979
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_020_day_highway_f9.jpg",
+        "clip": "day_highway",
+        "frame": 9,
+        "gt_class": "truck"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_010_day_highway_f10.jpg",
+        "clip": "day_highway",
+        "frame": 10,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.4597335755825043
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_021_day_highway_f10.jpg",
+        "clip": "day_highway",
+        "frame": 10,
+        "gt_class": "truck"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_011_day_highway_f11.jpg",
+        "clip": "day_highway",
+        "frame": 11,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.4516351819038391
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_022_day_highway_f11.jpg",
+        "clip": "day_highway",
+        "frame": 11,
+        "gt_class": "truck"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_012_day_highway_f12.jpg",
+        "clip": "day_highway",
+        "frame": 12,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.6048758625984192
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_023_day_highway_f12.jpg",
+        "clip": "day_highway",
+        "frame": 12,
+        "gt_class": "truck"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_024_day_highway_f13.jpg",
+        "clip": "day_highway",
+        "frame": 13,
+        "gt_class": "truck"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_025_day_highway_f14.jpg",
+        "clip": "day_highway",
+        "frame": 14,
+        "gt_class": "truck"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_026_day_highway_f16.jpg",
+        "clip": "day_highway",
+        "frame": 16,
+        "gt_class": "truck"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_027_day_highway_f16.jpg",
+        "clip": "day_highway",
+        "frame": 16,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_028_day_highway_f17.jpg",
+        "clip": "day_highway",
+        "frame": 17,
+        "gt_class": "car"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_029_day_highway_f17.jpg",
+        "clip": "day_highway",
+        "frame": 17,
+        "gt_class": "truck"
+      },
+      {
+        "type": "HARD_POSITIVE_FN",
+        "filename": "low_conf_030_day_highway_f17.jpg",
+        "clip": "day_highway",
+        "frame": 17,
+        "gt_class": "car"
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_013_day_highway_f20.jpg",
+        "clip": "day_highway",
+        "frame": 20,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.8081793189048767
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_014_day_highway_f23.jpg",
+        "clip": "day_highway",
+        "frame": 23,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.4458438456058502
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_015_day_highway_f26.jpg",
+        "clip": "day_highway",
+        "frame": 26,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.3754407465457916
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_016_day_highway_f32.jpg",
+        "clip": "day_highway",
+        "frame": 32,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.7939373850822449
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_017_day_highway_f53.jpg",
+        "clip": "day_highway",
+        "frame": 53,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.43076109886169434
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_018_day_highway_f54.jpg",
+        "clip": "day_highway",
+        "frame": 54,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.4682617783546448
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_019_day_highway_f55.jpg",
+        "clip": "day_highway",
+        "frame": 55,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.4263654351234436
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_020_day_highway_f56.jpg",
+        "clip": "day_highway",
+        "frame": 56,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.5174237489700317
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_021_day_highway_f57.jpg",
+        "clip": "day_highway",
+        "frame": 57,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.42378029227256775
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_022_day_highway_f58.jpg",
+        "clip": "day_highway",
+        "frame": 58,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.6168515682220459
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_023_day_highway_f58.jpg",
+        "clip": "day_highway",
+        "frame": 58,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.36096253991127014
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_024_day_highway_f59.jpg",
+        "clip": "day_highway",
+        "frame": 59,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.5744411945343018
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_025_day_highway_f60.jpg",
+        "clip": "day_highway",
+        "frame": 60,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.5328764319419861
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_026_day_highway_f60.jpg",
+        "clip": "day_highway",
+        "frame": 60,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.3651280999183655
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_027_day_highway_f62.jpg",
+        "clip": "day_highway",
+        "frame": 62,
+        "gt_class": "truck",
+        "pred_class": "car",
+        "confidence": 0.46442165970802307
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_028_day_highway_f62.jpg",
+        "clip": "day_highway",
+        "frame": 62,
+        "gt_class": "car",
+        "pred_class": "truck",
+        "confidence": 0.4389742314815521
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_029_day_highway_f63.jpg",
+        "clip": "day_highway",
+        "frame": 63,
+        "gt_class": "car",
+        "pred_class": "truck",
+        "confidence": 0.5040627717971802
+      },
+      {
+        "type": "BOUNDARY_MISCLASS",
+        "filename": "misclass_030_day_highway_f65.jpg",
+        "clip": "day_highway",
+        "frame": 65,
+        "gt_class": "car",
+        "pred_class": "truck",
+        "confidence": 0.520765483379364
+      }
+    ]
+  }
+}

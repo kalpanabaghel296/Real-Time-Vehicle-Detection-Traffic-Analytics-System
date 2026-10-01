@@ -40,6 +40,7 @@ data/evaluation/thumbs/
 data/evaluation/baseline_outputs/snapshots/
 data/evaluation/baseline_outputs/errors/*/*/*.jpg
 data/evaluation/baseline_outputs/diagnostics/error_gallery/
+data/evaluation/hard_cases/*/*.jpg
 outputs/evaluation/
 
 # IDE and OS Files
