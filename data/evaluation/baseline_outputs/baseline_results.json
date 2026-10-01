@@ -1,0 +1,483 @@
+{
+  "benchmark_timestamp": "2026-10-01 16:13:05",
+  "model": "yolov8n.pt",
+  "conf_threshold": 0.35,
+  "iou_threshold": 0.5,
+  "macro_metrics": {
+    "mAP50": 0.6439,
+    "mAP50_95": 0.5731,
+    "precision": 0.7888,
+    "recall": 0.669,
+    "mota": 0.4311,
+    "hota": 0.6397,
+    "idf1": 0.663,
+    "total_id_switches": 29,
+    "total_gt_crossings": 30,
+    "total_pred_crossings": 29,
+    "avg_counting_accuracy_pct": 74.64,
+    "avg_far_per_min": 60.0,
+    "avg_fps": 5.28
+  },
+  "per_video_results": [
+    {
+      "video": "day_highway.mp4",
+      "model": "yolov8n.pt",
+      "conf_threshold": 0.35,
+      "iou_threshold": 0.5,
+      "frames_processed": 120,
+      "latency": {
+        "avg_fps": 4.2,
+        "inference_ms": 134.05,
+        "tracking_ms": 98.98
+      },
+      "detection": {
+        "mAP50": 0.8191,
+        "mAP50_95": 0.7567,
+        "precision": 0.5824,
+        "recall": 0.8836,
+        "f1": 0.7021,
+        "per_class_ap50": {
+          "car": 0.8654,
+          "motorcycle": 1.0,
+          "bus": 1.0,
+          "truck": 0.4108
+        },
+        "size_breakdown": {
+          "small": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "gt": 0
+          },
+          "medium": {
+            "precision": 0.3799,
+            "recall": 0.861,
+            "f1": 0.5272,
+            "tp": 731,
+            "fp": 1193,
+            "fn": 143,
+            "gt": 849
+          },
+          "large": {
+            "precision": 0.8992,
+            "recall": 0.8992,
+            "f1": 0.8992,
+            "tp": 1106,
+            "fp": 124,
+            "fn": 99,
+            "gt": 1230
+          }
+        }
+      },
+      "tracking": {
+        "mota": 0.2881,
+        "hota": 0.669,
+        "idf1": 0.7115,
+        "id_switches": 7,
+        "fragmentations": 43,
+        "mostly_tracked": 28,
+        "mostly_lost": 1,
+        "total_gt_tracks": 36,
+        "total_pred_tracks": 59
+      },
+      "counting": {
+        "gt_total": 8,
+        "pred_total": 9,
+        "mae": 1.0,
+        "relative_error_pct": 12.5,
+        "precision": 0.8889,
+        "recall": 1.0,
+        "f1": 0.9412,
+        "duplicate_counts": 0,
+        "missed_counts": 0
+      },
+      "violation": {
+        "precision": 0.0,
+        "recall": 1.0,
+        "f1": 0.0,
+        "far_per_min": 60.0,
+        "total_predicted_alerts": 4,
+        "true_positive_alerts": 0,
+        "false_alarms": 4
+      },
+      "error_counts": {
+        "FALSE_POSITIVE": 1104,
+        "FALSE_NEGATIVE": 221,
+        "MISCLASSIFICATION": 42,
+        "LOCALIZATION": 154,
+        "DUPLICATE": 38
+      }
+    },
+    {
+      "video": "dense_traffic.mp4",
+      "model": "yolov8n.pt",
+      "conf_threshold": 0.35,
+      "iou_threshold": 0.5,
+      "frames_processed": 120,
+      "latency": {
+        "avg_fps": 4.95,
+        "inference_ms": 97.53,
+        "tracking_ms": 100.19
+      },
+      "detection": {
+        "mAP50": 0.4983,
+        "mAP50_95": 0.4155,
+        "precision": 0.856,
+        "recall": 0.7438,
+        "f1": 0.796,
+        "per_class_ap50": {
+          "car": 0.769,
+          "motorcycle": 1.0,
+          "bus": 0.1462,
+          "truck": 0.0781
+        },
+        "size_breakdown": {
+          "small": {
+            "precision": 0.7622,
+            "recall": 0.4252,
+            "f1": 0.5459,
+            "tp": 125,
+            "fp": 39,
+            "fn": 123,
+            "gt": 294
+          },
+          "medium": {
+            "precision": 0.8635,
+            "recall": 0.8827,
+            "f1": 0.873,
+            "tp": 677,
+            "fp": 107,
+            "fn": 130,
+            "gt": 767
+          },
+          "large": {
+            "precision": 1.0,
+            "recall": 0.6226,
+            "f1": 0.7674,
+            "tp": 66,
+            "fp": 0,
+            "fn": 46,
+            "gt": 106
+          }
+        }
+      },
+      "tracking": {
+        "mota": 0.7695,
+        "hota": 0.8319,
+        "idf1": 0.8649,
+        "id_switches": 3,
+        "fragmentations": 21,
+        "mostly_tracked": 11,
+        "mostly_lost": 3,
+        "total_gt_tracks": 18,
+        "total_pred_tracks": 22
+      },
+      "counting": {
+        "gt_total": 5,
+        "pred_total": 5,
+        "mae": 0.0,
+        "relative_error_pct": 0.0,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8,
+        "duplicate_counts": 1,
+        "missed_counts": 1
+      },
+      "violation": {
+        "precision": 0.0,
+        "recall": 1.0,
+        "f1": 0.0,
+        "far_per_min": 60.0,
+        "total_predicted_alerts": 4,
+        "true_positive_alerts": 0,
+        "false_alarms": 4
+      },
+      "error_counts": {
+        "FALSE_POSITIVE": 35,
+        "FALSE_NEGATIVE": 262,
+        "MISCLASSIFICATION": 46,
+        "LOCALIZATION": 65,
+        "DUPLICATE": 9
+      }
+    },
+    {
+      "video": "night_traffic.mp4",
+      "model": "yolov8n.pt",
+      "conf_threshold": 0.35,
+      "iou_threshold": 0.5,
+      "frames_processed": 120,
+      "latency": {
+        "avg_fps": 5.51,
+        "inference_ms": 88.86,
+        "tracking_ms": 88.45
+      },
+      "detection": {
+        "mAP50": 0.7988,
+        "mAP50_95": 0.7806,
+        "precision": 1.0,
+        "recall": 0.1951,
+        "f1": 0.3265,
+        "per_class_ap50": {
+          "car": 0.1951,
+          "motorcycle": 1.0,
+          "bus": 1.0,
+          "truck": 1.0
+        },
+        "size_breakdown": {
+          "small": {
+            "precision": 1.0,
+            "recall": 0.0029,
+            "f1": 0.0058,
+            "tp": 1,
+            "fp": 0,
+            "fn": 343,
+            "gt": 344
+          },
+          "medium": {
+            "precision": 1.0,
+            "recall": 0.3846,
+            "f1": 0.5556,
+            "tp": 135,
+            "fp": 0,
+            "fn": 216,
+            "gt": 351
+          },
+          "large": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "gt": 2
+          }
+        }
+      },
+      "tracking": {
+        "mota": 0.1808,
+        "hota": 0.296,
+        "idf1": 0.276,
+        "id_switches": 3,
+        "fragmentations": 12,
+        "mostly_tracked": 0,
+        "mostly_lost": 11,
+        "total_gt_tracks": 13,
+        "total_pred_tracks": 6
+      },
+      "counting": {
+        "gt_total": 1,
+        "pred_total": 0,
+        "mae": 1.0,
+        "relative_error_pct": 100.0,
+        "precision": 1.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "duplicate_counts": 0,
+        "missed_counts": 1
+      },
+      "violation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "far_per_min": 0.0,
+        "total_predicted_alerts": 0,
+        "true_positive_alerts": 0,
+        "false_alarms": 0
+      },
+      "error_counts": {
+        "FALSE_POSITIVE": 0,
+        "FALSE_NEGATIVE": 561,
+        "MISCLASSIFICATION": 0,
+        "LOCALIZATION": 0,
+        "DUPLICATE": 0
+      }
+    },
+    {
+      "video": "intersection.mp4",
+      "model": "yolov8n.pt",
+      "conf_threshold": 0.35,
+      "iou_threshold": 0.5,
+      "frames_processed": 120,
+      "latency": {
+        "avg_fps": 5.95,
+        "inference_ms": 80.51,
+        "tracking_ms": 83.06
+      },
+      "detection": {
+        "mAP50": 0.4055,
+        "mAP50_95": 0.3063,
+        "precision": 0.9279,
+        "recall": 0.6836,
+        "f1": 0.7872,
+        "per_class_ap50": {
+          "car": 0.6787,
+          "motorcycle": 0.686,
+          "bus": 0.0,
+          "truck": 0.2573
+        },
+        "size_breakdown": {
+          "small": {
+            "precision": 0.6667,
+            "recall": 0.0992,
+            "f1": 0.1727,
+            "tp": 12,
+            "fp": 6,
+            "fn": 105,
+            "gt": 121
+          },
+          "medium": {
+            "precision": 0.9405,
+            "recall": 0.6975,
+            "f1": 0.801,
+            "tp": 648,
+            "fp": 41,
+            "fn": 287,
+            "gt": 929
+          },
+          "large": {
+            "precision": 0.911,
+            "recall": 0.9348,
+            "f1": 0.9227,
+            "tp": 215,
+            "fp": 21,
+            "fn": 13,
+            "gt": 230
+          }
+        }
+      },
+      "tracking": {
+        "mota": 0.6484,
+        "hota": 0.7637,
+        "idf1": 0.786,
+        "id_switches": 4,
+        "fragmentations": 29,
+        "mostly_tracked": 12,
+        "mostly_lost": 8,
+        "total_gt_tracks": 27,
+        "total_pred_tracks": 28
+      },
+      "counting": {
+        "gt_total": 7,
+        "pred_total": 6,
+        "mae": 1.0,
+        "relative_error_pct": 14.29,
+        "precision": 1.0,
+        "recall": 0.8571,
+        "f1": 0.9231,
+        "duplicate_counts": 0,
+        "missed_counts": 1
+      },
+      "violation": {
+        "precision": 0.0,
+        "recall": 1.0,
+        "f1": 0.0,
+        "far_per_min": 135.0,
+        "total_predicted_alerts": 9,
+        "true_positive_alerts": 0,
+        "false_alarms": 9
+      },
+      "error_counts": {
+        "FALSE_POSITIVE": 18,
+        "FALSE_NEGATIVE": 389,
+        "MISCLASSIFICATION": 23,
+        "LOCALIZATION": 22,
+        "DUPLICATE": 12
+      }
+    },
+    {
+      "video": "wrong_way.mp4",
+      "model": "yolov8n.pt",
+      "conf_threshold": 0.35,
+      "iou_threshold": 0.5,
+      "frames_processed": 120,
+      "latency": {
+        "avg_fps": 5.81,
+        "inference_ms": 81.35,
+        "tracking_ms": 86.29
+      },
+      "detection": {
+        "mAP50": 0.6976,
+        "mAP50_95": 0.6064,
+        "precision": 0.5779,
+        "recall": 0.8387,
+        "f1": 0.6843,
+        "per_class_ap50": {
+          "car": 0.8093,
+          "motorcycle": 1.0,
+          "bus": 0.5762,
+          "truck": 0.4049
+        },
+        "size_breakdown": {
+          "small": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "gt": 0
+          },
+          "medium": {
+            "precision": 0.382,
+            "recall": 0.868,
+            "f1": 0.5305,
+            "tp": 743,
+            "fp": 1202,
+            "fn": 132,
+            "gt": 856
+          },
+          "large": {
+            "precision": 0.8854,
+            "recall": 0.8199,
+            "f1": 0.8514,
+            "tp": 1097,
+            "fp": 142,
+            "fn": 222,
+            "gt": 1338
+          }
+        }
+      },
+      "tracking": {
+        "mota": 0.2685,
+        "hota": 0.6377,
+        "idf1": 0.6766,
+        "id_switches": 12,
+        "fragmentations": 51,
+        "mostly_tracked": 29,
+        "mostly_lost": 2,
+        "total_gt_tracks": 38,
+        "total_pred_tracks": 66
+      },
+      "counting": {
+        "gt_total": 9,
+        "pred_total": 9,
+        "mae": 0.0,
+        "relative_error_pct": 0.0,
+        "precision": 0.7778,
+        "recall": 0.7778,
+        "f1": 0.7778,
+        "duplicate_counts": 0,
+        "missed_counts": 2
+      },
+      "violation": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "far_per_min": 45.0,
+        "total_predicted_alerts": 4,
+        "true_positive_alerts": 1,
+        "false_alarms": 3
+      },
+      "error_counts": {
+        "FALSE_POSITIVE": 1122,
+        "FALSE_NEGATIVE": 322,
+        "MISCLASSIFICATION": 53,
+        "LOCALIZATION": 143,
+        "DUPLICATE": 47
+      }
+    }
+  ]
+}

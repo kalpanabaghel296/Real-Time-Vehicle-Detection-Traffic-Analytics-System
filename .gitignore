@@ -34,6 +34,13 @@ data/input/*.mp4
 !data/sample/.gitkeep
 !models/.gitkeep
 
+# Evaluation raw downloads and temporary outputs
+data/evaluation/raw/
+data/evaluation/thumbs/
+data/evaluation/baseline_outputs/snapshots/
+data/evaluation/baseline_outputs/errors/*/*/*.jpg
+outputs/evaluation/
+
 # IDE and OS Files
 .vscode/
 .idea/

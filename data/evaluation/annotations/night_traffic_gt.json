@@ -1,0 +1,8296 @@
+{
+  "video_name": "night_traffic.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 30.0,
+  "total_frames": 120,
+  "counting_line": {
+    "start": [
+      0,
+      450
+    ],
+    "end": [
+      1280,
+      450
+    ]
+  },
+  "legal_direction": "DOWN",
+  "frames": [
+    {
+      "frame_idx": 0,
+      "detections": [
+        {
+          "bbox": [
+            1076,
+            573,
+            1201,
+            639
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8367900848388672
+        },
+        {
+          "bbox": [
+            674,
+            520,
+            719,
+            558
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.8043996095657349
+        },
+        {
+          "bbox": [
+            711,
+            515,
+            750,
+            545
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7769465446472168
+        },
+        {
+          "bbox": [
+            636,
+            460,
+            659,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6030400395393372
+        },
+        {
+          "bbox": [
+            727,
+            584,
+            832,
+            618
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5746470093727112
+        },
+        {
+          "bbox": [
+            677,
+            487,
+            710,
+            514
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3612206280231476
+        }
+      ]
+    },
+    {
+      "frame_idx": 1,
+      "detections": [
+        {
+          "bbox": [
+            1068,
+            572,
+            1194,
+            638
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8027819991111755
+        },
+        {
+          "bbox": [
+            673,
+            519,
+            720,
+            558
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.8078961372375488
+        },
+        {
+          "bbox": [
+            712,
+            516,
+            749,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7766522169113159
+        },
+        {
+          "bbox": [
+            635,
+            459,
+            659,
+            479
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6540015935897827
+        },
+        {
+          "bbox": [
+            733,
+            584,
+            836,
+            617
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5395606756210327
+        },
+        {
+          "bbox": [
+            676,
+            487,
+            709,
+            514
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4104539453983307
+        }
+      ]
+    },
+    {
+      "frame_idx": 2,
+      "detections": [
+        {
+          "bbox": [
+            1057,
+            571,
+            1184,
+            638
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8188945055007935
+        },
+        {
+          "bbox": [
+            672,
+            517,
+            719,
+            557
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.802839457988739
+        },
+        {
+          "bbox": [
+            711,
+            516,
+            749,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7738954424858093
+        },
+        {
+          "bbox": [
+            635,
+            459,
+            659,
+            479
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6844691634178162
+        },
+        {
+          "bbox": [
+            738,
+            584,
+            841,
+            617
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.4735633432865143
+        },
+        {
+          "bbox": [
+            675,
+            487,
+            709,
+            514
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.408248633146286
+        }
+      ]
+    },
+    {
+      "frame_idx": 3,
+      "detections": [
+        {
+          "bbox": [
+            1046,
+            570,
+            1174,
+            638
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8044348359107971
+        },
+        {
+          "bbox": [
+            672,
+            518,
+            717,
+            556
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7916789650917053
+        },
+        {
+          "bbox": [
+            710,
+            515,
+            749,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7786725163459778
+        },
+        {
+          "bbox": [
+            635,
+            459,
+            659,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6718655228614807
+        },
+        {
+          "bbox": [
+            750,
+            585,
+            853,
+            617
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5702630877494812
+        },
+        {
+          "bbox": [
+            674,
+            486,
+            709,
+            514
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4040485620498657
+        },
+        {
+          "bbox": [
+            672,
+            464,
+            694,
+            479
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.39148977398872375
+        }
+      ]
+    },
+    {
+      "frame_idx": 4,
+      "detections": [
+        {
+          "bbox": [
+            1038,
+            570,
+            1164,
+            637
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7684910297393799
+        },
+        {
+          "bbox": [
+            672,
+            518,
+            716,
+            556
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7800279259681702
+        },
+        {
+          "bbox": [
+            709,
+            515,
+            748,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7645754218101501
+        },
+        {
+          "bbox": [
+            635,
+            458,
+            659,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6596135497093201
+        },
+        {
+          "bbox": [
+            761,
+            585,
+            864,
+            618
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5025203227996826
+        },
+        {
+          "bbox": [
+            673,
+            486,
+            707,
+            514
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.42707839608192444
+        },
+        {
+          "bbox": [
+            672,
+            464,
+            694,
+            479
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.3668612837791443
+        }
+      ]
+    },
+    {
+      "frame_idx": 5,
+      "detections": [
+        {
+          "bbox": [
+            1029,
+            569,
+            1157,
+            637
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7423312664031982
+        },
+        {
+          "bbox": [
+            672,
+            519,
+            715,
+            555
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7893162369728088
+        },
+        {
+          "bbox": [
+            709,
+            515,
+            748,
+            545
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7803457379341125
+        },
+        {
+          "bbox": [
+            635,
+            458,
+            659,
+            477
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6626587510108948
+        },
+        {
+          "bbox": [
+            772,
+            586,
+            875,
+            619
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5836455821990967
+        },
+        {
+          "bbox": [
+            674,
+            486,
+            707,
+            513
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.42164576053619385
+        },
+        {
+          "bbox": [
+            672,
+            464,
+            694,
+            479
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.37884771823883057
+        },
+        {
+          "bbox": [
+            522,
+            428,
+            547,
+            442
+          ],
+          "class_name": "car",
+          "track_id": 10,
+          "confidence": 0.38687020540237427
+        }
+      ]
+    },
+    {
+      "frame_idx": 6,
+      "detections": [
+        {
+          "bbox": [
+            1021,
+            568,
+            1146,
+            636
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.720438539981842
+        },
+        {
+          "bbox": [
+            672,
+            519,
+            714,
+            555
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7869474291801453
+        },
+        {
+          "bbox": [
+            709,
+            514,
+            747,
+            545
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7916819453239441
+        },
+        {
+          "bbox": [
+            634,
+            457,
+            659,
+            477
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.674162745475769
+        },
+        {
+          "bbox": [
+            783,
+            588,
+            890,
+            622
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.6314154267311096
+        },
+        {
+          "bbox": [
+            674,
+            486,
+            707,
+            512
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4013839364051819
+        },
+        {
+          "bbox": [
+            522,
+            428,
+            547,
+            442
+          ],
+          "class_name": "car",
+          "track_id": 10,
+          "confidence": 0.3885434865951538
+        }
+      ]
+    },
+    {
+      "frame_idx": 7,
+      "detections": [
+        {
+          "bbox": [
+            1013,
+            567,
+            1136,
+            633
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.6428947448730469
+        },
+        {
+          "bbox": [
+            672,
+            519,
+            714,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7887077927589417
+        },
+        {
+          "bbox": [
+            709,
+            514,
+            747,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7911393046379089
+        },
+        {
+          "bbox": [
+            634,
+            456,
+            659,
+            477
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6630653738975525
+        },
+        {
+          "bbox": [
+            795,
+            589,
+            901,
+            622
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5890122056007385
+        },
+        {
+          "bbox": [
+            675,
+            486,
+            707,
+            512
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.42269057035446167
+        },
+        {
+          "bbox": [
+            522,
+            428,
+            547,
+            443
+          ],
+          "class_name": "car",
+          "track_id": 10,
+          "confidence": 0.4103925824165344
+        },
+        {
+          "bbox": [
+            671,
+            462,
+            694,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4360968768596649
+        }
+      ]
+    },
+    {
+      "frame_idx": 8,
+      "detections": [
+        {
+          "bbox": [
+            1001,
+            564,
+            1132,
+            635
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.690824568271637
+        },
+        {
+          "bbox": [
+            672,
+            519,
+            713,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7905318737030029
+        },
+        {
+          "bbox": [
+            709,
+            514,
+            746,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7805660963058472
+        },
+        {
+          "bbox": [
+            633,
+            456,
+            659,
+            477
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6367231011390686
+        },
+        {
+          "bbox": [
+            800,
+            589,
+            913,
+            625
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5957071185112
+        },
+        {
+          "bbox": [
+            675,
+            486,
+            707,
+            512
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4271262288093567
+        },
+        {
+          "bbox": [
+            522,
+            428,
+            547,
+            443
+          ],
+          "class_name": "car",
+          "track_id": 10,
+          "confidence": 0.38629284501075745
+        },
+        {
+          "bbox": [
+            670,
+            461,
+            694,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.495929092168808
+        }
+      ]
+    },
+    {
+      "frame_idx": 9,
+      "detections": [
+        {
+          "bbox": [
+            993,
+            563,
+            1125,
+            636
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7780721783638
+        },
+        {
+          "bbox": [
+            672,
+            519,
+            713,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7873454093933105
+        },
+        {
+          "bbox": [
+            709,
+            514,
+            746,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7731810808181763
+        },
+        {
+          "bbox": [
+            633,
+            456,
+            659,
+            476
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6113273501396179
+        },
+        {
+          "bbox": [
+            806,
+            590,
+            920,
+            626
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5577839016914368
+        },
+        {
+          "bbox": [
+            675,
+            486,
+            706,
+            511
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3992566168308258
+        },
+        {
+          "bbox": [
+            522,
+            429,
+            546,
+            443
+          ],
+          "class_name": "car",
+          "track_id": 10,
+          "confidence": 0.36764711141586304
+        },
+        {
+          "bbox": [
+            670,
+            461,
+            693,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.45525655150413513
+        }
+      ]
+    },
+    {
+      "frame_idx": 10,
+      "detections": [
+        {
+          "bbox": [
+            986,
+            562,
+            1115,
+            633
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.6736170053482056
+        },
+        {
+          "bbox": [
+            671,
+            520,
+            712,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7732560038566589
+        },
+        {
+          "bbox": [
+            708,
+            514,
+            746,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7777259349822998
+        },
+        {
+          "bbox": [
+            633,
+            455,
+            658,
+            476
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.617308497428894
+        },
+        {
+          "bbox": [
+            814,
+            591,
+            921,
+            625
+          ],
+          "class_name": "car",
+          "track_id": 5,
+          "confidence": 0.5939168334007263
+        },
+        {
+          "bbox": [
+            673,
+            484,
+            706,
+            510
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3778045177459717
+        },
+        {
+          "bbox": [
+            670,
+            461,
+            693,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4652453362941742
+        }
+      ]
+    },
+    {
+      "frame_idx": 11,
+      "detections": [
+        {
+          "bbox": [
+            978,
+            561,
+            1106,
+            633
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7610719203948975
+        },
+        {
+          "bbox": [
+            671,
+            520,
+            712,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7774089574813843
+        },
+        {
+          "bbox": [
+            708,
+            514,
+            745,
+            543
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7955260872840881
+        },
+        {
+          "bbox": [
+            633,
+            455,
+            658,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6331035494804382
+        },
+        {
+          "bbox": [
+            675,
+            486,
+            705,
+            510
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3695754408836365
+        },
+        {
+          "bbox": [
+            670,
+            461,
+            692,
+            477
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.45555931329727173
+        }
+      ]
+    },
+    {
+      "frame_idx": 12,
+      "detections": [
+        {
+          "bbox": [
+            970,
+            561,
+            1097,
+            633
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7354366183280945
+        },
+        {
+          "bbox": [
+            671,
+            520,
+            711,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7843726277351379
+        },
+        {
+          "bbox": [
+            707,
+            513,
+            745,
+            543
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.8039429187774658
+        },
+        {
+          "bbox": [
+            633,
+            455,
+            658,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6635001301765442
+        },
+        {
+          "bbox": [
+            676,
+            487,
+            705,
+            509
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3826558589935303
+        },
+        {
+          "bbox": [
+            670,
+            461,
+            692,
+            476
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.47466805577278137
+        },
+        {
+          "bbox": [
+            522,
+            429,
+            546,
+            444
+          ],
+          "class_name": "car",
+          "track_id": 10,
+          "confidence": 0.35786837339401245
+        }
+      ]
+    },
+    {
+      "frame_idx": 13,
+      "detections": [
+        {
+          "bbox": [
+            964,
+            561,
+            1090,
+            633
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.6684389114379883
+        },
+        {
+          "bbox": [
+            671,
+            520,
+            710,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7750180959701538
+        },
+        {
+          "bbox": [
+            706,
+            513,
+            745,
+            543
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7835016250610352
+        },
+        {
+          "bbox": [
+            632,
+            455,
+            658,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6410739421844482
+        },
+        {
+          "bbox": [
+            670,
+            461,
+            691,
+            476
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.3907763957977295
+        },
+        {
+          "bbox": [
+            653,
+            512,
+            682,
+            553
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.35268735885620117
+        }
+      ]
+    },
+    {
+      "frame_idx": 14,
+      "detections": [
+        {
+          "bbox": [
+            956,
+            560,
+            1081,
+            632
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.4403204917907715
+        },
+        {
+          "bbox": [
+            670,
+            520,
+            710,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7647624611854553
+        },
+        {
+          "bbox": [
+            706,
+            512,
+            744,
+            542
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7598244547843933
+        },
+        {
+          "bbox": [
+            632,
+            455,
+            658,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6449548602104187
+        },
+        {
+          "bbox": [
+            670,
+            461,
+            691,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4043448269367218
+        },
+        {
+          "bbox": [
+            521,
+            429,
+            546,
+            444
+          ],
+          "class_name": "car",
+          "track_id": 10,
+          "confidence": 0.3632424473762512
+        }
+      ]
+    },
+    {
+      "frame_idx": 15,
+      "detections": [
+        {
+          "bbox": [
+            669,
+            520,
+            709,
+            554
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7570677399635315
+        },
+        {
+          "bbox": [
+            706,
+            512,
+            744,
+            542
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7739714980125427
+        },
+        {
+          "bbox": [
+            632,
+            455,
+            658,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6226711273193359
+        },
+        {
+          "bbox": [
+            670,
+            461,
+            691,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4288221597671509
+        }
+      ]
+    },
+    {
+      "frame_idx": 16,
+      "detections": [
+        {
+          "bbox": [
+            669,
+            520,
+            709,
+            553
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7684117555618286
+        },
+        {
+          "bbox": [
+            706,
+            512,
+            744,
+            542
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7674452066421509
+        },
+        {
+          "bbox": [
+            632,
+            454,
+            658,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6223947405815125
+        },
+        {
+          "bbox": [
+            669,
+            460,
+            691,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.46936896443367004
+        }
+      ]
+    },
+    {
+      "frame_idx": 17,
+      "detections": [
+        {
+          "bbox": [
+            669,
+            520,
+            709,
+            553
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7716397047042847
+        },
+        {
+          "bbox": [
+            705,
+            512,
+            744,
+            541
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7376951575279236
+        },
+        {
+          "bbox": [
+            632,
+            454,
+            657,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5676316618919373
+        },
+        {
+          "bbox": [
+            669,
+            460,
+            692,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5120962262153625
+        },
+        {
+          "bbox": [
+            673,
+            482,
+            705,
+            507
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3801162540912628
+        }
+      ]
+    },
+    {
+      "frame_idx": 18,
+      "detections": [
+        {
+          "bbox": [
+            668,
+            520,
+            708,
+            552
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7708757519721985
+        },
+        {
+          "bbox": [
+            703,
+            511,
+            742,
+            541
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7294089198112488
+        },
+        {
+          "bbox": [
+            633,
+            455,
+            657,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5699021816253662
+        },
+        {
+          "bbox": [
+            669,
+            460,
+            692,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.46373048424720764
+        },
+        {
+          "bbox": [
+            539,
+            463,
+            566,
+            481
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.3558103144168854
+        },
+        {
+          "bbox": [
+            673,
+            481,
+            705,
+            507
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.39814338088035583
+        }
+      ]
+    },
+    {
+      "frame_idx": 19,
+      "detections": [
+        {
+          "bbox": [
+            668,
+            519,
+            708,
+            552
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.763416051864624
+        },
+        {
+          "bbox": [
+            702,
+            511,
+            741,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7171502113342285
+        },
+        {
+          "bbox": [
+            633,
+            455,
+            657,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5977686643600464
+        },
+        {
+          "bbox": [
+            669,
+            460,
+            692,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.49791693687438965
+        },
+        {
+          "bbox": [
+            672,
+            480,
+            704,
+            506
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4332062304019928
+        }
+      ]
+    },
+    {
+      "frame_idx": 20,
+      "detections": [
+        {
+          "bbox": [
+            667,
+            519,
+            707,
+            552
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7586126327514648
+        },
+        {
+          "bbox": [
+            702,
+            511,
+            741,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7106898427009583
+        },
+        {
+          "bbox": [
+            633,
+            455,
+            657,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5547705888748169
+        },
+        {
+          "bbox": [
+            669,
+            460,
+            691,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.42112424969673157
+        },
+        {
+          "bbox": [
+            673,
+            480,
+            703,
+            505
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3507959544658661
+        },
+        {
+          "bbox": [
+            946,
+            560,
+            1030,
+            608
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.6144753098487854
+        },
+        {
+          "bbox": [
+            539,
+            464,
+            567,
+            483
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.35522231459617615
+        }
+      ]
+    },
+    {
+      "frame_idx": 21,
+      "detections": [
+        {
+          "bbox": [
+            667,
+            519,
+            707,
+            552
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7312490344047546
+        },
+        {
+          "bbox": [
+            702,
+            511,
+            741,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7180373072624207
+        },
+        {
+          "bbox": [
+            633,
+            454,
+            657,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5595521330833435
+        },
+        {
+          "bbox": [
+            946,
+            560,
+            1021,
+            602
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.49828386306762695
+        },
+        {
+          "bbox": [
+            538,
+            464,
+            568,
+            485
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.3892125189304352
+        }
+      ]
+    },
+    {
+      "frame_idx": 22,
+      "detections": [
+        {
+          "bbox": [
+            666,
+            519,
+            707,
+            551
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.728463351726532
+        },
+        {
+          "bbox": [
+            702,
+            511,
+            741,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7139111757278442
+        },
+        {
+          "bbox": [
+            632,
+            454,
+            657,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5102555751800537
+        },
+        {
+          "bbox": [
+            943,
+            559,
+            1017,
+            602
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.5478472709655762
+        },
+        {
+          "bbox": [
+            673,
+            481,
+            702,
+            504
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.36159101128578186
+        }
+      ]
+    },
+    {
+      "frame_idx": 23,
+      "detections": [
+        {
+          "bbox": [
+            666,
+            518,
+            706,
+            551
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6959056258201599
+        },
+        {
+          "bbox": [
+            700,
+            511,
+            740,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7002912759780884
+        },
+        {
+          "bbox": [
+            632,
+            453,
+            657,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5073956847190857
+        },
+        {
+          "bbox": [
+            673,
+            480,
+            702,
+            504
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4121031165122986
+        },
+        {
+          "bbox": [
+            653,
+            511,
+            677,
+            545
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.3905341625213623
+        },
+        {
+          "bbox": [
+            536,
+            464,
+            569,
+            487
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.35439860820770264
+        }
+      ]
+    },
+    {
+      "frame_idx": 24,
+      "detections": [
+        {
+          "bbox": [
+            665,
+            517,
+            706,
+            550
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6503913402557373
+        },
+        {
+          "bbox": [
+            700,
+            511,
+            740,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.709327757358551
+        },
+        {
+          "bbox": [
+            632,
+            454,
+            657,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5062953233718872
+        },
+        {
+          "bbox": [
+            673,
+            480,
+            702,
+            504
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4882604777812958
+        },
+        {
+          "bbox": [
+            652,
+            511,
+            678,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.35615530610084534
+        },
+        {
+          "bbox": [
+            537,
+            464,
+            569,
+            487
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.36866623163223267
+        },
+        {
+          "bbox": [
+            668,
+            459,
+            692,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.3806723952293396
+        },
+        {
+          "bbox": [
+            904,
+            559,
+            1007,
+            619
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.5224025249481201
+        }
+      ]
+    },
+    {
+      "frame_idx": 25,
+      "detections": [
+        {
+          "bbox": [
+            664,
+            515,
+            705,
+            549
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.594199001789093
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            740,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7514857649803162
+        },
+        {
+          "bbox": [
+            632,
+            454,
+            657,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5329642295837402
+        },
+        {
+          "bbox": [
+            672,
+            480,
+            702,
+            504
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3971220552921295
+        },
+        {
+          "bbox": [
+            652,
+            511,
+            680,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.36877548694610596
+        },
+        {
+          "bbox": [
+            537,
+            465,
+            568,
+            486
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.39385369420051575
+        },
+        {
+          "bbox": [
+            667,
+            459,
+            692,
+            476
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4573499858379364
+        },
+        {
+          "bbox": [
+            893,
+            560,
+            1001,
+            624
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.45394212007522583
+        }
+      ]
+    },
+    {
+      "frame_idx": 26,
+      "detections": [
+        {
+          "bbox": [
+            664,
+            515,
+            704,
+            549
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5934187769889832
+        },
+        {
+          "bbox": [
+            700,
+            511,
+            741,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7457758784294128
+        },
+        {
+          "bbox": [
+            633,
+            453,
+            656,
+            472
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5599469542503357
+        },
+        {
+          "bbox": [
+            672,
+            479,
+            702,
+            504
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3832911550998688
+        },
+        {
+          "bbox": [
+            651,
+            511,
+            679,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.3667146563529968
+        },
+        {
+          "bbox": [
+            667,
+            458,
+            691,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.49584755301475525
+        },
+        {
+          "bbox": [
+            884,
+            559,
+            996,
+            626
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.6884868144989014
+        }
+      ]
+    },
+    {
+      "frame_idx": 27,
+      "detections": [
+        {
+          "bbox": [
+            664,
+            516,
+            703,
+            549
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6053863167762756
+        },
+        {
+          "bbox": [
+            700,
+            511,
+            740,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7284072041511536
+        },
+        {
+          "bbox": [
+            633,
+            453,
+            656,
+            472
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6018710136413574
+        },
+        {
+          "bbox": [
+            671,
+            478,
+            702,
+            503
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4149523079395294
+        },
+        {
+          "bbox": [
+            650,
+            511,
+            679,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.36133021116256714
+        },
+        {
+          "bbox": [
+            668,
+            458,
+            691,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.48386919498443604
+        },
+        {
+          "bbox": [
+            879,
+            559,
+            990,
+            627
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8216263055801392
+        }
+      ]
+    },
+    {
+      "frame_idx": 28,
+      "detections": [
+        {
+          "bbox": [
+            664,
+            515,
+            703,
+            548
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.611097514629364
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            739,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7455102205276489
+        },
+        {
+          "bbox": [
+            633,
+            453,
+            657,
+            472
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6275407075881958
+        },
+        {
+          "bbox": [
+            671,
+            477,
+            702,
+            503
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.40610983967781067
+        },
+        {
+          "bbox": [
+            650,
+            511,
+            679,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.37976694107055664
+        },
+        {
+          "bbox": [
+            668,
+            458,
+            690,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4933716058731079
+        },
+        {
+          "bbox": [
+            874,
+            559,
+            982,
+            625
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.818507730960846
+        }
+      ]
+    },
+    {
+      "frame_idx": 29,
+      "detections": [
+        {
+          "bbox": [
+            664,
+            515,
+            703,
+            548
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6647739410400391
+        },
+        {
+          "bbox": [
+            700,
+            511,
+            740,
+            539
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7411776185035706
+        },
+        {
+          "bbox": [
+            633,
+            452,
+            657,
+            471
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6307153105735779
+        },
+        {
+          "bbox": [
+            671,
+            478,
+            702,
+            503
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3644976317882538
+        },
+        {
+          "bbox": [
+            650,
+            511,
+            678,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.36339953541755676
+        },
+        {
+          "bbox": [
+            667,
+            457,
+            691,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5004129409790039
+        },
+        {
+          "bbox": [
+            871,
+            558,
+            975,
+            623
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8208137154579163
+        },
+        {
+          "bbox": [
+            535,
+            466,
+            568,
+            490
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.35312139987945557
+        }
+      ]
+    },
+    {
+      "frame_idx": 30,
+      "detections": [
+        {
+          "bbox": [
+            664,
+            515,
+            703,
+            548
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6712862849235535
+        },
+        {
+          "bbox": [
+            702,
+            511,
+            741,
+            539
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7463353276252747
+        },
+        {
+          "bbox": [
+            634,
+            452,
+            658,
+            471
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6264234781265259
+        },
+        {
+          "bbox": [
+            671,
+            478,
+            702,
+            502
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.40779876708984375
+        },
+        {
+          "bbox": [
+            652,
+            510,
+            677,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.3531055152416229
+        },
+        {
+          "bbox": [
+            667,
+            457,
+            691,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5274353623390198
+        },
+        {
+          "bbox": [
+            865,
+            557,
+            969,
+            622
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8760127425193787
+        }
+      ]
+    },
+    {
+      "frame_idx": 31,
+      "detections": [
+        {
+          "bbox": [
+            663,
+            515,
+            703,
+            548
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6853101849555969
+        },
+        {
+          "bbox": [
+            703,
+            511,
+            741,
+            539
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7338827252388
+        },
+        {
+          "bbox": [
+            634,
+            451,
+            658,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6162986755371094
+        },
+        {
+          "bbox": [
+            671,
+            477,
+            702,
+            502
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5084108114242554
+        },
+        {
+          "bbox": [
+            667,
+            456,
+            691,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5172151327133179
+        },
+        {
+          "bbox": [
+            860,
+            557,
+            964,
+            622
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8296380639076233
+        }
+      ]
+    },
+    {
+      "frame_idx": 32,
+      "detections": [
+        {
+          "bbox": [
+            663,
+            514,
+            703,
+            548
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6491669416427612
+        },
+        {
+          "bbox": [
+            703,
+            511,
+            740,
+            539
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7041777968406677
+        },
+        {
+          "bbox": [
+            634,
+            451,
+            658,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6110484004020691
+        },
+        {
+          "bbox": [
+            671,
+            476,
+            702,
+            502
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4742695093154907
+        },
+        {
+          "bbox": [
+            667,
+            456,
+            691,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5170570015907288
+        },
+        {
+          "bbox": [
+            858,
+            556,
+            957,
+            620
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7626012563705444
+        },
+        {
+          "bbox": [
+            538,
+            470,
+            565,
+            489
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.3878519833087921
+        }
+      ]
+    },
+    {
+      "frame_idx": 33,
+      "detections": [
+        {
+          "bbox": [
+            663,
+            514,
+            702,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.683532178401947
+        },
+        {
+          "bbox": [
+            702,
+            511,
+            740,
+            539
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.689396321773529
+        },
+        {
+          "bbox": [
+            634,
+            450,
+            657,
+            469
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6110755801200867
+        },
+        {
+          "bbox": [
+            671,
+            476,
+            702,
+            501
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4210737645626068
+        },
+        {
+          "bbox": [
+            667,
+            456,
+            691,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5225598216056824
+        },
+        {
+          "bbox": [
+            851,
+            555,
+            941,
+            614
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.5705752968788147
+        }
+      ]
+    },
+    {
+      "frame_idx": 34,
+      "detections": [
+        {
+          "bbox": [
+            663,
+            514,
+            702,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7182573676109314
+        },
+        {
+          "bbox": [
+            701,
+            511,
+            739,
+            539
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6671410799026489
+        },
+        {
+          "bbox": [
+            634,
+            450,
+            657,
+            469
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5938036441802979
+        },
+        {
+          "bbox": [
+            672,
+            477,
+            701,
+            501
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4173264503479004
+        },
+        {
+          "bbox": [
+            666,
+            456,
+            691,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4746985137462616
+        },
+        {
+          "bbox": [
+            846,
+            555,
+            933,
+            613
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.724612832069397
+        },
+        {
+          "bbox": [
+            654,
+            509,
+            677,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.38516390323638916
+        }
+      ]
+    },
+    {
+      "frame_idx": 35,
+      "detections": [
+        {
+          "bbox": [
+            663,
+            514,
+            701,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7406648397445679
+        },
+        {
+          "bbox": [
+            700,
+            511,
+            739,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6682029366493225
+        },
+        {
+          "bbox": [
+            634,
+            451,
+            657,
+            469
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5986268520355225
+        },
+        {
+          "bbox": [
+            672,
+            477,
+            701,
+            500
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.40787893533706665
+        },
+        {
+          "bbox": [
+            667,
+            456,
+            691,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.42464590072631836
+        },
+        {
+          "bbox": [
+            844,
+            555,
+            929,
+            612
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7417041659355164
+        },
+        {
+          "bbox": [
+            654,
+            508,
+            677,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.45146870613098145
+        }
+      ]
+    },
+    {
+      "frame_idx": 36,
+      "detections": [
+        {
+          "bbox": [
+            663,
+            514,
+            702,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7763209939002991
+        },
+        {
+          "bbox": [
+            700,
+            511,
+            739,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6803979277610779
+        },
+        {
+          "bbox": [
+            634,
+            451,
+            657,
+            469
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5786634683609009
+        },
+        {
+          "bbox": [
+            673,
+            477,
+            701,
+            500
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4438106119632721
+        },
+        {
+          "bbox": [
+            667,
+            455,
+            691,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4189237058162689
+        },
+        {
+          "bbox": [
+            841,
+            554,
+            927,
+            612
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8094109296798706
+        },
+        {
+          "bbox": [
+            653,
+            508,
+            677,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.45001664757728577
+        }
+      ]
+    },
+    {
+      "frame_idx": 37,
+      "detections": [
+        {
+          "bbox": [
+            663,
+            514,
+            702,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7472482919692993
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            738,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7027086019515991
+        },
+        {
+          "bbox": [
+            634,
+            450,
+            657,
+            469
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5555531978607178
+        },
+        {
+          "bbox": [
+            672,
+            476,
+            701,
+            500
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.47884610295295715
+        },
+        {
+          "bbox": [
+            666,
+            455,
+            691,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.45800989866256714
+        },
+        {
+          "bbox": [
+            838,
+            554,
+            925,
+            612
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7598365545272827
+        },
+        {
+          "bbox": [
+            652,
+            508,
+            677,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.45262783765792847
+        }
+      ]
+    },
+    {
+      "frame_idx": 38,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            514,
+            701,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7088446021080017
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            738,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.703024685382843
+        },
+        {
+          "bbox": [
+            633,
+            450,
+            657,
+            469
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5600184202194214
+        },
+        {
+          "bbox": [
+            672,
+            476,
+            701,
+            499
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.49741891026496887
+        },
+        {
+          "bbox": [
+            666,
+            455,
+            690,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4881976246833801
+        },
+        {
+          "bbox": [
+            834,
+            554,
+            922,
+            614
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.811596691608429
+        },
+        {
+          "bbox": [
+            651,
+            508,
+            676,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.4730726182460785
+        },
+        {
+          "bbox": [
+            536,
+            472,
+            564,
+            493
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.3706335425376892
+        }
+      ]
+    },
+    {
+      "frame_idx": 39,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            513,
+            701,
+            547
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.713077962398529
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            737,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7081016302108765
+        },
+        {
+          "bbox": [
+            633,
+            450,
+            657,
+            469
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5572460889816284
+        },
+        {
+          "bbox": [
+            671,
+            475,
+            701,
+            499
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5010488033294678
+        },
+        {
+          "bbox": [
+            666,
+            455,
+            690,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.509098470211029
+        },
+        {
+          "bbox": [
+            831,
+            554,
+            917,
+            613
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7533981204032898
+        },
+        {
+          "bbox": [
+            651,
+            508,
+            676,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.4555666148662567
+        }
+      ]
+    },
+    {
+      "frame_idx": 40,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            513,
+            700,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7418022751808167
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            737,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6868180632591248
+        },
+        {
+          "bbox": [
+            633,
+            449,
+            657,
+            468
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5184761881828308
+        },
+        {
+          "bbox": [
+            671,
+            475,
+            701,
+            499
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.45750755071640015
+        },
+        {
+          "bbox": [
+            666,
+            455,
+            690,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5277027487754822
+        },
+        {
+          "bbox": [
+            827,
+            554,
+            913,
+            612
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8073371052742004
+        },
+        {
+          "bbox": [
+            651,
+            508,
+            676,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.46353858709335327
+        }
+      ]
+    },
+    {
+      "frame_idx": 41,
+      "detections": [
+        {
+          "bbox": [
+            661,
+            513,
+            700,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7470076084136963
+        },
+        {
+          "bbox": [
+            698,
+            511,
+            736,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6761909127235413
+        },
+        {
+          "bbox": [
+            633,
+            449,
+            657,
+            468
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.540439784526825
+        },
+        {
+          "bbox": [
+            671,
+            473,
+            702,
+            499
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4300318956375122
+        },
+        {
+          "bbox": [
+            666,
+            454,
+            690,
+            472
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5651923418045044
+        },
+        {
+          "bbox": [
+            823,
+            554,
+            909,
+            612
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7944368720054626
+        },
+        {
+          "bbox": [
+            651,
+            508,
+            676,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.4222188889980316
+        }
+      ]
+    },
+    {
+      "frame_idx": 42,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            513,
+            700,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7570733428001404
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            737,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6781169772148132
+        },
+        {
+          "bbox": [
+            633,
+            449,
+            657,
+            468
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5316665172576904
+        },
+        {
+          "bbox": [
+            671,
+            473,
+            701,
+            499
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4431023895740509
+        },
+        {
+          "bbox": [
+            665,
+            454,
+            690,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5877111554145813
+        },
+        {
+          "bbox": [
+            820,
+            554,
+            903,
+            610
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8114388585090637
+        },
+        {
+          "bbox": [
+            651,
+            508,
+            676,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.39568793773651123
+        },
+        {
+          "bbox": [
+            655,
+            423,
+            677,
+            440
+          ],
+          "class_name": "car",
+          "track_id": 15,
+          "confidence": 0.3750649392604828
+        }
+      ]
+    },
+    {
+      "frame_idx": 43,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            514,
+            699,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7604489922523499
+        },
+        {
+          "bbox": [
+            698,
+            511,
+            736,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6892778277397156
+        },
+        {
+          "bbox": [
+            633,
+            448,
+            656,
+            467
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.551215648651123
+        },
+        {
+          "bbox": [
+            670,
+            473,
+            701,
+            499
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.40157777070999146
+        },
+        {
+          "bbox": [
+            665,
+            454,
+            690,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5774355530738831
+        },
+        {
+          "bbox": [
+            816,
+            553,
+            899,
+            609
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8491779565811157
+        },
+        {
+          "bbox": [
+            651,
+            508,
+            676,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 11,
+          "confidence": 0.4054783880710602
+        },
+        {
+          "bbox": [
+            655,
+            423,
+            677,
+            440
+          ],
+          "class_name": "car",
+          "track_id": 15,
+          "confidence": 0.3887864053249359
+        }
+      ]
+    },
+    {
+      "frame_idx": 44,
+      "detections": [
+        {
+          "bbox": [
+            661,
+            513,
+            699,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7644994854927063
+        },
+        {
+          "bbox": [
+            697,
+            510,
+            736,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6907194256782532
+        },
+        {
+          "bbox": [
+            632,
+            448,
+            657,
+            467
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.605962336063385
+        },
+        {
+          "bbox": [
+            670,
+            471,
+            702,
+            499
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.37380170822143555
+        },
+        {
+          "bbox": [
+            665,
+            454,
+            690,
+            472
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5735687613487244
+        },
+        {
+          "bbox": [
+            812,
+            552,
+            894,
+            606
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8520107269287109
+        },
+        {
+          "bbox": [
+            655,
+            423,
+            677,
+            440
+          ],
+          "class_name": "car",
+          "track_id": 15,
+          "confidence": 0.35100990533828735
+        },
+        {
+          "bbox": [
+            651,
+            403,
+            670,
+            422
+          ],
+          "class_name": "car",
+          "track_id": 16,
+          "confidence": 0.3729930520057678
+        }
+      ]
+    },
+    {
+      "frame_idx": 45,
+      "detections": [
+        {
+          "bbox": [
+            661,
+            513,
+            699,
+            546
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7275300621986389
+        },
+        {
+          "bbox": [
+            697,
+            510,
+            737,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6759144067764282
+        },
+        {
+          "bbox": [
+            632,
+            447,
+            657,
+            467
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.6113828420639038
+        },
+        {
+          "bbox": [
+            670,
+            471,
+            701,
+            498
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.42654553055763245
+        },
+        {
+          "bbox": [
+            665,
+            453,
+            690,
+            472
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.5398184657096863
+        },
+        {
+          "bbox": [
+            808,
+            551,
+            890,
+            607
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8270694613456726
+        },
+        {
+          "bbox": [
+            655,
+            424,
+            676,
+            440
+          ],
+          "class_name": "car",
+          "track_id": 15,
+          "confidence": 0.353384405374527
+        },
+        {
+          "bbox": [
+            650,
+            400,
+            671,
+            422
+          ],
+          "class_name": "car",
+          "track_id": 16,
+          "confidence": 0.3955862820148468
+        }
+      ]
+    },
+    {
+      "frame_idx": 46,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            513,
+            699,
+            545
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6861711144447327
+        },
+        {
+          "bbox": [
+            698,
+            510,
+            737,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6606508493423462
+        },
+        {
+          "bbox": [
+            631,
+            447,
+            657,
+            467
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5399115085601807
+        },
+        {
+          "bbox": [
+            671,
+            471,
+            700,
+            497
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4311448633670807
+        },
+        {
+          "bbox": [
+            665,
+            453,
+            690,
+            472
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4634992480278015
+        },
+        {
+          "bbox": [
+            804,
+            551,
+            886,
+            606
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7923941612243652
+        },
+        {
+          "bbox": [
+            650,
+            400,
+            672,
+            421
+          ],
+          "class_name": "car",
+          "track_id": 16,
+          "confidence": 0.40310877561569214
+        }
+      ]
+    },
+    {
+      "frame_idx": 47,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            513,
+            698,
+            545
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6680976748466492
+        },
+        {
+          "bbox": [
+            699,
+            510,
+            737,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6444058418273926
+        },
+        {
+          "bbox": [
+            631,
+            446,
+            657,
+            468
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4934772551059723
+        },
+        {
+          "bbox": [
+            670,
+            471,
+            700,
+            498
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4276770353317261
+        },
+        {
+          "bbox": [
+            666,
+            453,
+            689,
+            471
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.43551018834114075
+        },
+        {
+          "bbox": [
+            799,
+            549,
+            883,
+            606
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8270426988601685
+        },
+        {
+          "bbox": [
+            650,
+            399,
+            672,
+            421
+          ],
+          "class_name": "car",
+          "track_id": 16,
+          "confidence": 0.3821103572845459
+        }
+      ]
+    },
+    {
+      "frame_idx": 48,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            512,
+            698,
+            545
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6688198447227478
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            737,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6205344796180725
+        },
+        {
+          "bbox": [
+            631,
+            446,
+            656,
+            467
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.43800047039985657
+        },
+        {
+          "bbox": [
+            670,
+            470,
+            699,
+            497
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.43002042174339294
+        },
+        {
+          "bbox": [
+            666,
+            452,
+            689,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4169911742210388
+        },
+        {
+          "bbox": [
+            796,
+            548,
+            880,
+            606
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8498650193214417
+        }
+      ]
+    },
+    {
+      "frame_idx": 49,
+      "detections": [
+        {
+          "bbox": [
+            662,
+            512,
+            698,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6436101794242859
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            736,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5916838049888611
+        },
+        {
+          "bbox": [
+            631,
+            446,
+            656,
+            466
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.464722216129303
+        },
+        {
+          "bbox": [
+            670,
+            470,
+            699,
+            497
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4159165024757385
+        },
+        {
+          "bbox": [
+            665,
+            451,
+            690,
+            471
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.45122045278549194
+        },
+        {
+          "bbox": [
+            792,
+            547,
+            875,
+            604
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8287418484687805
+        },
+        {
+          "bbox": [
+            528,
+            479,
+            566,
+            508
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.4209742844104767
+        }
+      ]
+    },
+    {
+      "frame_idx": 50,
+      "detections": [
+        {
+          "bbox": [
+            661,
+            512,
+            697,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6526644229888916
+        },
+        {
+          "bbox": [
+            699,
+            511,
+            736,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.604289710521698
+        },
+        {
+          "bbox": [
+            631,
+            446,
+            656,
+            466
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.49848487973213196
+        },
+        {
+          "bbox": [
+            670,
+            469,
+            699,
+            497
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.41775691509246826
+        },
+        {
+          "bbox": [
+            666,
+            451,
+            690,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.45410051941871643
+        },
+        {
+          "bbox": [
+            791,
+            548,
+            870,
+            603
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8102689385414124
+        },
+        {
+          "bbox": [
+            530,
+            479,
+            565,
+            507
+          ],
+          "class_name": "car",
+          "track_id": 13,
+          "confidence": 0.3587987422943115
+        },
+        {
+          "bbox": [
+            654,
+            421,
+            677,
+            439
+          ],
+          "class_name": "car",
+          "track_id": 15,
+          "confidence": 0.3623462915420532
+        }
+      ]
+    },
+    {
+      "frame_idx": 51,
+      "detections": [
+        {
+          "bbox": [
+            660,
+            511,
+            697,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.659304678440094
+        },
+        {
+          "bbox": [
+            695,
+            510,
+            734,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6286129355430603
+        },
+        {
+          "bbox": [
+            631,
+            446,
+            656,
+            466
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5456631183624268
+        },
+        {
+          "bbox": [
+            669,
+            469,
+            698,
+            497
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4277512729167938
+        },
+        {
+          "bbox": [
+            666,
+            452,
+            690,
+            469
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4782625138759613
+        },
+        {
+          "bbox": [
+            788,
+            548,
+            866,
+            602
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7911179661750793
+        },
+        {
+          "bbox": [
+            653,
+            421,
+            676,
+            439
+          ],
+          "class_name": "car",
+          "track_id": 15,
+          "confidence": 0.36585375666618347
+        }
+      ]
+    },
+    {
+      "frame_idx": 52,
+      "detections": [
+        {
+          "bbox": [
+            658,
+            511,
+            696,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6669437289237976
+        },
+        {
+          "bbox": [
+            695,
+            510,
+            734,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6083552837371826
+        },
+        {
+          "bbox": [
+            631,
+            446,
+            656,
+            466
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5056426525115967
+        },
+        {
+          "bbox": [
+            669,
+            469,
+            698,
+            497
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4270187020301819
+        },
+        {
+          "bbox": [
+            666,
+            451,
+            690,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.4868265688419342
+        },
+        {
+          "bbox": [
+            786,
+            548,
+            862,
+            601
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.824894905090332
+        }
+      ]
+    },
+    {
+      "frame_idx": 53,
+      "detections": [
+        {
+          "bbox": [
+            656,
+            510,
+            694,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6794514656066895
+        },
+        {
+          "bbox": [
+            696,
+            510,
+            734,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6018707752227783
+        },
+        {
+          "bbox": [
+            630,
+            444,
+            655,
+            465
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.45095717906951904
+        },
+        {
+          "bbox": [
+            669,
+            468,
+            698,
+            496
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.43029487133026123
+        },
+        {
+          "bbox": [
+            666,
+            452,
+            690,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.48489147424697876
+        },
+        {
+          "bbox": [
+            784,
+            549,
+            857,
+            599
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8348677158355713
+        }
+      ]
+    },
+    {
+      "frame_idx": 54,
+      "detections": [
+        {
+          "bbox": [
+            654,
+            510,
+            693,
+            544
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6776881814002991
+        },
+        {
+          "bbox": [
+            695,
+            510,
+            733,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5763610601425171
+        },
+        {
+          "bbox": [
+            629,
+            442,
+            655,
+            463
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.378885418176651
+        },
+        {
+          "bbox": [
+            670,
+            469,
+            697,
+            495
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4462665617465973
+        },
+        {
+          "bbox": [
+            665,
+            451,
+            690,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.38178056478500366
+        },
+        {
+          "bbox": [
+            783,
+            549,
+            852,
+            596
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8450764417648315
+        }
+      ]
+    },
+    {
+      "frame_idx": 55,
+      "detections": [
+        {
+          "bbox": [
+            654,
+            510,
+            693,
+            543
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6736183166503906
+        },
+        {
+          "bbox": [
+            696,
+            511,
+            734,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5559788942337036
+        },
+        {
+          "bbox": [
+            629,
+            442,
+            655,
+            463
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.42092129588127136
+        },
+        {
+          "bbox": [
+            670,
+            469,
+            696,
+            494
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.39843684434890747
+        },
+        {
+          "bbox": [
+            665,
+            451,
+            690,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.3562825918197632
+        },
+        {
+          "bbox": [
+            781,
+            548,
+            848,
+            593
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8530012369155884
+        }
+      ]
+    },
+    {
+      "frame_idx": 56,
+      "detections": [
+        {
+          "bbox": [
+            653,
+            510,
+            693,
+            543
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6756822466850281
+        },
+        {
+          "bbox": [
+            695,
+            511,
+            733,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5414997935295105
+        },
+        {
+          "bbox": [
+            630,
+            442,
+            654,
+            462
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.46281659603118896
+        },
+        {
+          "bbox": [
+            669,
+            468,
+            696,
+            495
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4022611677646637
+        },
+        {
+          "bbox": [
+            777,
+            548,
+            845,
+            593
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8437986373901367
+        },
+        {
+          "bbox": [
+            515,
+            445,
+            541,
+            461
+          ],
+          "class_name": "car",
+          "track_id": 17,
+          "confidence": 0.39333269000053406
+        }
+      ]
+    },
+    {
+      "frame_idx": 57,
+      "detections": [
+        {
+          "bbox": [
+            652,
+            509,
+            692,
+            543
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6766113638877869
+        },
+        {
+          "bbox": [
+            693,
+            510,
+            733,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5261383056640625
+        },
+        {
+          "bbox": [
+            631,
+            443,
+            654,
+            463
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.49668246507644653
+        },
+        {
+          "bbox": [
+            669,
+            468,
+            697,
+            495
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.38169097900390625
+        },
+        {
+          "bbox": [
+            774,
+            547,
+            842,
+            592
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8437596559524536
+        },
+        {
+          "bbox": [
+            515,
+            445,
+            542,
+            462
+          ],
+          "class_name": "car",
+          "track_id": 17,
+          "confidence": 0.404527872800827
+        },
+        {
+          "bbox": [
+            665,
+            451,
+            689,
+            470
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.38013336062431335
+        }
+      ]
+    },
+    {
+      "frame_idx": 58,
+      "detections": [
+        {
+          "bbox": [
+            652,
+            509,
+            692,
+            543
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7025824785232544
+        },
+        {
+          "bbox": [
+            692,
+            510,
+            732,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5941015481948853
+        },
+        {
+          "bbox": [
+            631,
+            443,
+            654,
+            462
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5172029733657837
+        },
+        {
+          "bbox": [
+            668,
+            467,
+            697,
+            496
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4263078570365906
+        },
+        {
+          "bbox": [
+            771,
+            547,
+            839,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8385351896286011
+        },
+        {
+          "bbox": [
+            515,
+            446,
+            542,
+            462
+          ],
+          "class_name": "car",
+          "track_id": 17,
+          "confidence": 0.4235365092754364
+        },
+        {
+          "bbox": [
+            665,
+            451,
+            690,
+            471
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.49119824171066284
+        }
+      ]
+    },
+    {
+      "frame_idx": 59,
+      "detections": [
+        {
+          "bbox": [
+            651,
+            509,
+            692,
+            543
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6814761161804199
+        },
+        {
+          "bbox": [
+            692,
+            509,
+            732,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6385232210159302
+        },
+        {
+          "bbox": [
+            631,
+            443,
+            654,
+            462
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5590338110923767
+        },
+        {
+          "bbox": [
+            668,
+            468,
+            697,
+            496
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4049033224582672
+        },
+        {
+          "bbox": [
+            768,
+            546,
+            836,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.843738853931427
+        },
+        {
+          "bbox": [
+            514,
+            446,
+            542,
+            463
+          ],
+          "class_name": "car",
+          "track_id": 17,
+          "confidence": 0.42428550124168396
+        },
+        {
+          "bbox": [
+            665,
+            451,
+            691,
+            471
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.48850739002227783
+        }
+      ]
+    },
+    {
+      "frame_idx": 60,
+      "detections": [
+        {
+          "bbox": [
+            651,
+            508,
+            692,
+            542
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6837637424468994
+        },
+        {
+          "bbox": [
+            692,
+            509,
+            732,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6766672730445862
+        },
+        {
+          "bbox": [
+            631,
+            443,
+            654,
+            462
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5464606881141663
+        },
+        {
+          "bbox": [
+            668,
+            469,
+            697,
+            497
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4662887752056122
+        },
+        {
+          "bbox": [
+            765,
+            546,
+            834,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8429822325706482
+        },
+        {
+          "bbox": [
+            514,
+            446,
+            542,
+            463
+          ],
+          "class_name": "car",
+          "track_id": 17,
+          "confidence": 0.40911173820495605
+        },
+        {
+          "bbox": [
+            664,
+            451,
+            692,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.43268904089927673
+        }
+      ]
+    },
+    {
+      "frame_idx": 61,
+      "detections": [
+        {
+          "bbox": [
+            651,
+            508,
+            692,
+            542
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6902822256088257
+        },
+        {
+          "bbox": [
+            691,
+            509,
+            732,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6465750932693481
+        },
+        {
+          "bbox": [
+            631,
+            442,
+            654,
+            462
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5180273652076721
+        },
+        {
+          "bbox": [
+            668,
+            468,
+            697,
+            497
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.40963539481163025
+        },
+        {
+          "bbox": [
+            762,
+            546,
+            831,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8440414667129517
+        },
+        {
+          "bbox": [
+            514,
+            446,
+            542,
+            463
+          ],
+          "class_name": "car",
+          "track_id": 17,
+          "confidence": 0.37046289443969727
+        }
+      ]
+    },
+    {
+      "frame_idx": 62,
+      "detections": [
+        {
+          "bbox": [
+            651,
+            508,
+            692,
+            542
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7033566832542419
+        },
+        {
+          "bbox": [
+            691,
+            508,
+            732,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6053443551063538
+        },
+        {
+          "bbox": [
+            631,
+            442,
+            654,
+            461
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5395132899284363
+        },
+        {
+          "bbox": [
+            667,
+            467,
+            696,
+            496
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.36957722902297974
+        },
+        {
+          "bbox": [
+            759,
+            545,
+            829,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8258671760559082
+        }
+      ]
+    },
+    {
+      "frame_idx": 63,
+      "detections": [
+        {
+          "bbox": [
+            650,
+            508,
+            691,
+            542
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7230186462402344
+        },
+        {
+          "bbox": [
+            691,
+            508,
+            732,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6096971035003662
+        },
+        {
+          "bbox": [
+            631,
+            442,
+            653,
+            461
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5362123847007751
+        },
+        {
+          "bbox": [
+            668,
+            466,
+            696,
+            495
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4402675926685333
+        },
+        {
+          "bbox": [
+            756,
+            544,
+            826,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8182921409606934
+        },
+        {
+          "bbox": [
+            665,
+            450,
+            691,
+            471
+          ],
+          "class_name": "car",
+          "track_id": 9,
+          "confidence": 0.3594961166381836
+        }
+      ]
+    },
+    {
+      "frame_idx": 64,
+      "detections": [
+        {
+          "bbox": [
+            650,
+            508,
+            691,
+            542
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.726601243019104
+        },
+        {
+          "bbox": [
+            690,
+            508,
+            732,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5831871032714844
+        },
+        {
+          "bbox": [
+            632,
+            443,
+            653,
+            461
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5313887000083923
+        },
+        {
+          "bbox": [
+            668,
+            466,
+            696,
+            494
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4090322256088257
+        },
+        {
+          "bbox": [
+            753,
+            544,
+            824,
+            590
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.828393816947937
+        }
+      ]
+    },
+    {
+      "frame_idx": 65,
+      "detections": [
+        {
+          "bbox": [
+            650,
+            508,
+            691,
+            541
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7307068109512329
+        },
+        {
+          "bbox": [
+            690,
+            508,
+            731,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6554715037345886
+        },
+        {
+          "bbox": [
+            632,
+            443,
+            653,
+            460
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5299046039581299
+        },
+        {
+          "bbox": [
+            667,
+            465,
+            695,
+            493
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3763164281845093
+        },
+        {
+          "bbox": [
+            749,
+            543,
+            822,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8489823937416077
+        }
+      ]
+    },
+    {
+      "frame_idx": 66,
+      "detections": [
+        {
+          "bbox": [
+            650,
+            508,
+            691,
+            541
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7303890585899353
+        },
+        {
+          "bbox": [
+            690,
+            508,
+            731,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6941935420036316
+        },
+        {
+          "bbox": [
+            632,
+            442,
+            653,
+            460
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5457214713096619
+        },
+        {
+          "bbox": [
+            667,
+            465,
+            695,
+            493
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.36937883496284485
+        },
+        {
+          "bbox": [
+            747,
+            543,
+            819,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8328195810317993
+        }
+      ]
+    },
+    {
+      "frame_idx": 67,
+      "detections": [
+        {
+          "bbox": [
+            650,
+            508,
+            691,
+            541
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7235336303710938
+        },
+        {
+          "bbox": [
+            690,
+            508,
+            730,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7152257561683655
+        },
+        {
+          "bbox": [
+            632,
+            442,
+            653,
+            460
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5252133011817932
+        },
+        {
+          "bbox": [
+            746,
+            543,
+            817,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8479201197624207
+        }
+      ]
+    },
+    {
+      "frame_idx": 68,
+      "detections": [
+        {
+          "bbox": [
+            650,
+            508,
+            691,
+            541
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7227808833122253
+        },
+        {
+          "bbox": [
+            689,
+            508,
+            730,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7385444641113281
+        },
+        {
+          "bbox": [
+            631,
+            441,
+            654,
+            460
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.521820068359375
+        },
+        {
+          "bbox": [
+            744,
+            543,
+            815,
+            591
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.846398115158081
+        }
+      ]
+    },
+    {
+      "frame_idx": 69,
+      "detections": [
+        {
+          "bbox": [
+            649,
+            508,
+            690,
+            541
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6940745115280151
+        },
+        {
+          "bbox": [
+            689,
+            508,
+            729,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.720031201839447
+        },
+        {
+          "bbox": [
+            631,
+            441,
+            654,
+            460
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5072102546691895
+        },
+        {
+          "bbox": [
+            742,
+            542,
+            812,
+            590
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8342201709747314
+        },
+        {
+          "bbox": [
+            667,
+            464,
+            695,
+            492
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3800489008426666
+        }
+      ]
+    },
+    {
+      "frame_idx": 70,
+      "detections": [
+        {
+          "bbox": [
+            649,
+            507,
+            690,
+            541
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6951448917388916
+        },
+        {
+          "bbox": [
+            688,
+            508,
+            730,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7421330809593201
+        },
+        {
+          "bbox": [
+            631,
+            441,
+            654,
+            460
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4570666253566742
+        },
+        {
+          "bbox": [
+            740,
+            542,
+            809,
+            589
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8288491368293762
+        },
+        {
+          "bbox": [
+            666,
+            463,
+            694,
+            491
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4058612287044525
+        }
+      ]
+    },
+    {
+      "frame_idx": 71,
+      "detections": [
+        {
+          "bbox": [
+            649,
+            507,
+            690,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6790617108345032
+        },
+        {
+          "bbox": [
+            688,
+            508,
+            730,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.746306836605072
+        },
+        {
+          "bbox": [
+            631,
+            440,
+            654,
+            460
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4713689386844635
+        },
+        {
+          "bbox": [
+            738,
+            542,
+            807,
+            589
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8244361281394958
+        },
+        {
+          "bbox": [
+            666,
+            463,
+            694,
+            491
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.41343826055526733
+        }
+      ]
+    },
+    {
+      "frame_idx": 72,
+      "detections": [
+        {
+          "bbox": [
+            649,
+            507,
+            690,
+            540
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.7135433554649353
+        },
+        {
+          "bbox": [
+            688,
+            507,
+            730,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7465251684188843
+        },
+        {
+          "bbox": [
+            631,
+            440,
+            654,
+            460
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5097012519836426
+        },
+        {
+          "bbox": [
+            736,
+            542,
+            804,
+            589
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8396319150924683
+        },
+        {
+          "bbox": [
+            665,
+            463,
+            694,
+            491
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.382002055644989
+        }
+      ]
+    },
+    {
+      "frame_idx": 73,
+      "detections": [
+        {
+          "bbox": [
+            649,
+            507,
+            690,
+            539
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6893832087516785
+        },
+        {
+          "bbox": [
+            688,
+            507,
+            730,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7391288876533508
+        },
+        {
+          "bbox": [
+            631,
+            439,
+            654,
+            459
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.5064979791641235
+        },
+        {
+          "bbox": [
+            734,
+            541,
+            801,
+            588
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8365901112556458
+        },
+        {
+          "bbox": [
+            666,
+            463,
+            694,
+            491
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3849324584007263
+        }
+      ]
+    },
+    {
+      "frame_idx": 74,
+      "detections": [
+        {
+          "bbox": [
+            649,
+            506,
+            690,
+            539
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6761395931243896
+        },
+        {
+          "bbox": [
+            688,
+            507,
+            730,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7335333228111267
+        },
+        {
+          "bbox": [
+            631,
+            440,
+            653,
+            459
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4981114864349365
+        },
+        {
+          "bbox": [
+            732,
+            541,
+            799,
+            588
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8524446487426758
+        },
+        {
+          "bbox": [
+            666,
+            463,
+            694,
+            491
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.404083251953125
+        }
+      ]
+    },
+    {
+      "frame_idx": 75,
+      "detections": [
+        {
+          "bbox": [
+            648,
+            506,
+            689,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6548175811767578
+        },
+        {
+          "bbox": [
+            688,
+            507,
+            729,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7393220663070679
+        },
+        {
+          "bbox": [
+            631,
+            440,
+            653,
+            459
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.49250730872154236
+        },
+        {
+          "bbox": [
+            730,
+            540,
+            797,
+            587
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8370692133903503
+        },
+        {
+          "bbox": [
+            666,
+            463,
+            693,
+            489
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.40010207891464233
+        }
+      ]
+    },
+    {
+      "frame_idx": 76,
+      "detections": [
+        {
+          "bbox": [
+            648,
+            506,
+            689,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6569725871086121
+        },
+        {
+          "bbox": [
+            689,
+            507,
+            729,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.72477787733078
+        },
+        {
+          "bbox": [
+            631,
+            440,
+            653,
+            459
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4860451817512512
+        },
+        {
+          "bbox": [
+            729,
+            539,
+            795,
+            586
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8298373818397522
+        },
+        {
+          "bbox": [
+            669,
+            463,
+            691,
+            484
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3687443733215332
+        }
+      ]
+    },
+    {
+      "frame_idx": 77,
+      "detections": [
+        {
+          "bbox": [
+            648,
+            506,
+            689,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6504787802696228
+        },
+        {
+          "bbox": [
+            689,
+            507,
+            729,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7135070562362671
+        },
+        {
+          "bbox": [
+            631,
+            440,
+            653,
+            458
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.44716134667396545
+        },
+        {
+          "bbox": [
+            728,
+            538,
+            793,
+            585
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8275377750396729
+        }
+      ]
+    },
+    {
+      "frame_idx": 78,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            505,
+            689,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6529203057289124
+        },
+        {
+          "bbox": [
+            689,
+            506,
+            729,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7333519458770752
+        },
+        {
+          "bbox": [
+            631,
+            439,
+            653,
+            458
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.41775670647621155
+        },
+        {
+          "bbox": [
+            726,
+            538,
+            791,
+            585
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8235573172569275
+        }
+      ]
+    },
+    {
+      "frame_idx": 79,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            506,
+            689,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6174893975257874
+        },
+        {
+          "bbox": [
+            688,
+            506,
+            728,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7126938104629517
+        },
+        {
+          "bbox": [
+            631,
+            439,
+            653,
+            458
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.42633256316185
+        },
+        {
+          "bbox": [
+            724,
+            538,
+            789,
+            585
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8321831226348877
+        }
+      ]
+    },
+    {
+      "frame_idx": 80,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            505,
+            689,
+            538
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6160331964492798
+        },
+        {
+          "bbox": [
+            688,
+            506,
+            728,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6933795213699341
+        },
+        {
+          "bbox": [
+            631,
+            438,
+            653,
+            457
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4392983615398407
+        },
+        {
+          "bbox": [
+            722,
+            538,
+            787,
+            585
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8504973649978638
+        },
+        {
+          "bbox": [
+            668,
+            461,
+            690,
+            481
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.38033831119537354
+        }
+      ]
+    },
+    {
+      "frame_idx": 81,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            505,
+            689,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5913538932800293
+        },
+        {
+          "bbox": [
+            688,
+            506,
+            728,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6913120150566101
+        },
+        {
+          "bbox": [
+            631,
+            438,
+            653,
+            457
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.44432151317596436
+        },
+        {
+          "bbox": [
+            721,
+            538,
+            786,
+            585
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8518258333206177
+        },
+        {
+          "bbox": [
+            668,
+            460,
+            690,
+            481
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.40180858969688416
+        }
+      ]
+    },
+    {
+      "frame_idx": 82,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            505,
+            688,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6049168705940247
+        },
+        {
+          "bbox": [
+            688,
+            506,
+            727,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6950436234474182
+        },
+        {
+          "bbox": [
+            631,
+            438,
+            653,
+            457
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4491885006427765
+        },
+        {
+          "bbox": [
+            719,
+            537,
+            784,
+            585
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8514573574066162
+        },
+        {
+          "bbox": [
+            667,
+            460,
+            689,
+            480
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4191932678222656
+        }
+      ]
+    },
+    {
+      "frame_idx": 83,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            505,
+            688,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6143542528152466
+        },
+        {
+          "bbox": [
+            687,
+            505,
+            727,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7020577192306519
+        },
+        {
+          "bbox": [
+            631,
+            437,
+            653,
+            457
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4548512101173401
+        },
+        {
+          "bbox": [
+            718,
+            537,
+            783,
+            585
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8500063419342041
+        },
+        {
+          "bbox": [
+            666,
+            459,
+            691,
+            482
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4671591520309448
+        }
+      ]
+    },
+    {
+      "frame_idx": 84,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            504,
+            688,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6141305565834045
+        },
+        {
+          "bbox": [
+            687,
+            506,
+            727,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6788617372512817
+        },
+        {
+          "bbox": [
+            631,
+            437,
+            653,
+            457
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.43900197744369507
+        },
+        {
+          "bbox": [
+            717,
+            537,
+            781,
+            584
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8443850874900818
+        },
+        {
+          "bbox": [
+            666,
+            459,
+            691,
+            482
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.44812387228012085
+        }
+      ]
+    },
+    {
+      "frame_idx": 85,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            504,
+            688,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6044894456863403
+        },
+        {
+          "bbox": [
+            688,
+            506,
+            726,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6870269775390625
+        },
+        {
+          "bbox": [
+            631,
+            437,
+            653,
+            456
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4417654275894165
+        },
+        {
+          "bbox": [
+            716,
+            536,
+            779,
+            584
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8494290709495544
+        },
+        {
+          "bbox": [
+            666,
+            459,
+            692,
+            482
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.41770312190055847
+        }
+      ]
+    },
+    {
+      "frame_idx": 86,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            504,
+            688,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5949411392211914
+        },
+        {
+          "bbox": [
+            688,
+            506,
+            726,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6988741755485535
+        },
+        {
+          "bbox": [
+            630,
+            436,
+            653,
+            456
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.40684494376182556
+        },
+        {
+          "bbox": [
+            715,
+            536,
+            777,
+            583
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.83587247133255
+        },
+        {
+          "bbox": [
+            666,
+            460,
+            690,
+            482
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.40139493346214294
+        }
+      ]
+    },
+    {
+      "frame_idx": 87,
+      "detections": [
+        {
+          "bbox": [
+            645,
+            504,
+            688,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.6023699641227722
+        },
+        {
+          "bbox": [
+            688,
+            506,
+            726,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.7006711959838867
+        },
+        {
+          "bbox": [
+            630,
+            435,
+            653,
+            456
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.42350319027900696
+        },
+        {
+          "bbox": [
+            713,
+            536,
+            775,
+            583
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8373391032218933
+        },
+        {
+          "bbox": [
+            666,
+            460,
+            690,
+            481
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.39655235409736633
+        }
+      ]
+    },
+    {
+      "frame_idx": 88,
+      "detections": [
+        {
+          "bbox": [
+            645,
+            504,
+            688,
+            537
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5760329365730286
+        },
+        {
+          "bbox": [
+            688,
+            506,
+            726,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6993735432624817
+        },
+        {
+          "bbox": [
+            630,
+            435,
+            653,
+            456
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4335877299308777
+        },
+        {
+          "bbox": [
+            712,
+            535,
+            774,
+            583
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.836266040802002
+        },
+        {
+          "bbox": [
+            665,
+            460,
+            690,
+            481
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.38387447595596313
+        }
+      ]
+    },
+    {
+      "frame_idx": 89,
+      "detections": [
+        {
+          "bbox": [
+            645,
+            504,
+            688,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5604150295257568
+        },
+        {
+          "bbox": [
+            687,
+            505,
+            726,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.687483549118042
+        },
+        {
+          "bbox": [
+            630,
+            434,
+            653,
+            455
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.445255309343338
+        },
+        {
+          "bbox": [
+            711,
+            535,
+            772,
+            583
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8067283034324646
+        },
+        {
+          "bbox": [
+            665,
+            460,
+            689,
+            481
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3738309442996979
+        }
+      ]
+    },
+    {
+      "frame_idx": 90,
+      "detections": [
+        {
+          "bbox": [
+            645,
+            504,
+            688,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5382565855979919
+        },
+        {
+          "bbox": [
+            687,
+            505,
+            726,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6609618663787842
+        },
+        {
+          "bbox": [
+            630,
+            434,
+            653,
+            455
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.45621412992477417
+        },
+        {
+          "bbox": [
+            709,
+            535,
+            771,
+            583
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8057717680931091
+        },
+        {
+          "bbox": [
+            665,
+            459,
+            691,
+            482
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.39306917786598206
+        }
+      ]
+    },
+    {
+      "frame_idx": 91,
+      "detections": [
+        {
+          "bbox": [
+            645,
+            504,
+            688,
+            536
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.543213963508606
+        },
+        {
+          "bbox": [
+            686,
+            504,
+            726,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6368750929832458
+        },
+        {
+          "bbox": [
+            630,
+            434,
+            653,
+            455
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.41114524006843567
+        },
+        {
+          "bbox": [
+            708,
+            534,
+            769,
+            582
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7915886044502258
+        },
+        {
+          "bbox": [
+            665,
+            459,
+            691,
+            482
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.41259604692459106
+        }
+      ]
+    },
+    {
+      "frame_idx": 92,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            504,
+            687,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.534690797328949
+        },
+        {
+          "bbox": [
+            685,
+            504,
+            726,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6220101118087769
+        },
+        {
+          "bbox": [
+            630,
+            434,
+            653,
+            455
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.3971935510635376
+        },
+        {
+          "bbox": [
+            707,
+            533,
+            768,
+            582
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.796393871307373
+        },
+        {
+          "bbox": [
+            665,
+            458,
+            691,
+            481
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4965234100818634
+        }
+      ]
+    },
+    {
+      "frame_idx": 93,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            504,
+            687,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5164613723754883
+        },
+        {
+          "bbox": [
+            685,
+            504,
+            725,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6148586869239807
+        },
+        {
+          "bbox": [
+            630,
+            434,
+            653,
+            455
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.389986127614975
+        },
+        {
+          "bbox": [
+            706,
+            533,
+            766,
+            581
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8366366624832153
+        },
+        {
+          "bbox": [
+            666,
+            458,
+            691,
+            480
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.49525633454322815
+        }
+      ]
+    },
+    {
+      "frame_idx": 94,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            504,
+            687,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5097505450248718
+        },
+        {
+          "bbox": [
+            685,
+            504,
+            725,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6324220299720764
+        },
+        {
+          "bbox": [
+            631,
+            434,
+            653,
+            454
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.3623579442501068
+        },
+        {
+          "bbox": [
+            705,
+            532,
+            764,
+            580
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8119345903396606
+        },
+        {
+          "bbox": [
+            665,
+            458,
+            691,
+            480
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.43029019236564636
+        }
+      ]
+    },
+    {
+      "frame_idx": 95,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            504,
+            687,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5011091232299805
+        },
+        {
+          "bbox": [
+            686,
+            503,
+            725,
+            531
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6684370040893555
+        },
+        {
+          "bbox": [
+            631,
+            434,
+            653,
+            454
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4302097260951996
+        },
+        {
+          "bbox": [
+            704,
+            532,
+            762,
+            579
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8102869391441345
+        },
+        {
+          "bbox": [
+            665,
+            458,
+            690,
+            479
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4803544282913208
+        }
+      ]
+    },
+    {
+      "frame_idx": 96,
+      "detections": [
+        {
+          "bbox": [
+            649,
+            505,
+            688,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5281265377998352
+        },
+        {
+          "bbox": [
+            685,
+            503,
+            725,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6349686980247498
+        },
+        {
+          "bbox": [
+            631,
+            433,
+            653,
+            453
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.48401516675949097
+        },
+        {
+          "bbox": [
+            704,
+            532,
+            761,
+            578
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8574419021606445
+        },
+        {
+          "bbox": [
+            665,
+            458,
+            689,
+            479
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.502403974533081
+        }
+      ]
+    },
+    {
+      "frame_idx": 97,
+      "detections": [
+        {
+          "bbox": [
+            650,
+            505,
+            688,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5364810228347778
+        },
+        {
+          "bbox": [
+            684,
+            503,
+            725,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6528617739677429
+        },
+        {
+          "bbox": [
+            631,
+            433,
+            653,
+            453
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.513664186000824
+        },
+        {
+          "bbox": [
+            703,
+            532,
+            759,
+            577
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8395527005195618
+        },
+        {
+          "bbox": [
+            665,
+            458,
+            689,
+            479
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5520480275154114
+        }
+      ]
+    },
+    {
+      "frame_idx": 98,
+      "detections": [
+        {
+          "bbox": [
+            651,
+            506,
+            688,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5239596366882324
+        },
+        {
+          "bbox": [
+            683,
+            503,
+            725,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6541323661804199
+        },
+        {
+          "bbox": [
+            631,
+            433,
+            653,
+            453
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4728817343711853
+        },
+        {
+          "bbox": [
+            702,
+            531,
+            758,
+            577
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8320489525794983
+        },
+        {
+          "bbox": [
+            665,
+            457,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5502814650535583
+        }
+      ]
+    },
+    {
+      "frame_idx": 99,
+      "detections": [
+        {
+          "bbox": [
+            648,
+            504,
+            687,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5152983665466309
+        },
+        {
+          "bbox": [
+            682,
+            503,
+            725,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6694735288619995
+        },
+        {
+          "bbox": [
+            632,
+            432,
+            652,
+            452
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.44305816292762756
+        },
+        {
+          "bbox": [
+            701,
+            531,
+            757,
+            577
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8309338688850403
+        },
+        {
+          "bbox": [
+            665,
+            458,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5284557342529297
+        }
+      ]
+    },
+    {
+      "frame_idx": 100,
+      "detections": [
+        {
+          "bbox": [
+            648,
+            505,
+            686,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5162761211395264
+        },
+        {
+          "bbox": [
+            682,
+            502,
+            725,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.679135262966156
+        },
+        {
+          "bbox": [
+            632,
+            432,
+            652,
+            452
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4109598696231842
+        },
+        {
+          "bbox": [
+            700,
+            530,
+            756,
+            576
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8276956677436829
+        },
+        {
+          "bbox": [
+            665,
+            458,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4982621371746063
+        }
+      ]
+    },
+    {
+      "frame_idx": 101,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            504,
+            687,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5329585671424866
+        },
+        {
+          "bbox": [
+            681,
+            501,
+            725,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6774867177009583
+        },
+        {
+          "bbox": [
+            632,
+            432,
+            652,
+            451
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.44957271218299866
+        },
+        {
+          "bbox": [
+            699,
+            531,
+            754,
+            576
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8295146822929382
+        },
+        {
+          "bbox": [
+            664,
+            457,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5022964477539062
+        }
+      ]
+    },
+    {
+      "frame_idx": 102,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            504,
+            686,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.529417097568512
+        },
+        {
+          "bbox": [
+            682,
+            501,
+            725,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6325714588165283
+        },
+        {
+          "bbox": [
+            632,
+            432,
+            652,
+            451
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.43790706992149353
+        },
+        {
+          "bbox": [
+            698,
+            530,
+            753,
+            575
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8292968273162842
+        },
+        {
+          "bbox": [
+            664,
+            457,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5311195850372314
+        }
+      ]
+    },
+    {
+      "frame_idx": 103,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            505,
+            686,
+            535
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5048163533210754
+        },
+        {
+          "bbox": [
+            682,
+            501,
+            725,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6551472544670105
+        },
+        {
+          "bbox": [
+            633,
+            432,
+            651,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4217669367790222
+        },
+        {
+          "bbox": [
+            698,
+            530,
+            752,
+            575
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8354447484016418
+        },
+        {
+          "bbox": [
+            664,
+            457,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4717208445072174
+        }
+      ]
+    },
+    {
+      "frame_idx": 104,
+      "detections": [
+        {
+          "bbox": [
+            646,
+            505,
+            686,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.46391239762306213
+        },
+        {
+          "bbox": [
+            682,
+            500,
+            725,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5666103959083557
+        },
+        {
+          "bbox": [
+            633,
+            432,
+            651,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.387462854385376
+        },
+        {
+          "bbox": [
+            697,
+            529,
+            750,
+            574
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8282457590103149
+        },
+        {
+          "bbox": [
+            664,
+            457,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.46515896916389465
+        }
+      ]
+    },
+    {
+      "frame_idx": 105,
+      "detections": [
+        {
+          "bbox": [
+            644,
+            503,
+            687,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5052676200866699
+        },
+        {
+          "bbox": [
+            682,
+            500,
+            725,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.6092903017997742
+        },
+        {
+          "bbox": [
+            632,
+            432,
+            651,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.390113890171051
+        },
+        {
+          "bbox": [
+            696,
+            529,
+            749,
+            573
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8220393061637878
+        },
+        {
+          "bbox": [
+            664,
+            457,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.49541205167770386
+        }
+      ]
+    },
+    {
+      "frame_idx": 106,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            502,
+            687,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5224296450614929
+        },
+        {
+          "bbox": [
+            683,
+            499,
+            725,
+            531
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5511019229888916
+        },
+        {
+          "bbox": [
+            632,
+            431,
+            652,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4165187180042267
+        },
+        {
+          "bbox": [
+            695,
+            529,
+            748,
+            572
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8168958425521851
+        },
+        {
+          "bbox": [
+            664,
+            457,
+            689,
+            478
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5423195958137512
+        }
+      ]
+    },
+    {
+      "frame_idx": 107,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            501,
+            687,
+            534
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5800294280052185
+        },
+        {
+          "bbox": [
+            683,
+            499,
+            723,
+            531
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5928300619125366
+        },
+        {
+          "bbox": [
+            632,
+            432,
+            652,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4266551733016968
+        },
+        {
+          "bbox": [
+            694,
+            529,
+            747,
+            572
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8081516623497009
+        },
+        {
+          "bbox": [
+            664,
+            457,
+            689,
+            477
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5085233449935913
+        }
+      ]
+    },
+    {
+      "frame_idx": 108,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            502,
+            686,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5118095278739929
+        },
+        {
+          "bbox": [
+            683,
+            499,
+            723,
+            530
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5431259870529175
+        },
+        {
+          "bbox": [
+            632,
+            431,
+            652,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.425760954618454
+        },
+        {
+          "bbox": [
+            694,
+            529,
+            746,
+            572
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8156981468200684
+        },
+        {
+          "bbox": [
+            663,
+            455,
+            689,
+            477
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.48571330308914185
+        }
+      ]
+    },
+    {
+      "frame_idx": 109,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            502,
+            686,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.48525550961494446
+        },
+        {
+          "bbox": [
+            683,
+            499,
+            723,
+            530
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5839004516601562
+        },
+        {
+          "bbox": [
+            632,
+            431,
+            652,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.48890605568885803
+        },
+        {
+          "bbox": [
+            693,
+            529,
+            745,
+            572
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8050657510757446
+        },
+        {
+          "bbox": [
+            663,
+            454,
+            690,
+            476
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.5245837569236755
+        }
+      ]
+    },
+    {
+      "frame_idx": 110,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            501,
+            686,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5219494700431824
+        },
+        {
+          "bbox": [
+            682,
+            498,
+            722,
+            530
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5980900526046753
+        },
+        {
+          "bbox": [
+            632,
+            431,
+            652,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4390966296195984
+        },
+        {
+          "bbox": [
+            692,
+            529,
+            744,
+            571
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8064517378807068
+        },
+        {
+          "bbox": [
+            663,
+            454,
+            690,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.47178909182548523
+        }
+      ]
+    },
+    {
+      "frame_idx": 111,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            501,
+            686,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5157156586647034
+        },
+        {
+          "bbox": [
+            683,
+            498,
+            722,
+            529
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5891571640968323
+        },
+        {
+          "bbox": [
+            632,
+            431,
+            652,
+            450
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4015415608882904
+        },
+        {
+          "bbox": [
+            691,
+            529,
+            742,
+            571
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8120166063308716
+        },
+        {
+          "bbox": [
+            663,
+            453,
+            690,
+            475
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.44199803471565247
+        }
+      ]
+    },
+    {
+      "frame_idx": 112,
+      "detections": [
+        {
+          "bbox": [
+            644,
+            502,
+            686,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.48337429761886597
+        },
+        {
+          "bbox": [
+            684,
+            499,
+            721,
+            529
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5551926493644714
+        },
+        {
+          "bbox": [
+            631,
+            429,
+            652,
+            449
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4046471118927002
+        },
+        {
+          "bbox": [
+            691,
+            529,
+            742,
+            571
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8137857913970947
+        },
+        {
+          "bbox": [
+            664,
+            453,
+            690,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3971906006336212
+        }
+      ]
+    },
+    {
+      "frame_idx": 113,
+      "detections": [
+        {
+          "bbox": [
+            644,
+            502,
+            685,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.48755285143852234
+        },
+        {
+          "bbox": [
+            684,
+            499,
+            721,
+            529
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5261929631233215
+        },
+        {
+          "bbox": [
+            631,
+            429,
+            652,
+            449
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4180485010147095
+        },
+        {
+          "bbox": [
+            689,
+            529,
+            741,
+            571
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8094841241836548
+        }
+      ]
+    },
+    {
+      "frame_idx": 114,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            503,
+            686,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.47782447934150696
+        },
+        {
+          "bbox": [
+            683,
+            499,
+            721,
+            530
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5439326167106628
+        },
+        {
+          "bbox": [
+            630,
+            429,
+            652,
+            449
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4272218942642212
+        },
+        {
+          "bbox": [
+            689,
+            528,
+            741,
+            571
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8182973265647888
+        },
+        {
+          "bbox": [
+            664,
+            453,
+            690,
+            474
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.4266873300075531
+        }
+      ]
+    },
+    {
+      "frame_idx": 115,
+      "detections": [
+        {
+          "bbox": [
+            647,
+            503,
+            686,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.4676026403903961
+        },
+        {
+          "bbox": [
+            682,
+            499,
+            721,
+            531
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5087569355964661
+        },
+        {
+          "bbox": [
+            630,
+            428,
+            651,
+            448
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.45062732696533203
+        },
+        {
+          "bbox": [
+            688,
+            528,
+            740,
+            570
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8013158440589905
+        },
+        {
+          "bbox": [
+            664,
+            453,
+            689,
+            473
+          ],
+          "class_name": "car",
+          "track_id": 8,
+          "confidence": 0.3915020525455475
+        }
+      ]
+    },
+    {
+      "frame_idx": 116,
+      "detections": [
+        {
+          "bbox": [
+            645,
+            502,
+            685,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5027956962585449
+        },
+        {
+          "bbox": [
+            682,
+            500,
+            721,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5076838731765747
+        },
+        {
+          "bbox": [
+            630,
+            428,
+            651,
+            448
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.4257891774177551
+        },
+        {
+          "bbox": [
+            687,
+            527,
+            740,
+            570
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7910677790641785
+        }
+      ]
+    },
+    {
+      "frame_idx": 117,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            501,
+            685,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5193168520927429
+        },
+        {
+          "bbox": [
+            682,
+            500,
+            721,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.5150956511497498
+        },
+        {
+          "bbox": [
+            630,
+            428,
+            651,
+            448
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.40686360001564026
+        },
+        {
+          "bbox": [
+            686,
+            527,
+            739,
+            570
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7905009388923645
+        }
+      ]
+    },
+    {
+      "frame_idx": 118,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            501,
+            685,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.5385483503341675
+        },
+        {
+          "bbox": [
+            682,
+            499,
+            722,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.4611186683177948
+        },
+        {
+          "bbox": [
+            630,
+            428,
+            651,
+            448
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.3969632089138031
+        },
+        {
+          "bbox": [
+            686,
+            527,
+            738,
+            569
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.8045199513435364
+        }
+      ]
+    },
+    {
+      "frame_idx": 119,
+      "detections": [
+        {
+          "bbox": [
+            643,
+            502,
+            685,
+            532
+          ],
+          "class_name": "car",
+          "track_id": 2,
+          "confidence": 0.49578630924224854
+        },
+        {
+          "bbox": [
+            683,
+            501,
+            721,
+            533
+          ],
+          "class_name": "car",
+          "track_id": 3,
+          "confidence": 0.46783435344696045
+        },
+        {
+          "bbox": [
+            630,
+            427,
+            651,
+            448
+          ],
+          "class_name": "car",
+          "track_id": 4,
+          "confidence": 0.41493934392929077
+        },
+        {
+          "bbox": [
+            686,
+            526,
+            737,
+            568
+          ],
+          "class_name": "car",
+          "track_id": 1,
+          "confidence": 0.7962213158607483
+        }
+      ]
+    }
+  ],
+  "line_crossings": [
+    {
+      "frame_idx": 71,
+      "track_id": 4,
+      "class_name": "car",
+      "direction": "UP"
+    }
+  ],
+  "wrong_way_events": []
+}
