@@ -27,6 +27,9 @@ outputs/logs/*.json
 !outputs/videos/.gitkeep
 !outputs/snapshots/.gitkeep
 !outputs/logs/.gitkeep
+# Inputs & Videos
+data/input/*.mp4
+!data/input/traffic.mp4
 !data/input/.gitkeep
 !data/sample/.gitkeep
 !models/.gitkeep

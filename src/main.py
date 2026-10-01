@@ -48,6 +48,7 @@ def run_pipeline(
     reset_logs: bool = False,
     imgsz: Any = 640,
     line_orientation: str = "AUTO",
+    ignore_opposing_median: bool = False,
 ) -> Dict[str, Any]:
     """Runs the unified traffic analytics pipeline."""
     print("=" * 75)
@@ -69,6 +70,7 @@ def run_pipeline(
         frame_skip=frame_skip,
         imgsz=effective_imgsz,
         line_orientation=line_orientation,
+        ignore_opposing_median=ignore_opposing_median,
     )
     cfg.ensure_directories()
 
@@ -133,6 +135,11 @@ def run_pipeline(
                 # Stage 1: Detection & Multi-Object Tracking
                 monitor.mark_preprocessed()
                 active_tracks = tracker.update(frame, idx)
+                if cfg.ignore_opposing_median:
+                    active_tracks = [
+                        t for t in active_tracks
+                        if not (t.centroid[1] < 0.35 * meta.height and t.centroid[0] > 0.65 * meta.width)
+                    ]
                 monitor.mark_inference_complete()
 
                 # Stage 2: Vehicle Counting
@@ -237,6 +244,7 @@ def run_pipeline(
         "total_violations": len(violation_detector.violations),
         "source": str(source),
         "allowed_direction": allowed_direction,
+        "effective_allowed_direction": violation_detector.inferred_allowed_direction or allowed_direction,
         "completed_at": datetime.now().isoformat(timespec="seconds"),
     }
     summary_path = Path(cfg.logs_dir) / "summary.json"
@@ -310,6 +318,11 @@ def main():
         action="store_true",
         help="Display OpenCV live window preview",
     )
+    parser.add_argument(
+        "--ignore-median",
+        action="store_true",
+        help="Filter out opposing carriageway median background traffic on divided highways",
+    )
     args = parser.parse_args()
 
     run_pipeline(
@@ -323,6 +336,7 @@ def main():
         reset_logs=args.reset_logs,
         imgsz=args.imgsz,
         line_orientation=args.orientation,
+        ignore_opposing_median=args.ignore_median,
     )
 
 

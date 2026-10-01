@@ -111,7 +111,15 @@ class TrafficConfig:
 
     # Temporal confirmation window: consecutive frames a vehicle must violate allowed direction
     # before raising a confirmed violation alert (prevents single-frame detector noise)
-    violation_confirm_frames: int = 3
+    violation_confirm_frames: int = 4
+
+    # Minimum trajectory points required before a track is evaluated for wrong-way violations
+    # Filters out tentative or edge-flicker detections in their first few frames
+    min_track_history_for_violation: int = 5
+
+    # Roadway Median & Corridor Filter:
+    # When True, ignores distant background traffic on the opposing side of divided highways
+    ignore_opposing_median: bool = False
 
     # -------------------------------------------------------------------------
     # 6. Performance & Optimization Settings

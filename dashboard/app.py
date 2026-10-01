@@ -141,6 +141,11 @@ def main():
     frame_skip = st.sidebar.selectbox("Frame Skipping", [0, 1, 2], index=0, format_func=lambda x: f"Process all frames (0)" if x == 0 else f"Skip {x} frame(s)")
 
     reset_logs = st.sidebar.checkbox("Reset audit logs for this run", value=True, help="Clear previous video counts and logs before running this video")
+    ignore_median = st.sidebar.checkbox(
+        "Filter Opposing Highway Median (Top-Right)",
+        value=True,
+        help="Filters out vehicles traveling on the separate opposing carriageway visible across the highway barrier in divided highway footage.",
+    )
     st.sidebar.caption("💡 **Camera Perspective Tip**: Best results are achieved with standard roadside or overhead CCTV footage (30°-60° angle). High-altitude vertical drone footage experiences COCO domain shift and extreme downsampling.")
 
     is_live = str(video_source).isdigit() or str(video_source).startswith("rtsp://") or str(video_source).startswith("http://")
@@ -167,6 +172,7 @@ def main():
                     reset_logs=reset_logs,
                     imgsz=imgsz,
                     line_orientation=line_orientation,
+                    ignore_opposing_median=ignore_median,
                 )
             st.sidebar.success("✅ Video Processing Complete!")
             st.rerun()
@@ -184,11 +190,13 @@ def main():
         total_violations = summary.get("total_violations", 0)
         avg_fps = f"{summary.get('avg_fps', 0.0):.1f} FPS"
         avg_lat = f"{summary.get('avg_inference_ms', 0.0):.1f} ms"
+        eff_dir = summary.get("effective_allowed_direction", summary.get("allowed_direction", "AUTO"))
     else:
         total_counted = len(events_df[events_df["event_type"] == "LINE_CROSSING"]) if not events_df.empty else 0
         total_violations = len(events_df[events_df["event_type"] == "WRONG_WAY_VIOLATION"]) if not events_df.empty else 0
         avg_fps = "-- FPS"
         avg_lat = "-- ms"
+        eff_dir = allowed_direction
 
     kpi1, kpi2, kpi3, kpi4 = st.columns(4)
     with kpi1:
@@ -197,8 +205,9 @@ def main():
         st.metric(
             "🚨 Wrong-Way Violations",
             total_violations,
-            delta=f"{total_violations} alerts" if total_violations > 0 else None,
-            delta_color="inverse",
+            delta=f"{total_violations} alerts" if total_violations > 0 else "0 (Normal Flow)",
+            delta_color="inverse" if total_violations > 0 else "normal",
+            help=f"Legal Flow: {eff_dir}",
         )
     with kpi3:
         st.metric("⚡ Processing Speed", avg_fps, help="Actual measured pipeline throughput on host machine")

@@ -148,3 +148,74 @@ def test_legal_vehicle_no_alert(tmp_path):
         assert len(events) == 0
 
     assert len(detector.violations) == 0
+
+
+def test_direction_estimation_aspect_ratio_diagonal_perspective():
+    """Test that diagonal lane movement in widescreen perspective is classified as DOWN."""
+    # Simulates vehicle moving from (1400, 400) to (1590, 474) on 1920x1080: dx=190, dy=74
+    traj = deque([
+        (1400, 400),
+        (1450, 420),
+        (1500, 440),
+        (1550, 460),
+        (1590, 474),
+    ])
+    direction = get_vehicle_direction(traj, min_distance=15.0, frame_size=(1920, 1080))
+    assert direction == "DOWN"
+
+
+def test_wrong_way_auto_calibration(tmp_path):
+    """Test that AUTO mode calibrates baseline direction to DOWN from dominant traffic flow."""
+    detector = WrongWayDetector(
+        allowed_direction="AUTO",
+        confirm_frames=3,
+        snapshots_dir=str(tmp_path),
+    )
+    frame = np.zeros((1080, 1920, 3), dtype=np.uint8)
+
+    # Simulate 5 vehicles over 6 frames moving downwards
+    vehicles = [
+        make_test_tracked_vehicle(track_id=i, y_start=200, y_end=400, history_len=8)
+        for i in range(1, 6)
+    ]
+
+    for f_idx in range(6):
+        detector.update(frame, vehicles, frame_idx=f_idx)
+
+    # Detector should have calibrated to DOWN
+    assert detector.is_calibrated is True
+    assert detector.inferred_allowed_direction == "DOWN"
+    # No false violations during calibration
+    assert len(detector.violations) == 0
+
+
+def test_wrong_way_downstream_no_violation(tmp_path):
+    """Test that vehicles with positive dy never trigger a violation against DOWN flow."""
+    detector = WrongWayDetector(
+        allowed_direction="DOWN",
+        confirm_frames=2,
+        snapshots_dir=str(tmp_path),
+    )
+    frame = np.zeros((1080, 1920, 3), dtype=np.uint8)
+
+    # Vehicle with diagonal downstream motion (dx=100, dy=40)
+    traj = deque(maxlen=20)
+    for i in range(10):
+        traj.append((500 + i * 10, 200 + i * 4))
+    veh = TrackedVehicle(
+        track_id=10,
+        class_id=2,
+        class_name="car",
+        confidence=0.9,
+        bbox=(580, 210, 620, 270),
+        centroid=traj[-1],
+        previous_centroid=traj[-2],
+        trajectory=traj,
+    )
+
+    for i in range(5):
+        events = detector.update(frame, [veh], frame_idx=i)
+        assert len(events) == 0
+
+    assert len(detector.violations) == 0
+

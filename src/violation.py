@@ -23,7 +23,11 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from config.config import TrafficConfig
 from src.tracker import TrackedVehicle
-from src.direction import get_vehicle_direction
+from src.direction import (
+    calculate_motion_vector,
+    estimate_cardinal_direction,
+    get_vehicle_direction,
+)
 
 
 class WrongWayDetector:
@@ -48,6 +52,7 @@ class WrongWayDetector:
         self.config = config or TrafficConfig()
         self.allowed_direction = (allowed_direction or self.config.allowed_direction).upper()
         self.confirm_frames = confirm_frames or self.config.violation_confirm_frames
+        self.min_track_history = getattr(self.config, "min_track_history_for_violation", 5)
 
         snap_path_str = snapshots_dir or self.config.snapshots_dir
         self.snapshots_dir = Path(snap_path_str)
@@ -56,15 +61,27 @@ class WrongWayDetector:
         # Audit registry of confirmed violations
         self.violations: List[Dict[str, Any]] = []
 
-        # Direction statistics for AUTO baseline flow inference
-        self.direction_counts: Dict[str, int] = {"UP": 0, "DOWN": 0, "LEFT": 0, "RIGHT": 0}
+        # Vector calibration samples for AUTO baseline flow inference
+        self.calibration_samples_dx: List[float] = []
+        self.calibration_samples_dy: List[float] = []
+        self.min_calibration_samples: int = 25
         self.inferred_allowed_direction: Optional[str] = (
             self.allowed_direction if self.allowed_direction != "AUTO" else None
         )
+        self.is_calibrated: bool = self.allowed_direction != "AUTO"
 
-    def _is_opposite_direction(self, current_dir: str) -> bool:
+        # Direction counts maintained for backward compatibility
+        self.direction_counts: Dict[str, int] = {"UP": 0, "DOWN": 0, "LEFT": 0, "RIGHT": 0}
+
+    def _is_opposite_direction(
+        self,
+        current_dir: str,
+        dx: float = 0.0,
+        dy: float = 0.0,
+    ) -> bool:
         """
         Checks if estimated direction directly opposes configured or auto-inferred legal traffic flow.
+        Also validates physical counter-flow displacement along the travel corridor.
         """
         effective_allowed = self.inferred_allowed_direction or self.allowed_direction
         if not effective_allowed or effective_allowed == "AUTO":
@@ -77,7 +94,20 @@ class WrongWayDetector:
             "RIGHT": "LEFT",
         }
         target_opposite = opposites.get(effective_allowed.upper())
-        return current_dir == target_opposite
+        if not target_opposite or current_dir != target_opposite:
+            return False
+
+        # Verify physical counter-flow displacement along the travel corridor
+        if effective_allowed == "DOWN" and dy >= 0:
+            return False
+        elif effective_allowed == "UP" and dy <= 0:
+            return False
+        elif effective_allowed == "RIGHT" and dx >= 0:
+            return False
+        elif effective_allowed == "LEFT" and dx <= 0:
+            return False
+
+        return True
 
     def update(
         self,
@@ -97,28 +127,60 @@ class WrongWayDetector:
             List of newly confirmed violation event dictionaries.
         """
         new_violations: List[Dict[str, Any]] = []
+        h, w = frame.shape[:2]
+        frame_size = (w, h)
+
+        # In AUTO mode, calibrate baseline traffic flow from stable moving vectors
+        if self.allowed_direction == "AUTO" and not self.is_calibrated:
+            for veh in tracks:
+                if len(veh.trajectory) >= self.min_track_history:
+                    dx, dy, dist = calculate_motion_vector(
+                        veh.trajectory, window=self.config.trajectory_history_length
+                    )
+                    if dist >= self.config.min_movement_distance:
+                        self.calibration_samples_dx.append(dx / w)
+                        self.calibration_samples_dy.append(dy / h)
+
+            if len(self.calibration_samples_dy) >= self.min_calibration_samples:
+                total_abs_v = sum(abs(y) for y in self.calibration_samples_dy)
+                total_abs_h = sum(abs(x) for x in self.calibration_samples_dx)
+                net_v = sum(self.calibration_samples_dy)
+                net_h = sum(self.calibration_samples_dx)
+
+                if total_abs_v >= total_abs_h:
+                    self.inferred_allowed_direction = "DOWN" if net_v > 0 else "UP"
+                else:
+                    self.inferred_allowed_direction = "RIGHT" if net_h > 0 else "LEFT"
+
+                self.is_calibrated = True
+                print(
+                    f"[*] [AUTO-FLOW] Calibrated baseline flow: {self.inferred_allowed_direction} "
+                    f"(vertical_abs={total_abs_v:.2f}, horizontal_abs={total_abs_h:.2f}, "
+                    f"samples={len(self.calibration_samples_dy)})"
+                )
+
+        # Violation alerts are only evaluated after baseline flow is established
+        can_check_violations = (self.allowed_direction != "AUTO") or self.is_calibrated
 
         for veh in tracks:
             # 1. Update vehicle direction estimate from trajectory history
-            current_dir = get_vehicle_direction(
-                veh.trajectory,
-                window=self.config.trajectory_history_length,
-                min_distance=self.config.min_movement_distance,
+            dx, dy, dist = calculate_motion_vector(
+                veh.trajectory, window=self.config.trajectory_history_length
+            )
+            current_dir = estimate_cardinal_direction(
+                dx, dy, min_distance=self.config.min_movement_distance, frame_size=frame_size
             )
             veh.direction = current_dir
 
-            # In AUTO mode, accumulate observed valid directions and infer baseline flow
             if current_dir in self.direction_counts:
                 self.direction_counts[current_dir] += 1
-                if self.allowed_direction == "AUTO":
-                    total_obs = sum(self.direction_counts.values())
-                    if total_obs >= 5:
-                        self.inferred_allowed_direction = max(
-                            self.direction_counts, key=self.direction_counts.get
-                        )
+
+            # Skip immature tracks for violation checking until trajectory stabilizes
+            if not can_check_violations or len(veh.trajectory) < self.min_track_history:
+                continue
 
             # 2. Check for opposite direction violation
-            if self._is_opposite_direction(current_dir):
+            if self._is_opposite_direction(current_dir, dx=dx, dy=dy):
                 veh.violation_frames += 1
 
                 # 3. Temporal Confirmation Gate:
@@ -132,13 +194,16 @@ class WrongWayDetector:
                         frame, veh, frame_idx
                     )
 
+                    effective_allowed = (
+                        self.inferred_allowed_direction or self.allowed_direction
+                    )
                     event = {
                         "timestamp": datetime.now().isoformat(timespec="seconds"),
                         "frame_idx": frame_idx,
                         "track_id": veh.track_id,
                         "class_name": veh.class_name,
                         "direction": veh.direction,
-                        "allowed_direction": self.allowed_direction,
+                        "allowed_direction": effective_allowed,
                         "confidence": round(float(veh.confidence), 4),
                         "snapshot_path": str(snapshot_path),
                     }
@@ -168,9 +233,10 @@ class WrongWayDetector:
         cv2.rectangle(snapshot, (x1, y1), (x2, y2), alert_color, 3)
 
         # Header warning banner
+        effective_allowed = self.inferred_allowed_direction or self.allowed_direction
         banner_text = (
             f"VIOLATION: ID {veh.track_id} {veh.class_name.upper()} | "
-            f"Moving: {veh.direction} | Allowed: {self.allowed_direction}"
+            f"Moving: {veh.direction} | Allowed: {effective_allowed}"
         )
         font = cv2.FONT_HERSHEY_SIMPLEX
         cv2.rectangle(snapshot, (0, 0), (snapshot.shape[1], 40), (0, 0, 180), -1)

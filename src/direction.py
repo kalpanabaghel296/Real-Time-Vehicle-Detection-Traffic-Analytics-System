@@ -55,6 +55,7 @@ def estimate_cardinal_direction(
     dx: float,
     dy: float,
     min_distance: float = 15.0,
+    frame_size: Optional[Tuple[int, int]] = None,
 ) -> str:
     """
     Classifies 2D motion vector into a cardinal direction ('DOWN', 'UP', 'LEFT', 'RIGHT', or 'STATIONARY').
@@ -63,6 +64,7 @@ def estimate_cardinal_direction(
         dx: Horizontal displacement in pixels.
         dy: Vertical displacement in pixels.
         min_distance: Minimum distance moved before assigning direction (filters stationary jitter).
+        frame_size: Optional (width, height) for aspect-ratio normalized vector calculation.
 
     Returns:
         Direction string.
@@ -71,11 +73,22 @@ def estimate_cardinal_direction(
     if distance < min_distance:
         return "STATIONARY"
 
-    abs_dx = abs(dx)
-    abs_dy = abs(dy)
+    if frame_size is not None and frame_size[0] > 0 and frame_size[1] > 0:
+        w, h = frame_size
+        dx_norm = dx / w
+        dy_norm = dy / h
+    else:
+        dx_norm = dx
+        dy_norm = dy
 
-    # Determine dominant axis of motion
-    if abs_dy >= abs_dx:
+    abs_dx_norm = abs(dx_norm)
+    abs_dy_norm = abs(dy_norm)
+
+    # In roadway perspectives (e.g. CCTV, dashboard, overhead), vehicles move along corridors.
+    # Oncoming/departing lanes fan outward diagonally due to camera perspective (16:9 widescreen).
+    # When significant vertical motion along the roadway corridor is present (|dy_norm| >= 0.6 * |dx_norm|),
+    # the vehicle's longitudinal progression dominates over perspective fanning:
+    if abs_dy_norm >= 0.6 * abs_dx_norm:
         return "DOWN" if dy > 0 else "UP"
     else:
         return "RIGHT" if dx > 0 else "LEFT"
@@ -85,9 +98,12 @@ def get_vehicle_direction(
     trajectory: deque,
     window: int = 8,
     min_distance: float = 15.0,
+    frame_size: Optional[Tuple[int, int]] = None,
 ) -> str:
     """
     Convenience function: computes displacement vector from trajectory and returns cardinal direction.
     """
     dx, dy, dist = calculate_motion_vector(trajectory, window=window)
-    return estimate_cardinal_direction(dx, dy, min_distance=min_distance)
+    return estimate_cardinal_direction(
+        dx, dy, min_distance=min_distance, frame_size=frame_size
+    )
