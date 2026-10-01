@@ -21,7 +21,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from config.config import TrafficConfig
-from src.utils import calculate_centroid, calculate_displacement_vector
+from src.utils import calculate_centroid, calculate_displacement_vector, calculate_euclidean_distance
 from src.detector import CLASS_COLORS, DEFAULT_COLOR
 
 
@@ -61,6 +61,17 @@ class TrackedVehicle:
     direction: Optional[str] = None
     violation_frames: int = 0
     violation_alerted: bool = False
+    class_history: deque = field(default_factory=lambda: deque(maxlen=20))
+    smoothed_centroid: Optional[Tuple[int, int]] = None
+    smoothed_trajectory: deque = field(default_factory=lambda: deque(maxlen=30))
+
+    @property
+    def stable_class_name(self) -> str:
+        """Returns statistical mode of observed classes across track history to prevent flickering."""
+        if not self.class_history:
+            return self.class_name
+        from collections import Counter
+        return Counter(self.class_history).most_common(1)[0][0]
 
     @property
     def displacement(self) -> Tuple[float, float]:
@@ -173,18 +184,42 @@ class VehicleTracker:
             if tid in self.tracks:
                 # Update existing track
                 veh = self.tracks[tid]
+                # Velocity gating: clamp physically impossible single-frame jumps (identity swap prevention)
+                jump_dist = calculate_euclidean_distance(veh.centroid, current_centroid)
+                max_jump = getattr(self.config, "max_track_jump_distance", 180.0)
+                if jump_dist > max_jump and len(veh.trajectory) >= 3:
+                    dx = current_centroid[0] - veh.centroid[0]
+                    dy = current_centroid[1] - veh.centroid[1]
+                    norm = max(1e-5, (dx * dx + dy * dy) ** 0.5)
+                    current_centroid = (
+                        int(veh.centroid[0] + (dx / norm) * max_jump),
+                        int(veh.centroid[1] + (dy / norm) * max_jump),
+                    )
+
                 veh.previous_centroid = veh.centroid
                 veh.centroid = current_centroid
                 veh.bbox = bbox
                 veh.confidence = conf
                 veh.class_id = cid
                 veh.class_name = cname
+                veh.class_history.append(cname)
                 veh.last_frame = frame_idx
                 veh.trajectory.append(current_centroid)
+
+                # Centroid smoothing (3-point moving average)
+                recent_pts = list(veh.trajectory)[-3:]
+                avg_x = int(sum(p[0] for p in recent_pts) / len(recent_pts))
+                avg_y = int(sum(p[1] for p in recent_pts) / len(recent_pts))
+                veh.smoothed_centroid = (avg_x, avg_y)
+                veh.smoothed_trajectory.append((avg_x, avg_y))
             else:
                 # Initialize new tracked vehicle
                 traj = deque(maxlen=self.config.trajectory_history_length)
                 traj.append(current_centroid)
+                sm_traj = deque(maxlen=self.config.trajectory_history_length)
+                sm_traj.append(current_centroid)
+                cls_hist = deque(maxlen=20)
+                cls_hist.append(cname)
                 veh = TrackedVehicle(
                     track_id=tid,
                     class_id=cid,
@@ -194,6 +229,9 @@ class VehicleTracker:
                     centroid=current_centroid,
                     previous_centroid=None,
                     trajectory=traj,
+                    class_history=cls_hist,
+                    smoothed_centroid=current_centroid,
+                    smoothed_trajectory=sm_traj,
                     first_frame=frame_idx,
                     last_frame=frame_idx,
                 )

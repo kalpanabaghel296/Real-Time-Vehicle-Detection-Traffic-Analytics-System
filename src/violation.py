@@ -52,7 +52,9 @@ class WrongWayDetector:
         self.config = config or TrafficConfig()
         self.allowed_direction = (allowed_direction or self.config.allowed_direction).upper()
         self.confirm_frames = confirm_frames or self.config.violation_confirm_frames
-        self.min_track_history = getattr(self.config, "min_track_history_for_violation", 5)
+        self.min_track_history = getattr(self.config, "min_track_history_for_violation", 8)
+        self.min_opposing_displacement = getattr(self.config, "min_opposing_displacement", 30.0)
+        self.border_exclusion_margin = getattr(self.config, "border_exclusion_margin", 35)
 
         snap_path_str = snapshots_dir or self.config.snapshots_dir
         self.snapshots_dir = Path(snap_path_str)
@@ -84,8 +86,8 @@ class WrongWayDetector:
         Also validates physical counter-flow displacement along the travel corridor.
         """
         effective_allowed = self.inferred_allowed_direction or self.allowed_direction
-        if not effective_allowed or effective_allowed == "AUTO":
-            return False  # Calibrating baseline flow
+        if not effective_allowed or effective_allowed in ("AUTO", "MULTI_DIRECTIONAL", "BIDIRECTIONAL"):
+            return False  # Multi-directional flow or calibrating baseline flow
 
         opposites = {
             "DOWN": "UP",
@@ -147,10 +149,21 @@ class WrongWayDetector:
                 net_v = sum(self.calibration_samples_dy)
                 net_h = sum(self.calibration_samples_dx)
 
-                if total_abs_v >= total_abs_h:
-                    self.inferred_allowed_direction = "DOWN" if net_v > 0 else "UP"
+                # Multi-directional detection (e.g. intersection or bidirectional flow)
+                if total_abs_v > 0.40 * total_abs_h and total_abs_h > 0.40 * total_abs_v:
+                    self.inferred_allowed_direction = "MULTI_DIRECTIONAL"
+                elif total_abs_v >= total_abs_h:
+                    v_ratio = abs(net_v) / (total_abs_v + 1e-5)
+                    if v_ratio < 0.55:
+                        self.inferred_allowed_direction = "BIDIRECTIONAL"
+                    else:
+                        self.inferred_allowed_direction = "DOWN" if net_v > 0 else "UP"
                 else:
-                    self.inferred_allowed_direction = "RIGHT" if net_h > 0 else "LEFT"
+                    h_ratio = abs(net_h) / (total_abs_h + 1e-5)
+                    if h_ratio < 0.55:
+                        self.inferred_allowed_direction = "BIDIRECTIONAL"
+                    else:
+                        self.inferred_allowed_direction = "RIGHT" if net_h > 0 else "LEFT"
 
                 self.is_calibrated = True
                 print(
@@ -183,10 +196,37 @@ class WrongWayDetector:
             if self._is_opposite_direction(current_dir, dx=dx, dy=dy):
                 veh.violation_frames += 1
 
-                # 3. Temporal Confirmation Gate:
-                # Require N consecutive violation frames before raising an alarm
+                # 3. Check cumulative physical displacement over full track history
+                cum_dx = veh.trajectory[-1][0] - veh.trajectory[0][0]
+                cum_dy = veh.trajectory[-1][1] - veh.trajectory[0][1]
+                effective_allowed = (
+                    self.inferred_allowed_direction or self.allowed_direction
+                )
+
+                has_cum_opposing = False
+                if effective_allowed == "DOWN" and cum_dy <= -self.min_opposing_displacement:
+                    has_cum_opposing = True
+                elif effective_allowed == "UP" and cum_dy >= self.min_opposing_displacement:
+                    has_cum_opposing = True
+                elif effective_allowed == "RIGHT" and cum_dx <= -self.min_opposing_displacement:
+                    has_cum_opposing = True
+                elif effective_allowed == "LEFT" and cum_dx >= self.min_opposing_displacement:
+                    has_cum_opposing = True
+
+                # Check frame boundary exclusion
+                cx, cy = veh.centroid
+                is_near_border = (
+                    cx < self.border_exclusion_margin
+                    or cx > w - self.border_exclusion_margin
+                    or cy < self.border_exclusion_margin
+                    or cy > h - self.border_exclusion_margin
+                )
+
+                # 4. Confirmation Gate: Consecutive frames + Cumulative displacement + Non-border
                 if (
                     veh.violation_frames >= self.confirm_frames
+                    and has_cum_opposing
+                    and not is_near_border
                     and not veh.violation_alerted
                 ):
                     veh.violation_alerted = True
@@ -194,9 +234,6 @@ class WrongWayDetector:
                         frame, veh, frame_idx
                     )
 
-                    effective_allowed = (
-                        self.inferred_allowed_direction or self.allowed_direction
-                    )
                     event = {
                         "timestamp": datetime.now().isoformat(timespec="seconds"),
                         "frame_idx": frame_idx,

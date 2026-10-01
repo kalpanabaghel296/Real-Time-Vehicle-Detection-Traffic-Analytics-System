@@ -105,7 +105,8 @@ class VehicleCounter:
                 continue
 
             # 2. Minimum Trajectory Check: Need previous and current centroid
-            if veh.previous_centroid is None:
+            min_hist = getattr(self.config, "min_track_history_for_counting", 1)
+            if veh.previous_centroid is None or len(veh.trajectory) < min_hist:
                 continue
 
             p1 = veh.previous_centroid
@@ -129,7 +130,7 @@ class VehicleCounter:
 
                 # 5. Register Valid Crossing
                 self.total_count += 1
-                veh_class = veh.class_name.lower()
+                veh_class = getattr(veh, "stable_class_name", veh.class_name).lower()
                 self.counts_by_class[veh_class] = self.counts_by_class.get(veh_class, 0) + 1
                 self.counted_ids.add(veh.track_id)
                 veh.counted = True
@@ -137,7 +138,7 @@ class VehicleCounter:
                 event = {
                     "frame_idx": frame_idx,
                     "track_id": veh.track_id,
-                    "class_name": veh.class_name,
+                    "class_name": getattr(veh, "stable_class_name", veh.class_name),
                     "confidence": veh.confidence,
                     "centroid": veh.centroid,
                     "displacement": (dx, dy),

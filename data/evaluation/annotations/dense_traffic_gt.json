@@ -14,7 +14,7 @@
       520
     ]
   },
-  "legal_direction": "DOWN",
+  "legal_direction": "AUTO",
   "frames": [
     {
       "frame_idx": 0,
