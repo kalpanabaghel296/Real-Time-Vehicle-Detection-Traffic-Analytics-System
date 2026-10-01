@@ -1,0 +1,5965 @@
+{
+  "summary_counts": {
+    "FALSE_POSITIVE": 56,
+    "FALSE_NEGATIVE": 216,
+    "MISCLASSIFICATION": 36,
+    "LOCALIZATION": 12,
+    "DUPLICATE": 47
+  },
+  "total_errors": 367,
+  "confusion_matrix_labels": [
+    "car",
+    "motorcycle",
+    "bus",
+    "truck",
+    "background"
+  ],
+  "confusion_matrix_raw": [
+    [
+      649,
+      0,
+      0,
+      13,
+      162
+    ],
+    [
+      0,
+      371,
+      0,
+      0,
+      54
+    ],
+    [
+      2,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      21,
+      0,
+      0,
+      7,
+      0
+    ],
+    [
+      35,
+      19,
+      0,
+      2,
+      0
+    ]
+  ],
+  "confusion_matrix_normalized": [
+    [
+      0.7876,
+      0.0,
+      0.0,
+      0.0158,
+      0.1966
+    ],
+    [
+      0.0,
+      0.8729,
+      0.0,
+      0.0,
+      0.1271
+    ],
+    [
+      0.6667,
+      0.0,
+      0.3333,
+      0.0,
+      0.0
+    ],
+    [
+      0.75,
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    [
+      0.625,
+      0.3393,
+      0.0,
+      0.0357,
+      0.0
+    ]
+  ],
+  "errors": [
+    {
+      "frame_idx": 0,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "bus",
+      "predicted_class": "car",
+      "confidence": 0.40928444266319275,
+      "bbox": [
+        1198,
+        278,
+        1279,
+        458
+      ],
+      "iou": 0.9822646657571623,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #3 (bus)"
+    },
+    {
+      "frame_idx": 1,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "bus",
+      "predicted_class": "car",
+      "confidence": 0.6767910122871399,
+      "bbox": [
+        1204,
+        277,
+        1279,
+        460
+      ],
+      "iou": 0.9444406005673562,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual bus"
+    },
+    {
+      "frame_idx": 1,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "bus",
+      "predicted_class": "truck",
+      "confidence": 0.4143984019756317,
+      "bbox": [
+        1204,
+        277,
+        1279,
+        461
+      ],
+      "iou": 0.9395649779735683,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #3 (bus)"
+    },
+    {
+      "frame_idx": 1,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "bus",
+      "predicted_class": "bus",
+      "confidence": 0.37919384241104126,
+      "bbox": [
+        1204,
+        277,
+        1279,
+        461
+      ],
+      "iou": 0.9395649779735683,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #3 (bus)"
+    },
+    {
+      "frame_idx": 1,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        28,
+        332,
+        101,
+        358
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 2,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.6415997743606567,
+      "bbox": [
+        1210,
+        277,
+        1279,
+        461
+      ],
+      "iou": 0.9078947368421053,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 2,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.45027273893356323,
+      "bbox": [
+        1210,
+        277,
+        1279,
+        462
+      ],
+      "iou": 0.9034369885433715,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #3 (truck)"
+    },
+    {
+      "frame_idx": 2,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.3532845675945282,
+      "bbox": [
+        738,
+        331,
+        793,
+        378
+      ],
+      "iou": 0.9064851307774991,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #9 (car)"
+    },
+    {
+      "frame_idx": 3,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.568128228187561,
+      "bbox": [
+        1222,
+        276,
+        1279,
+        462
+      ],
+      "iou": 0.8028169014084507,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 3,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.47825515270233154,
+      "bbox": [
+        525,
+        331,
+        562,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.48"
+    },
+    {
+      "frame_idx": 3,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.38018572330474854,
+      "bbox": [
+        739,
+        330,
+        793,
+        378
+      ],
+      "iou": 0.9096774193548387,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #9 (car)"
+    },
+    {
+      "frame_idx": 3,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.3595973551273346,
+      "bbox": [
+        1221,
+        276,
+        1279,
+        462
+      ],
+      "iou": 0.8169014084507042,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #3 (truck)"
+    },
+    {
+      "frame_idx": 3,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        416,
+        334,
+        438,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 4,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "bus",
+      "predicted_class": "car",
+      "confidence": 0.4614841043949127,
+      "bbox": [
+        1233,
+        276,
+        1279,
+        463
+      ],
+      "iou": 0.696969696969697,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual bus"
+    },
+    {
+      "frame_idx": 4,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "bus",
+      "predicted_class": "truck",
+      "confidence": 0.42036673426628113,
+      "bbox": [
+        1233,
+        275,
+        1279,
+        463
+      ],
+      "iou": 0.694381659670649,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #3 (bus)"
+    },
+    {
+      "frame_idx": 4,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.38741302490234375,
+      "bbox": [
+        524,
+        331,
+        556,
+        370
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.39"
+    },
+    {
+      "frame_idx": 4,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.3727506697177887,
+      "bbox": [
+        739,
+        330,
+        795,
+        378
+      ],
+      "iou": 0.9591836734693877,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #9 (car)"
+    },
+    {
+      "frame_idx": 4,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        415,
+        331,
+        439,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 5,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.4944787323474884,
+      "bbox": [
+        1239,
+        276,
+        1279,
+        464
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.49"
+    },
+    {
+      "frame_idx": 5,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.48925089836120605,
+      "bbox": [
+        739,
+        330,
+        797,
+        378
+      ],
+      "iou": 0.9795918367346939,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 5,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.38279128074645996,
+      "bbox": [
+        518,
+        333,
+        549,
+        370
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.38"
+    },
+    {
+      "frame_idx": 5,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.36314740777015686,
+      "bbox": [
+        739,
+        329,
+        796,
+        378
+      ],
+      "iou": 0.9437737150741635,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #8 (truck)"
+    },
+    {
+      "frame_idx": 5,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "truck",
+      "confidence": 0.36057305335998535,
+      "bbox": [
+        1241,
+        275,
+        1279,
+        464
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.36"
+    },
+    {
+      "frame_idx": 5,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        414,
+        329,
+        440,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 6,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        414,
+        331,
+        438,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 7,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.4862617254257202,
+      "bbox": [
+        1232,
+        368,
+        1264,
+        421
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.49"
+    },
+    {
+      "frame_idx": 7,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.3659103810787201,
+      "bbox": [
+        739,
+        328,
+        796,
+        377
+      ],
+      "iou": 0.9467796610169491,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #8 (car)"
+    },
+    {
+      "frame_idx": 7,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        414,
+        330,
+        438,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 8,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.45972341299057007,
+      "bbox": [
+        1236,
+        374,
+        1272,
+        421
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.46"
+    },
+    {
+      "frame_idx": 8,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.3845233917236328,
+      "bbox": [
+        1008,
+        350,
+        1036,
+        393
+      ],
+      "iou": 0.021374927787406125,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.38"
+    },
+    {
+      "frame_idx": 8,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        413,
+        330,
+        437,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 9,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.47562411427497864,
+      "bbox": [
+        1237,
+        372,
+        1279,
+        424
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.48"
+    },
+    {
+      "frame_idx": 9,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.4325118064880371,
+      "bbox": [
+        741,
+        327,
+        800,
+        377
+      ],
+      "iou": 0.9293655984303466,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #8 (car)"
+    },
+    {
+      "frame_idx": 9,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.35292601585388184,
+      "bbox": [
+        1013,
+        349,
+        1042,
+        394
+      ],
+      "iou": 0.021387441732931178,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.35"
+    },
+    {
+      "frame_idx": 10,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.5138247013092041,
+      "bbox": [
+        742,
+        327,
+        800,
+        377
+      ],
+      "iou": 0.9477124183006536,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 10,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.4439440965652466,
+      "bbox": [
+        1256,
+        372,
+        1279,
+        426
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.44"
+    },
+    {
+      "frame_idx": 10,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.4309556484222412,
+      "bbox": [
+        742,
+        327,
+        801,
+        377
+      ],
+      "iou": 0.9640522875816994,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #8 (car)"
+    },
+    {
+      "frame_idx": 10,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.4286465048789978,
+      "bbox": [
+        1016,
+        348,
+        1042,
+        394
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.43"
+    },
+    {
+      "frame_idx": 11,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.398174911737442,
+      "bbox": [
+        1259,
+        373,
+        1279,
+        425
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.40"
+    },
+    {
+      "frame_idx": 11,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.3752862513065338,
+      "bbox": [
+        1017,
+        353,
+        1045,
+        394
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.38"
+    },
+    {
+      "frame_idx": 12,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.4083726108074188,
+      "bbox": [
+        743,
+        327,
+        805,
+        377
+      ],
+      "iou": 0.9493670886075949,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #8 (car)"
+    },
+    {
+      "frame_idx": 12,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.39610421657562256,
+      "bbox": [
+        1266,
+        369,
+        1279,
+        425
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.40"
+    },
+    {
+      "frame_idx": 12,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.36311474442481995,
+      "bbox": [
+        1020,
+        350,
+        1045,
+        395
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.36"
+    },
+    {
+      "frame_idx": 12,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        516,
+        328,
+        548,
+        350
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 13,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        411,
+        327,
+        436,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 13,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        516,
+        327,
+        546,
+        348
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 14,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        22,
+        328,
+        94,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 14,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        515,
+        327,
+        546,
+        348
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 15,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.3904978632926941,
+      "bbox": [
+        1032,
+        348,
+        1064,
+        396
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.39"
+    },
+    {
+      "frame_idx": 15,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        22,
+        328,
+        94,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 15,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        512,
+        326,
+        546,
+        349
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 16,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.46791958808898926,
+      "bbox": [
+        748,
+        326,
+        809,
+        378
+      ],
+      "iou": 0.9494260006205398,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 16,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.4008471667766571,
+      "bbox": [
+        748,
+        328,
+        808,
+        378
+      ],
+      "iou": 0.9271523178807947,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #8 (car)"
+    },
+    {
+      "frame_idx": 16,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.3613068759441376,
+      "bbox": [
+        511,
+        326,
+        542,
+        360
+      ],
+      "iou": 0.1337386018237082,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.36"
+    },
+    {
+      "frame_idx": 16,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        20,
+        327,
+        93,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 16,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        410,
+        327,
+        434,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 17,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.36833691596984863,
+      "bbox": [
+        511,
+        326,
+        542,
+        361
+      ],
+      "iou": 0.137913741223671,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.37"
+    },
+    {
+      "frame_idx": 17,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        19,
+        328,
+        92,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 17,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1035,
+        352,
+        1071,
+        399
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 17,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        670,
+        336,
+        701,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 18,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.40113142132759094,
+      "bbox": [
+        511,
+        325,
+        542,
+        360
+      ],
+      "iou": 0.1338063862138875,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.40"
+    },
+    {
+      "frame_idx": 18,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        14,
+        327,
+        93,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 18,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        575,
+        352,
+        606,
+        407
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 18,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        670,
+        337,
+        701,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 19,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.42892447113990784,
+      "bbox": [
+        511,
+        325,
+        542,
+        355
+      ],
+      "iou": 0.11158569140416444,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.43"
+    },
+    {
+      "frame_idx": 19,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1040,
+        348,
+        1081,
+        400
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 20,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.37600579857826233,
+      "bbox": [
+        513,
+        325,
+        542,
+        358
+      ],
+      "iou": 0.14064997336174748,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.38"
+    },
+    {
+      "frame_idx": 20,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1045,
+        351,
+        1085,
+        401
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 20,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        670,
+        337,
+        701,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 21,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.36945614218711853,
+      "bbox": [
+        513,
+        325,
+        542,
+        360
+      ],
+      "iou": 0.17382307294361096,
+      "severity": "MEDIUM",
+      "details": "IoU 0.17 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 21,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1050,
+        354,
+        1088,
+        401
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 21,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        18,
+        327,
+        90,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 22,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.35891595482826233,
+      "bbox": [
+        513,
+        326,
+        541,
+        363
+      ],
+      "iou": 0.18102114492006188,
+      "severity": "MEDIUM",
+      "details": "IoU 0.18 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 22,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.3520101010799408,
+      "bbox": [
+        752,
+        325,
+        814,
+        379
+      ],
+      "iou": 0.9482352941176471,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (car)"
+    },
+    {
+      "frame_idx": 22,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1055,
+        354,
+        1093,
+        401
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 22,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        673,
+        337,
+        703,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 22,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        19,
+        327,
+        91,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 23,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "motorcycle",
+      "confidence": 0.6414357423782349,
+      "bbox": [
+        0,
+        404,
+        45,
+        524
+      ],
+      "iou": 0.4706195160861473,
+      "severity": "MEDIUM",
+      "details": "IoU 0.47 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 23,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.39372140169143677,
+      "bbox": [
+        1260,
+        382,
+        1279,
+        447
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.39"
+    },
+    {
+      "frame_idx": 23,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        0,
+        399,
+        91,
+        522
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 23,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1057,
+        353,
+        1097,
+        402
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 24,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        18,
+        328,
+        89,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 25,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1064,
+        354,
+        1105,
+        403
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 25,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        18,
+        327,
+        89,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 26,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        18,
+        327,
+        89,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 27,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        17,
+        327,
+        89,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 28,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        528,
+        335,
+        562,
+        366
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 28,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        15,
+        327,
+        87,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 28,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        406,
+        327,
+        431,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 29,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.3613854646682739,
+      "bbox": [
+        513,
+        331,
+        535,
+        372
+      ],
+      "iou": 0.16608996539792387,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.36"
+    },
+    {
+      "frame_idx": 29,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        526,
+        334,
+        561,
+        366
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 29,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        13,
+        327,
+        86,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 30,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.4184281527996063,
+      "bbox": [
+        406,
+        323,
+        430,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.42"
+    },
+    {
+      "frame_idx": 30,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        524,
+        335,
+        560,
+        367
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 30,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        12,
+        327,
+        86,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 31,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        522,
+        334,
+        560,
+        368
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 32,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.3552952706813812,
+      "bbox": [
+        406,
+        323,
+        430,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.36"
+    },
+    {
+      "frame_idx": 32,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        521,
+        333,
+        560,
+        368
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 32,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        14,
+        327,
+        86,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 33,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        14,
+        327,
+        86,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 34,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        13,
+        327,
+        86,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 35,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        12,
+        328,
+        84,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 35,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        405,
+        327,
+        430,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 36,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        12,
+        328,
+        86,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 37,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.3902457058429718,
+      "bbox": [
+        769,
+        324,
+        839,
+        381
+      ],
+      "iou": 0.9315068493150684,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #5 (car)"
+    },
+    {
+      "frame_idx": 37,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        585,
+        349,
+        614,
+        394
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 38,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.38810625672340393,
+      "bbox": [
+        769,
+        324,
+        842,
+        382
+      ],
+      "iou": 0.943136797949196,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #5 (car)"
+    },
+    {
+      "frame_idx": 38,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1118,
+        353,
+        1171,
+        412
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 38,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        586,
+        351,
+        615,
+        395
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 38,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        405,
+        327,
+        430,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 38,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        3,
+        327,
+        90,
+        358
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 39,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        406,
+        327,
+        431,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 40,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.35054054856300354,
+      "bbox": [
+        510,
+        324,
+        541,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.35"
+    },
+    {
+      "frame_idx": 40,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        406,
+        327,
+        431,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 41,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.35104140639305115,
+      "bbox": [
+        509,
+        324,
+        541,
+        356
+      ],
+      "iou": 0.001295672454003628,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.35"
+    },
+    {
+      "frame_idx": 41,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        406,
+        327,
+        431,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 41,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        12,
+        327,
+        89,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 42,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.41871967911720276,
+      "bbox": [
+        1262,
+        380,
+        1279,
+        438
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.42"
+    },
+    {
+      "frame_idx": 42,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        406,
+        326,
+        432,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 42,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        16,
+        327,
+        89,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 43,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "motorcycle",
+      "confidence": 0.7030481696128845,
+      "bbox": [
+        0,
+        425,
+        43,
+        518
+      ],
+      "iou": 0.3960752903484181,
+      "severity": "MEDIUM",
+      "details": "IoU 0.40 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 43,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.3952159881591797,
+      "bbox": [
+        511,
+        326,
+        542,
+        359
+      ],
+      "iou": 0.013493621197252208,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.40"
+    },
+    {
+      "frame_idx": 43,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        0,
+        400,
+        85,
+        517
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 43,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        407,
+        327,
+        432,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 43,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        17,
+        327,
+        90,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 44,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.39766424894332886,
+      "bbox": [
+        512,
+        326,
+        542,
+        358
+      ],
+      "iou": 0.005934718100890208,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.40"
+    },
+    {
+      "frame_idx": 44,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        407,
+        327,
+        432,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 44,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        18,
+        328,
+        90,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 45,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        19,
+        328,
+        90,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 46,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.35679545998573303,
+      "bbox": [
+        512,
+        324,
+        540,
+        357
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.36"
+    },
+    {
+      "frame_idx": 46,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        567,
+        334,
+        592,
+        368
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 47,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1175,
+        354,
+        1232,
+        418
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 47,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        568,
+        335,
+        592,
+        366
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 47,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        407,
+        327,
+        432,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 48,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        791,
+        324,
+        865,
+        383
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 48,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1183,
+        353,
+        1241,
+        419
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 48,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        569,
+        337,
+        593,
+        367
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 48,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        408,
+        327,
+        433,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 49,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.4305644631385803,
+      "bbox": [
+        965,
+        352,
+        997,
+        391
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.43"
+    },
+    {
+      "frame_idx": 49,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        793,
+        324,
+        867,
+        384
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 49,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1189,
+        352,
+        1248,
+        420
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 49,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        569,
+        337,
+        593,
+        368
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 49,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        408,
+        328,
+        433,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 50,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.3622138798236847,
+      "bbox": [
+        837,
+        341,
+        868,
+        383
+      ],
+      "iou": 0.28933333333333333,
+      "severity": "MEDIUM",
+      "details": "IoU 0.29 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 50,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        794,
+        325,
+        869,
+        385
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 50,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1196,
+        353,
+        1254,
+        420
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 50,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        569,
+        338,
+        593,
+        369
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 50,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        408,
+        328,
+        433,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 51,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.3555934727191925,
+      "bbox": [
+        836,
+        339,
+        870,
+        384
+      ],
+      "iou": 0.34459459459459457,
+      "severity": "MEDIUM",
+      "details": "IoU 0.34 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 51,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        796,
+        325,
+        870,
+        385
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 51,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1203,
+        353,
+        1262,
+        421
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 51,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        408,
+        328,
+        433,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 52,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        798,
+        325,
+        873,
+        385
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 52,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        408,
+        329,
+        433,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 52,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        568,
+        338,
+        592,
+        369
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 53,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        802,
+        325,
+        875,
+        384
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 53,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1218,
+        355,
+        1274,
+        422
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 53,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        408,
+        329,
+        434,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 53,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        568,
+        337,
+        593,
+        369
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 54,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        802,
+        325,
+        877,
+        385
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 54,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1226,
+        357,
+        1280,
+        423
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 55,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        409,
+        330,
+        435,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 58,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        411,
+        330,
+        437,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 59,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        21,
+        332,
+        96,
+        359
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 59,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        520,
+        326,
+        549,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 60,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        544,
+        339,
+        565,
+        379
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 60,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        520,
+        327,
+        549,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 61,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.49917078018188477,
+      "bbox": [
+        637,
+        328,
+        705,
+        385
+      ],
+      "iou": 0.9277942631058358,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 61,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        411,
+        330,
+        437,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 62,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.5307533740997314,
+      "bbox": [
+        635,
+        328,
+        706,
+        385
+      ],
+      "iou": 0.9824561403508771,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 62,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.38616082072257996,
+      "bbox": [
+        519,
+        328,
+        550,
+        348
+      ],
+      "iou": 0.3875,
+      "severity": "MEDIUM",
+      "details": "IoU 0.39 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 62,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.3652426302433014,
+      "bbox": [
+        612,
+        337,
+        638,
+        373
+      ],
+      "iou": 0.04548736462093863,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.37"
+    },
+    {
+      "frame_idx": 62,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        514,
+        328,
+        554,
+        368
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 62,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        411,
+        329,
+        437,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 62,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        545,
+        339,
+        566,
+        379
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 63,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        514,
+        329,
+        555,
+        370
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 63,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        411,
+        329,
+        437,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 63,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        611,
+        338,
+        639,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 64,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.5133406519889832,
+      "bbox": [
+        635,
+        327,
+        708,
+        386
+      ],
+      "iou": 0.025887428907628948,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.51"
+    },
+    {
+      "frame_idx": 64,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        514,
+        329,
+        555,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 64,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        410,
+        329,
+        436,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 64,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        546,
+        339,
+        567,
+        380
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 64,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1018,
+        352,
+        1058,
+        398
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 65,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.3739466071128845,
+      "bbox": [
+        549,
+        336,
+        569,
+        380
+      ],
+      "iou": 0.08779264214046822,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.37"
+    },
+    {
+      "frame_idx": 65,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        454,
+        368,
+        516,
+        457
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 65,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        514,
+        329,
+        555,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 65,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        410,
+        329,
+        436,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 65,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1022,
+        353,
+        1062,
+        398
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 66,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.376300573348999,
+      "bbox": [
+        550,
+        335,
+        570,
+        381
+      ],
+      "iou": 0.07535641547861507,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.38"
+    },
+    {
+      "frame_idx": 66,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        22,
+        333,
+        94,
+        359
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 66,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        515,
+        329,
+        555,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 66,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        410,
+        329,
+        437,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 66,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1026,
+        353,
+        1067,
+        399
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 67,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.42993882298469543,
+      "bbox": [
+        639,
+        328,
+        712,
+        387
+      ],
+      "iou": 0.8910227780259045,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 67,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.3997475504875183,
+      "bbox": [
+        639,
+        328,
+        711,
+        387
+      ],
+      "iou": 0.902919212491514,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #10 (car)"
+    },
+    {
+      "frame_idx": 67,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        23,
+        333,
+        95,
+        360
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 67,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        515,
+        329,
+        556,
+        373
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 67,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        410,
+        329,
+        437,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 67,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1030,
+        353,
+        1071,
+        400
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 68,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.4113560914993286,
+      "bbox": [
+        639,
+        327,
+        714,
+        387
+      ],
+      "iou": 0.8894668400520156,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #9 (car)"
+    },
+    {
+      "frame_idx": 68,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        23,
+        333,
+        96,
+        360
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 68,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        516,
+        330,
+        556,
+        373
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 68,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1034,
+        353,
+        1076,
+        401
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 69,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.4229651987552643,
+      "bbox": [
+        639,
+        327,
+        715,
+        387
+      ],
+      "iou": 0.8761844598862919,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #9 (car)"
+    },
+    {
+      "frame_idx": 69,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        24,
+        333,
+        96,
+        361
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 69,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        518,
+        330,
+        556,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 70,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        24,
+        333,
+        96,
+        360
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 70,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        519,
+        331,
+        557,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 71,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        25,
+        332,
+        96,
+        360
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 71,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1047,
+        353,
+        1090,
+        402
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 72,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        412,
+        328,
+        437,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 74,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.3777560591697693,
+      "bbox": [
+        640,
+        329,
+        720,
+        389
+      ],
+      "iou": 0.9341666666666667,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #9 (car)"
+    },
+    {
+      "frame_idx": 74,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1061,
+        353,
+        1105,
+        404
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 75,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        1065,
+        354,
+        1108,
+        405
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 77,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.7359703779220581,
+      "bbox": [
+        1247,
+        367,
+        1279,
+        476
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Spurious detection on background with conf=0.74"
+    },
+    {
+      "frame_idx": 77,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        373,
+        375,
+        455,
+        477
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 78,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.41179004311561584,
+      "bbox": [
+        1262,
+        379,
+        1279,
+        457
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.41"
+    },
+    {
+      "frame_idx": 78,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        412,
+        328,
+        438,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 80,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.36131104826927185,
+      "bbox": [
+        588,
+        337,
+        609,
+        367
+      ],
+      "iou": 0.051899907321594066,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.36"
+    },
+    {
+      "frame_idx": 81,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.47877323627471924,
+      "bbox": [
+        585,
+        336,
+        610,
+        365
+      ],
+      "iou": 0.05714285714285714,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.48"
+    },
+    {
+      "frame_idx": 82,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.5123814344406128,
+      "bbox": [
+        583,
+        336,
+        610,
+        365
+      ],
+      "iou": 0.054782975136957436,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.51"
+    },
+    {
+      "frame_idx": 83,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.5156925916671753,
+      "bbox": [
+        584,
+        337,
+        610,
+        366
+      ],
+      "iou": 0.05686433793663688,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.52"
+    },
+    {
+      "frame_idx": 84,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.4892689883708954,
+      "bbox": [
+        584,
+        336,
+        612,
+        368
+      ],
+      "iou": 0.07020280811232449,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.49"
+    },
+    {
+      "frame_idx": 85,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.4363023042678833,
+      "bbox": [
+        584,
+        336,
+        611,
+        367
+      ],
+      "iou": 0.055259146341463415,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.44"
+    },
+    {
+      "frame_idx": 87,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        26,
+        332,
+        95,
+        358
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 87,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        587,
+        337,
+        619,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 88,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        588,
+        336,
+        620,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 88,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        567,
+        343,
+        588,
+        386
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 89,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        506,
+        373,
+        557,
+        449
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 89,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        588,
+        336,
+        621,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 89,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        568,
+        343,
+        589,
+        387
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 90,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.49507060647010803,
+      "bbox": [
+        853,
+        321,
+        956,
+        393
+      ],
+      "iou": 0.2724014336917563,
+      "severity": "MEDIUM",
+      "details": "IoU 0.27 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 90,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.35134193301200867,
+      "bbox": [
+        527,
+        324,
+        560,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.35"
+    },
+    {
+      "frame_idx": 90,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        569,
+        345,
+        590,
+        387
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 91,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.3672645092010498,
+      "bbox": [
+        527,
+        326,
+        560,
+        349
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.37"
+    },
+    {
+      "frame_idx": 91,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.3584425449371338,
+      "bbox": [
+        855,
+        320,
+        963,
+        391
+      ],
+      "iou": 0.9358199356913184,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 91,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        493,
+        371,
+        548,
+        451
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 91,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        569,
+        345,
+        590,
+        387
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 92,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.41285860538482666,
+      "bbox": [
+        655,
+        328,
+        742,
+        395
+      ],
+      "iou": 0.9740458015267176,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (car)"
+    },
+    {
+      "frame_idx": 92,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.3615393042564392,
+      "bbox": [
+        855,
+        322,
+        966,
+        392
+      ],
+      "iou": 0.9545627617717984,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 92,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        488,
+        372,
+        543,
+        451
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 92,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        570,
+        344,
+        592,
+        387
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 92,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        544,
+        338,
+        575,
+        373
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 93,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.4797954857349396,
+      "bbox": [
+        868,
+        324,
+        974,
+        397
+      ],
+      "iou": 0.8448979591836735,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 93,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.47323644161224365,
+      "bbox": [
+        657,
+        327,
+        744,
+        394
+      ],
+      "iou": 0.9740458015267176,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 93,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.4691123962402344,
+      "bbox": [
+        657,
+        328,
+        744,
+        395
+      ],
+      "iou": 0.9740458015267176,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (car)"
+    },
+    {
+      "frame_idx": 93,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        570,
+        344,
+        592,
+        387
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 94,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.4925127923488617,
+      "bbox": [
+        657,
+        327,
+        746,
+        395
+      ],
+      "iou": 0.9596827495042961,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 94,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.4496590793132782,
+      "bbox": [
+        657,
+        327,
+        746,
+        395
+      ],
+      "iou": 0.9596827495042961,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (car)"
+    },
+    {
+      "frame_idx": 94,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.4403035640716553,
+      "bbox": [
+        864,
+        320,
+        976,
+        392
+      ],
+      "iou": 0.9420112551994128,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 94,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        571,
+        344,
+        593,
+        387
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 94,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        543,
+        337,
+        575,
+        374
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 95,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.5165664553642273,
+      "bbox": [
+        658,
+        327,
+        747,
+        395
+      ],
+      "iou": 1.0,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 95,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.5051572918891907,
+      "bbox": [
+        659,
+        327,
+        747,
+        395
+      ],
+      "iou": 0.9887640449438202,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (car)"
+    },
+    {
+      "frame_idx": 95,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.48489198088645935,
+      "bbox": [
+        869,
+        320,
+        979,
+        392
+      ],
+      "iou": 0.9376522162688748,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 95,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.4294256269931793,
+      "bbox": [
+        866,
+        321,
+        982,
+        395
+      ],
+      "iou": 0.9310344827586207,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #10 (truck)"
+    },
+    {
+      "frame_idx": 95,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        467,
+        371,
+        526,
+        455
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 95,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        593,
+        337,
+        623,
+        370
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 95,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        571,
+        343,
+        594,
+        388
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 95,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        544,
+        337,
+        576,
+        374
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 96,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.506243884563446,
+      "bbox": [
+        660,
+        328,
+        749,
+        396
+      ],
+      "iou": 0.9710144927536232,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (car)"
+    },
+    {
+      "frame_idx": 96,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        594,
+        337,
+        625,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 97,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.506613552570343,
+      "bbox": [
+        660,
+        328,
+        750,
+        397
+      ],
+      "iou": 0.9745571658615136,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (car)"
+    },
+    {
+      "frame_idx": 97,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.48847496509552,
+      "bbox": [
+        873,
+        322,
+        989,
+        395
+      ],
+      "iou": 0.9741379310344828,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #9 (truck)"
+    },
+    {
+      "frame_idx": 97,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        593,
+        337,
+        624,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 98,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.647246241569519,
+      "bbox": [
+        880,
+        327,
+        994,
+        395
+      ],
+      "iou": 0.8736111111111111,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 98,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.6105802655220032,
+      "bbox": [
+        663,
+        328,
+        752,
+        397
+      ],
+      "iou": 0.9747141246577549,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 98,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.44875913858413696,
+      "bbox": [
+        878,
+        321,
+        995,
+        397
+      ],
+      "iou": 0.9326343966094134,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #8 (truck)"
+    },
+    {
+      "frame_idx": 98,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.3951498866081238,
+      "bbox": [
+        663,
+        327,
+        752,
+        397
+      ],
+      "iou": 0.9609399809463322,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (car)"
+    },
+    {
+      "frame_idx": 98,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.36888444423675537,
+      "bbox": [
+        0,
+        399,
+        83,
+        491
+      ],
+      "iou": 0.12441559445152815,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.37"
+    },
+    {
+      "frame_idx": 98,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        29,
+        330,
+        101,
+        356
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 98,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        546,
+        336,
+        580,
+        374
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 98,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        575,
+        346,
+        597,
+        388
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 99,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.5901572108268738,
+      "bbox": [
+        882,
+        326,
+        996,
+        393
+      ],
+      "iou": 0.8855652173913043,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 99,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.5846510529518127,
+      "bbox": [
+        663,
+        327,
+        754,
+        397
+      ],
+      "iou": 0.9714285714285714,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 99,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.5173584818840027,
+      "bbox": [
+        881,
+        321,
+        998,
+        398
+      ],
+      "iou": 0.9573759573759574,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #8 (truck)"
+    },
+    {
+      "frame_idx": 99,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.3524039387702942,
+      "bbox": [
+        600,
+        338,
+        622,
+        368
+      ],
+      "iou": 0.031914893617021274,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.35"
+    },
+    {
+      "frame_idx": 99,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        31,
+        330,
+        102,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 99,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        546,
+        336,
+        579,
+        374
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 99,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        576,
+        346,
+        598,
+        389
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 100,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.5793076753616333,
+      "bbox": [
+        884,
+        325,
+        1004,
+        392
+      ],
+      "iou": 0.8666369313113291,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 100,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.556178092956543,
+      "bbox": [
+        665,
+        327,
+        755,
+        398
+      ],
+      "iou": 0.9752321981424149,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 100,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        17,
+        329,
+        92,
+        355
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 100,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        546,
+        336,
+        580,
+        374
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 101,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.5197165012359619,
+      "bbox": [
+        885,
+        323,
+        1007,
+        393
+      ],
+      "iou": 0.8975342465753424,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 101,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.45271456241607666,
+      "bbox": [
+        885,
+        321,
+        1006,
+        397
+      ],
+      "iou": 0.9542192257503262,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (truck)"
+    },
+    {
+      "frame_idx": 102,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.4916878640651703,
+      "bbox": [
+        887,
+        320,
+        1012,
+        396
+      ],
+      "iou": 0.9278511279758811,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 102,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.4583001732826233,
+      "bbox": [
+        887,
+        320,
+        1013,
+        397
+      ],
+      "iou": 0.9321789321789322,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #7 (truck)"
+    },
+    {
+      "frame_idx": 102,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.42019107937812805,
+      "bbox": [
+        667,
+        325,
+        758,
+        397
+      ],
+      "iou": 0.9619450317124736,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 102,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.3972744047641754,
+      "bbox": [
+        666,
+        325,
+        759,
+        397
+      ],
+      "iou": 0.961768219832736,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #6 (car)"
+    },
+    {
+      "frame_idx": 103,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        579,
+        346,
+        601,
+        389
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 104,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.5847045183181763,
+      "bbox": [
+        895,
+        320,
+        1017,
+        396
+      ],
+      "iou": 0.9790269349515597,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 104,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "motorcycle",
+      "confidence": 0.5551295280456543,
+      "bbox": [
+        1245,
+        377,
+        1279,
+        428
+      ],
+      "iou": 0.0,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.56"
+    },
+    {
+      "frame_idx": 104,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.4209801256656647,
+      "bbox": [
+        896,
+        320,
+        1017,
+        397
+      ],
+      "iou": 1.0,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #6 (truck)"
+    },
+    {
+      "frame_idx": 104,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        532,
+        329,
+        574,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 104,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        510,
+        328,
+        537,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 104,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        579,
+        346,
+        601,
+        389
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 104,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        31,
+        327,
+        104,
+        354
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 105,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.5710663795471191,
+      "bbox": [
+        899,
+        326,
+        1023,
+        393
+      ],
+      "iou": 0.8517545702878756,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 105,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.41545572876930237,
+      "bbox": [
+        898,
+        320,
+        1023,
+        396
+      ],
+      "iou": 0.9558257977341232,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #6 (truck)"
+    },
+    {
+      "frame_idx": 105,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        549,
+        333,
+        584,
+        373
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 105,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        531,
+        326,
+        576,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 105,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        510,
+        326,
+        538,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 105,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        579,
+        348,
+        601,
+        389
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 105,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        33,
+        327,
+        105,
+        353
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 106,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.6313630938529968,
+      "bbox": [
+        902,
+        325,
+        1025,
+        394
+      ],
+      "iou": 0.8846153846153846,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 106,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        551,
+        333,
+        586,
+        373
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 106,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        534,
+        328,
+        577,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 106,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        512,
+        327,
+        539,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 106,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        421,
+        326,
+        446,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 107,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.5972537398338318,
+      "bbox": [
+        904,
+        319,
+        1032,
+        398
+      ],
+      "iou": 0.9564873417721519,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 107,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "motorcycle",
+      "confidence": 0.5091875791549683,
+      "bbox": [
+        0,
+        400,
+        34,
+        518
+      ],
+      "iou": 0.4341991341991342,
+      "severity": "MEDIUM",
+      "details": "IoU 0.43 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 107,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        0,
+        399,
+        77,
+        519
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 107,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        537,
+        330,
+        579,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 107,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        513,
+        327,
+        539,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 107,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        422,
+        326,
+        446,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 107,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        581,
+        350,
+        603,
+        389
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 108,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.5460139513015747,
+      "bbox": [
+        908,
+        318,
+        1034,
+        399
+      ],
+      "iou": 0.9798157946306094,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 108,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.4153313636779785,
+      "bbox": [
+        673,
+        324,
+        769,
+        397
+      ],
+      "iou": 0.9895833333333334,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (car)"
+    },
+    {
+      "frame_idx": 108,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "motorcycle",
+      "confidence": 0.36096715927124023,
+      "bbox": [
+        579,
+        329,
+        605,
+        388
+      ],
+      "iou": 0.4996784565916399,
+      "severity": "MEDIUM",
+      "details": "IoU 0.50 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 108,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        552,
+        333,
+        587,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 108,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        538,
+        328,
+        582,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 108,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        514,
+        328,
+        539,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 108,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        422,
+        326,
+        447,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 108,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        582,
+        351,
+        603,
+        389
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 109,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.6319417357444763,
+      "bbox": [
+        911,
+        318,
+        1038,
+        400
+      ],
+      "iou": 0.9878048780487805,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 109,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.46216464042663574,
+      "bbox": [
+        674,
+        324,
+        772,
+        398
+      ],
+      "iou": 0.9562879205736349,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (car)"
+    },
+    {
+      "frame_idx": 109,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        552,
+        333,
+        587,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 109,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        35,
+        325,
+        107,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 109,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        424,
+        327,
+        447,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 110,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "motorcycle",
+      "confidence": 0.3868962228298187,
+      "bbox": [
+        580,
+        329,
+        606,
+        388
+      ],
+      "iou": 0.4996784565916399,
+      "severity": "MEDIUM",
+      "details": "IoU 0.50 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 110,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        553,
+        333,
+        588,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 110,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        35,
+        324,
+        107,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 110,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "motorcycle",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        582,
+        351,
+        603,
+        389
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed motorcycle vehicle"
+    },
+    {
+      "frame_idx": 110,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        515,
+        325,
+        543,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 111,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        553,
+        333,
+        588,
+        372
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 111,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        32,
+        324,
+        107,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 111,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        604,
+        330,
+        638,
+        368
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 112,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.4246862232685089,
+      "bbox": [
+        676,
+        322,
+        774,
+        398
+      ],
+      "iou": 0.9868421052631579,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (car)"
+    },
+    {
+      "frame_idx": 113,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.6365464329719543,
+      "bbox": [
+        923,
+        316,
+        1060,
+        401
+      ],
+      "iou": 0.9593817088879347,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 113,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.44407570362091064,
+      "bbox": [
+        676,
+        322,
+        775,
+        398
+      ],
+      "iou": 0.9868421052631579,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (car)"
+    },
+    {
+      "frame_idx": 113,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.37431326508522034,
+      "bbox": [
+        602,
+        330,
+        638,
+        366
+      ],
+      "iou": 0.07623318385650224,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.37"
+    },
+    {
+      "frame_idx": 113,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        32,
+        324,
+        108,
+        352
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 113,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        538,
+        324,
+        585,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 113,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        514,
+        326,
+        541,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 114,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.37332743406295776,
+      "bbox": [
+        603,
+        329,
+        638,
+        366
+      ],
+      "iou": 0.07648183556405354,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.37"
+    },
+    {
+      "frame_idx": 114,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        32,
+        324,
+        108,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 114,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        514,
+        325,
+        541,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 114,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        423,
+        327,
+        446,
+        350
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 115,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.48048678040504456,
+      "bbox": [
+        677,
+        322,
+        778,
+        398
+      ],
+      "iou": 0.987012987012987,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (car)"
+    },
+    {
+      "frame_idx": 115,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.41917654871940613,
+      "bbox": [
+        603,
+        327,
+        639,
+        366
+      ],
+      "iou": 0.08433734939759036,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.42"
+    },
+    {
+      "frame_idx": 115,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        32,
+        323,
+        107,
+        351
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 116,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.5569606423377991,
+      "bbox": [
+        677,
+        321,
+        778,
+        399
+      ],
+      "iou": 0.9679446888749215,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (car)"
+    },
+    {
+      "frame_idx": 116,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        514,
+        326,
+        540,
+        350
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 117,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "car",
+      "predicted_class": "truck",
+      "confidence": 0.5556381940841675,
+      "bbox": [
+        677,
+        321,
+        779,
+        399
+      ],
+      "iou": 0.9873417721518988,
+      "severity": "MEDIUM",
+      "details": "Predicted truck instead of actual car"
+    },
+    {
+      "frame_idx": 117,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.5415130257606506,
+      "bbox": [
+        677,
+        321,
+        779,
+        399
+      ],
+      "iou": 0.9873417721518988,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (car)"
+    },
+    {
+      "frame_idx": 117,
+      "error_type": "LOCALIZATION",
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.391795814037323,
+      "bbox": [
+        536,
+        318,
+        579,
+        371
+      ],
+      "iou": 0.45005968961400716,
+      "severity": "MEDIUM",
+      "details": "IoU 0.45 is below matching threshold 0.5"
+    },
+    {
+      "frame_idx": 117,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        550,
+        332,
+        585,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 118,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.6352076530456543,
+      "bbox": [
+        676,
+        320,
+        779,
+        399
+      ],
+      "iou": 0.038142462095928295,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.64"
+    },
+    {
+      "frame_idx": 118,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "truck",
+      "confidence": 0.4355643093585968,
+      "bbox": [
+        677,
+        320,
+        778,
+        399
+      ],
+      "iou": 0.03372193852972348,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.44"
+    },
+    {
+      "frame_idx": 118,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.37957221269607544,
+      "bbox": [
+        935,
+        315,
+        1083,
+        405
+      ],
+      "iou": 0.9621621621621622,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (truck)"
+    },
+    {
+      "frame_idx": 118,
+      "error_type": "FALSE_POSITIVE",
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.37034326791763306,
+      "bbox": [
+        601,
+        322,
+        636,
+        365
+      ],
+      "iou": 0.06109725685785536,
+      "severity": "LOW",
+      "details": "Spurious detection on background with conf=0.37"
+    },
+    {
+      "frame_idx": 118,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        548,
+        331,
+        583,
+        371
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 119,
+      "error_type": "MISCLASSIFICATION",
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.45132508873939514,
+      "bbox": [
+        938,
+        315,
+        1089,
+        406
+      ],
+      "iou": 0.9735099337748344,
+      "severity": "MEDIUM",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "frame_idx": 119,
+      "error_type": "DUPLICATE",
+      "ground_truth_class": "truck",
+      "predicted_class": "truck",
+      "confidence": 0.434533029794693,
+      "bbox": [
+        937,
+        314,
+        1089,
+        405
+      ],
+      "iou": 0.9464196294441662,
+      "severity": "MEDIUM",
+      "details": "Duplicate prediction on GT #4 (truck)"
+    },
+    {
+      "frame_idx": 119,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        28,
+        323,
+        99,
+        350
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    },
+    {
+      "frame_idx": 119,
+      "error_type": "FALSE_NEGATIVE",
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "bbox": [
+        547,
+        331,
+        581,
+        370
+      ],
+      "iou": 0.0,
+      "severity": "HIGH",
+      "details": "Missed car vehicle"
+    }
+  ]
+}
