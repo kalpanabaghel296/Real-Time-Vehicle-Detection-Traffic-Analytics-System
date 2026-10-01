@@ -7,7 +7,7 @@ Organized as a clean Python dataclass for type-safety and easy inspection.
 
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Tuple, List, Optional
+from typing import Tuple, List, Optional, Dict
 
 
 @dataclass
@@ -47,6 +47,17 @@ class TrafficConfig:
     # Minimum confidence score [0.0 - 1.0] for a candidate detection box to be accepted
     # Set to 0.35 to balance high precision with recall on moving vehicles
     confidence_threshold: float = 0.35
+
+    # Per-class confidence thresholds optimized via empirical F1 sweep
+    per_class_confidence: Dict[str, float] = field(
+        default_factory=lambda: {
+            "car": 0.40,
+            "truck": 0.35,
+            "bus": 0.35,
+            "motorcycle": 0.30,
+        }
+    )
+    enable_detection_filtering: bool = True
 
     # Non-Maximum Suppression (NMS) Intersection-over-Union (IoU) threshold
     # Boxes with IoU > iou_threshold with a higher confidence box are suppressed

@@ -1,0 +1,42 @@
+{
+  "confidence_threshold": 0.4,
+  "iou_threshold": 0.45,
+  "per_class_confidence": {
+    "car": 0.45,
+    "truck": 0.4,
+    "bus": 0.38,
+    "motorcycle": 0.3
+  },
+  "size_priors": {
+    "car": {
+      "min_area": 300,
+      "max_area": 250000,
+      "min_aspect_ratio": 0.25,
+      "max_aspect_ratio": 3.0
+    },
+    "truck": {
+      "min_area": 800,
+      "max_area": 450000,
+      "min_aspect_ratio": 0.2,
+      "max_aspect_ratio": 3.5
+    },
+    "bus": {
+      "min_area": 800,
+      "max_area": 450000,
+      "min_aspect_ratio": 0.2,
+      "max_aspect_ratio": 3.5
+    },
+    "motorcycle": {
+      "min_area": 120,
+      "max_area": 80000,
+      "min_aspect_ratio": 0.4,
+      "max_aspect_ratio": 4.0
+    }
+  },
+  "temporal_confirmation": {
+    "enabled": true,
+    "window_frames": 3,
+    "min_hits": 2,
+    "iou_match": 0.4
+  }
+}

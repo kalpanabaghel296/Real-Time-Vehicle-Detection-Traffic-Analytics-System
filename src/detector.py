@@ -26,6 +26,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from config.config import TrafficConfig
+from src.filters.detection_filter import DetectionFilter, DetectionFilterConfig
 
 
 @dataclass
@@ -105,12 +106,19 @@ class YOLOVehicleDetector:
             "total_ms": 0.0,
         }
 
-    def detect(self, frame: np.ndarray) -> List[Detection]:
+        # Post-detection filter initialization (per-class confidence, size priors, temporal consistency)
+        filter_cfg = getattr(self.config, "detection_filter_config", None) or DetectionFilterConfig()
+        if hasattr(self.config, "per_class_confidence") and isinstance(self.config.per_class_confidence, dict):
+            filter_cfg.per_class_confidence.update(self.config.per_class_confidence)
+        self.detection_filter = DetectionFilter(config=filter_cfg)
+
+    def detect(self, frame: np.ndarray, frame_idx: int = 0) -> List[Detection]:
         """
         Runs object detection on a single BGR frame.
 
         Args:
             frame: Input image array (BGR format).
+            frame_idx: Current video frame index (for temporal consistency filtering).
 
         Returns:
             List of Detection objects filtered for target vehicle classes.
@@ -179,6 +187,14 @@ class YOLOVehicleDetector:
                 bbox=(int(x1), int(y1), int(x2), int(y2)),
             )
             detections.append(detection)
+
+        # Apply post-detection filters (per-class confidence, size priors, temporal consistency)
+        if getattr(self.config, "enable_detection_filtering", True):
+            detections = self.detection_filter.apply(
+                detections,
+                frame_shape=frame.shape[:2],
+                frame_idx=frame_idx,
+            )
 
         return detections
 

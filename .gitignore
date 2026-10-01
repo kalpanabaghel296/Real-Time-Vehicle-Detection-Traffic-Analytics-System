@@ -42,6 +42,8 @@ data/evaluation/baseline_outputs/errors/*/*/*.jpg
 data/evaluation/baseline_outputs/diagnostics/error_gallery/
 data/evaluation/yolov8s_outputs/snapshots/
 data/evaluation/yolov8s_outputs/errors/*/*/*.jpg
+data/evaluation/phase7_outputs/snapshots/
+data/evaluation/phase7_outputs/errors/*/*/*.jpg
 data/evaluation/hard_cases/*/*.jpg
 outputs/evaluation/
 
