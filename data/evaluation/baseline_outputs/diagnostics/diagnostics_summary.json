@@ -1,0 +1,401 @@
+{
+  "total_errors": 4688,
+  "category_distribution": {
+    "counts": {
+      "FALSE_POSITIVE": 2279,
+      "LOCALIZATION": 384,
+      "FALSE_NEGATIVE": 1755,
+      "MISCLASSIFICATION": 164,
+      "DUPLICATE": 106
+    },
+    "percentages": {
+      "FALSE_POSITIVE": 48.61,
+      "LOCALIZATION": 8.19,
+      "FALSE_NEGATIVE": 37.44,
+      "MISCLASSIFICATION": 3.5,
+      "DUPLICATE": 2.26
+    }
+  },
+  "per_video_summary": {
+    "day_highway": {
+      "FALSE_POSITIVE": 1104,
+      "FALSE_NEGATIVE": 221,
+      "MISCLASSIFICATION": 42,
+      "LOCALIZATION": 154,
+      "DUPLICATE": 38
+    },
+    "dense_traffic": {
+      "FALSE_POSITIVE": 35,
+      "FALSE_NEGATIVE": 262,
+      "MISCLASSIFICATION": 46,
+      "LOCALIZATION": 65,
+      "DUPLICATE": 9
+    },
+    "intersection": {
+      "FALSE_POSITIVE": 18,
+      "FALSE_NEGATIVE": 389,
+      "MISCLASSIFICATION": 23,
+      "LOCALIZATION": 22,
+      "DUPLICATE": 12
+    },
+    "night_traffic": {
+      "FALSE_POSITIVE": 0,
+      "FALSE_NEGATIVE": 561,
+      "MISCLASSIFICATION": 0,
+      "LOCALIZATION": 0,
+      "DUPLICATE": 0
+    },
+    "wrong_way": {
+      "FALSE_POSITIVE": 1122,
+      "FALSE_NEGATIVE": 322,
+      "MISCLASSIFICATION": 53,
+      "LOCALIZATION": 143,
+      "DUPLICATE": 47
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "background"
+    ],
+    "raw": [
+      [
+        4891,
+        0,
+        1,
+        27,
+        1236
+      ],
+      [
+        0,
+        292,
+        0,
+        0,
+        133
+      ],
+      [
+        0,
+        0,
+        37,
+        7,
+        20
+      ],
+      [
+        83,
+        0,
+        46,
+        278,
+        366
+      ],
+      [
+        2268,
+        5,
+        2,
+        4,
+        0
+      ]
+    ],
+    "normalized": [
+      [
+        0.7946,
+        0.0,
+        0.0002,
+        0.0044,
+        0.2008
+      ],
+      [
+        0.0,
+        0.6871,
+        0.0,
+        0.0,
+        0.3129
+      ],
+      [
+        0.0,
+        0.0,
+        0.5781,
+        0.1094,
+        0.3125
+      ],
+      [
+        0.1074,
+        0.0,
+        0.0595,
+        0.3596,
+        0.4735
+      ],
+      [
+        0.9952,
+        0.0022,
+        0.0009,
+        0.0018,
+        0.0
+      ]
+    ]
+  },
+  "top_failure_gallery": [
+    {
+      "rank": 1,
+      "error_type": "FALSE_NEGATIVE",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 0,
+      "ground_truth_class": "truck",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "iou": 0.0,
+      "crop_filename": "error_01_false_negative_day_highway_f0.jpg",
+      "details": "Missed truck vehicle"
+    },
+    {
+      "rank": 2,
+      "error_type": "FALSE_NEGATIVE",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 0,
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "iou": 0.0,
+      "crop_filename": "error_02_false_negative_day_highway_f0.jpg",
+      "details": "Missed car vehicle"
+    },
+    {
+      "rank": 3,
+      "error_type": "FALSE_NEGATIVE",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 0,
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "iou": 0.0,
+      "crop_filename": "error_03_false_negative_day_highway_f0.jpg",
+      "details": "Missed car vehicle"
+    },
+    {
+      "rank": 4,
+      "error_type": "FALSE_NEGATIVE",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 1,
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "iou": 0.0,
+      "crop_filename": "error_04_false_negative_day_highway_f1.jpg",
+      "details": "Missed car vehicle"
+    },
+    {
+      "rank": 5,
+      "error_type": "FALSE_NEGATIVE",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 1,
+      "ground_truth_class": "car",
+      "predicted_class": "background",
+      "confidence": 0.0,
+      "iou": 0.0,
+      "crop_filename": "error_05_false_negative_day_highway_f1.jpg",
+      "details": "Missed car vehicle"
+    },
+    {
+      "rank": 6,
+      "error_type": "FALSE_POSITIVE",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 21,
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.8587840795516968,
+      "iou": 0.0,
+      "crop_filename": "error_06_false_positive_day_highway_f21.jpg",
+      "details": "Spurious detection on background with conf=0.86"
+    },
+    {
+      "rank": 7,
+      "error_type": "FALSE_POSITIVE",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 22,
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.8580230474472046,
+      "iou": 0.0,
+      "crop_filename": "error_07_false_positive_day_highway_f22.jpg",
+      "details": "Spurious detection on background with conf=0.86"
+    },
+    {
+      "rank": 8,
+      "error_type": "MISCLASSIFICATION",
+      "severity": "HIGH",
+      "video": "intersection",
+      "frame_idx": 108,
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.8561769127845764,
+      "iou": 0.9527439024390244,
+      "crop_filename": "error_08_misclassification_intersection_f108.jpg",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "rank": 9,
+      "error_type": "FALSE_POSITIVE",
+      "severity": "HIGH",
+      "video": "wrong_way",
+      "frame_idx": 21,
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.84304279088974,
+      "iou": 0.0,
+      "crop_filename": "error_09_false_positive_wrong_way_f21.jpg",
+      "details": "Spurious detection on background with conf=0.84"
+    },
+    {
+      "rank": 10,
+      "error_type": "FALSE_POSITIVE",
+      "severity": "HIGH",
+      "video": "wrong_way",
+      "frame_idx": 22,
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.8323271870613098,
+      "iou": 0.0,
+      "crop_filename": "error_10_false_positive_wrong_way_f22.jpg",
+      "details": "Spurious detection on background with conf=0.83"
+    },
+    {
+      "rank": 11,
+      "error_type": "MISCLASSIFICATION",
+      "severity": "HIGH",
+      "video": "intersection",
+      "frame_idx": 107,
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.82023024559021,
+      "iou": 0.9185185185185185,
+      "crop_filename": "error_11_misclassification_intersection_f107.jpg",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "rank": 12,
+      "error_type": "FALSE_POSITIVE",
+      "severity": "HIGH",
+      "video": "wrong_way",
+      "frame_idx": 81,
+      "ground_truth_class": "background",
+      "predicted_class": "car",
+      "confidence": 0.8150435090065002,
+      "iou": 0.012407752818100722,
+      "crop_filename": "error_12_false_positive_wrong_way_f81.jpg",
+      "details": "Spurious detection on background with conf=0.82"
+    },
+    {
+      "rank": 13,
+      "error_type": "MISCLASSIFICATION",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 20,
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.8081793189048767,
+      "iou": 0.9631864481842338,
+      "crop_filename": "error_13_misclassification_day_highway_f20.jpg",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "rank": 14,
+      "error_type": "MISCLASSIFICATION",
+      "severity": "HIGH",
+      "video": "wrong_way",
+      "frame_idx": 10,
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.7966098785400391,
+      "iou": 0.9538228614685844,
+      "crop_filename": "error_14_misclassification_wrong_way_f10.jpg",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "rank": 15,
+      "error_type": "MISCLASSIFICATION",
+      "severity": "HIGH",
+      "video": "day_highway",
+      "frame_idx": 32,
+      "ground_truth_class": "truck",
+      "predicted_class": "car",
+      "confidence": 0.7939373850822449,
+      "iou": 0.9671052631578947,
+      "crop_filename": "error_15_misclassification_day_highway_f32.jpg",
+      "details": "Predicted car instead of actual truck"
+    },
+    {
+      "rank": 16,
+      "error_type": "LOCALIZATION",
+      "severity": "MEDIUM",
+      "video": "wrong_way",
+      "frame_idx": 99,
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.5821215510368347,
+      "iou": 0.15129151291512916,
+      "crop_filename": "error_16_localization_wrong_way_f99.jpg",
+      "details": "IoU 0.15 is below matching threshold 0.5"
+    },
+    {
+      "rank": 17,
+      "error_type": "LOCALIZATION",
+      "severity": "MEDIUM",
+      "video": "day_highway",
+      "frame_idx": 95,
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.6173858046531677,
+      "iou": 0.15209505941213258,
+      "crop_filename": "error_17_localization_day_highway_f95.jpg",
+      "details": "IoU 0.15 is below matching threshold 0.5"
+    },
+    {
+      "rank": 18,
+      "error_type": "LOCALIZATION",
+      "severity": "MEDIUM",
+      "video": "day_highway",
+      "frame_idx": 112,
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.3660185933113098,
+      "iou": 0.15211378901619912,
+      "crop_filename": "error_18_localization_day_highway_f112.jpg",
+      "details": "IoU 0.15 is below matching threshold 0.5"
+    },
+    {
+      "rank": 19,
+      "error_type": "LOCALIZATION",
+      "severity": "MEDIUM",
+      "video": "wrong_way",
+      "frame_idx": 112,
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.37036460638046265,
+      "iou": 0.1535448491970231,
+      "crop_filename": "error_19_localization_wrong_way_f112.jpg",
+      "details": "IoU 0.15 is below matching threshold 0.5"
+    },
+    {
+      "rank": 20,
+      "error_type": "LOCALIZATION",
+      "severity": "MEDIUM",
+      "video": "wrong_way",
+      "frame_idx": 93,
+      "ground_truth_class": "car",
+      "predicted_class": "car",
+      "confidence": 0.5319730639457703,
+      "iou": 0.15406940063091482,
+      "crop_filename": "error_20_localization_wrong_way_f93.jpg",
+      "details": "IoU 0.15 is below matching threshold 0.5"
+    }
+  ]
+}
