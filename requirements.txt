@@ -1,6 +1,6 @@
 # Core Computer Vision & Machine Learning
 numpy>=1.24.0,<2.1.0
-opencv-python>=4.8.0.76
+opencv-python-headless>=4.8.0.76
 ultralytics>=8.1.0
 torch>=2.2.0
 torchvision>=0.17.0
