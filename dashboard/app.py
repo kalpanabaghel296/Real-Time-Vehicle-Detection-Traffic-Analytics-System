@@ -20,12 +20,24 @@ except ModuleNotFoundError:
         import subprocess
         with st.spinner("⚙️ Initializing cloud environment: Installing OpenCV runtime... Please wait a few seconds."):
             subprocess.run([
-                sys.executable, "-m", "pip", "install", "opencv-python-headless==4.10.0.84", "--no-cache-dir"
+                sys.executable, "-m", "pip", "install", "opencv-python-headless", "--no-cache-dir"
             ], check=True)
         import cv2
     except Exception as install_err:
-        st.error(f"❌ OpenCV Auto-Installation Failed: {install_err}")
-        st.info("Tip: In Streamlit Cloud, please click 'Manage app' (bottom right) -> '⋮' -> 'Clear cache and reboot'.")
+        py_ver = f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
+        st.error(f"❌ OpenCV Installation Failed on Python {py_ver}")
+        if sys.version_info.minor >= 13:
+            st.warning(
+                f"⚠️ **Incompatible Python Version Detected ({py_ver})**\n\n"
+                "Machine Learning packages (PyTorch, Ultralytics, OpenCV) do not have pre-built wheels for Python 3.13 / 3.14 yet.\n\n"
+                "**How to Fix in 10 Seconds:**\n"
+                "1. Look at the bottom-right corner of this screen, click **'Manage app'**.\n"
+                "2. Click the three dots **'⋮'** -> select **'⚙️ Settings'**.\n"
+                "3. In the **Python version** dropdown, select **`3.11`** (or `3.10`).\n"
+                "4. Click **'Save'**."
+            )
+        else:
+            st.info("Tip: In Streamlit Cloud, please click 'Manage app' (bottom right) -> '⋮' -> 'Clear cache and reboot'.")
         st.code(traceback.format_exc())
         st.stop()
 except Exception as e:
