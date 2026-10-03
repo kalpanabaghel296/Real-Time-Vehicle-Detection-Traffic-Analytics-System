@@ -235,7 +235,16 @@ class VideoWriterHelper:
         import shutil
         import subprocess
 
-        ffmpeg_bin = shutil.which("ffmpeg")
+        ffmpeg_bin = None
+        try:
+            import imageio_ffmpeg
+            ffmpeg_bin = imageio_ffmpeg.get_ffmpeg_exe()
+        except Exception:
+            pass
+
+        if not ffmpeg_bin:
+            ffmpeg_bin = shutil.which("ffmpeg")
+
         if not ffmpeg_bin or not self.output_path.exists():
             return
 
