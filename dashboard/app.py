@@ -15,9 +15,22 @@ import traceback
 
 try:
     import cv2
+except ModuleNotFoundError:
+    try:
+        import subprocess
+        with st.spinner("⚙️ Initializing cloud environment: Installing OpenCV runtime... Please wait a few seconds."):
+            subprocess.run([
+                sys.executable, "-m", "pip", "install", "opencv-python-headless==4.10.0.84", "--no-cache-dir"
+            ], check=True)
+        import cv2
+    except Exception as install_err:
+        st.error(f"❌ OpenCV Auto-Installation Failed: {install_err}")
+        st.info("Tip: In Streamlit Cloud, please click 'Manage app' (bottom right) -> '⋮' -> 'Clear cache and reboot'.")
+        st.code(traceback.format_exc())
+        st.stop()
 except Exception as e:
     st.error(f"❌ OpenCV (cv2) Import Error: {e}")
-    st.info("Tip: If deploying on Streamlit Cloud, please click 'Manage app' (bottom right) -> '⋮' -> 'Clear cache and reboot'.")
+    st.info("Tip: In Streamlit Cloud, please click 'Manage app' (bottom right) -> '⋮' -> 'Clear cache and reboot'.")
     st.code(traceback.format_exc())
     st.stop()
 
