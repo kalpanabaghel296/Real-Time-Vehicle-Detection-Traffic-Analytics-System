@@ -6,15 +6,24 @@ inspecting class distributions, viewing wrong-way violation snapshots,
 and analyzing real-time performance telemetry.
 """
 
+import streamlit as st
 import json
 from pathlib import Path
 import sys
 import time
-import cv2
+import traceback
+
+try:
+    import cv2
+except Exception as e:
+    st.error(f"❌ OpenCV (cv2) Import Error: {e}")
+    st.info("Tip: If deploying on Streamlit Cloud, please click 'Manage app' (bottom right) -> '⋮' -> 'Clear cache and reboot'.")
+    st.code(traceback.format_exc())
+    st.stop()
+
 import numpy as np
 import pandas as pd
 from PIL import Image
-import streamlit as st
 
 # Ensure project root is in sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
