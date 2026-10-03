@@ -46,6 +46,15 @@ except Exception as e:
     st.code(traceback.format_exc())
     st.stop()
 
+try:
+    import lap
+except ModuleNotFoundError:
+    try:
+        import subprocess
+        subprocess.run([sys.executable, "-m", "pip", "install", "lapx", "--no-cache-dir"], check=True)
+    except Exception:
+        pass
+
 import numpy as np
 import pandas as pd
 from PIL import Image
